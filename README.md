@@ -54,8 +54,17 @@ Audio tech        plugin experiments, build systems, DSP-adjacent projects
 ## GitHub Snapshot
 
 <p align="center">
-  <img height="165" alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=Hikari-Tsai&show_icons=true&theme=tokyonight&hide_border=true">
-  <img height="165" alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Hikari-Tsai&layout=compact&theme=tokyonight&hide_border=true">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Hikari-Tsai&theme=github_dark" alt="Profile details">
+</p>
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Hikari-Tsai&theme=github_dark" alt="Repos per language">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Hikari-Tsai&theme=github_dark" alt="Most commit language">
+</p>
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Hikari-Tsai&theme=github_dark" alt="Stats">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Hikari-Tsai&theme=github_dark&utcOffset=8" alt="Productive time">
 </p>
 
 ---
