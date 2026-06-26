@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/Hikari-Tsai?tab=repositories"><img alt="GitHub repositories" src="https://img.shields.io/badge/GitHub-Projects-181717?style=for-the-badge&logo=github"></a>
   <a href="https://github.com/Hikari-Tsai/dc-manager"><img alt="Discord bot" src="https://img.shields.io/badge/Discord-Bot-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
-  <a href="https://github.com/Hikari-Tsai/Hikari-Tsai.github.io"><img alt="GitHub Pages" src="https://img.shields.io/badge/GitHub-Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white"></a>
+  <a href="https://Hikari-Tsai.github.io"><img alt="GitHub Pages" src="https://img.shields.io/badge/GitHub-Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white"></a>
 </p>
 
 ---
