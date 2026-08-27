@@ -13,13 +13,13 @@
 
 <p align="center">
   <a href="https://hikari-tsai.github.io/hikari-tsai-portfolio/">
-    <img src="./assets/code-portfolio-button.svg" alt="Code Portfolio: AI engineering, creator tools, web projects, and software work." width="420">
+    <img src="./assets/code-portfolio-button.svg" alt="Code Portfolio: AI engineering, creator tools, web projects, and software work." width="520">
   </a>
 </p>
 
 <p align="center">
   <a href="https://hikari-tsai.github.io/homepage/">
-    <img src="./assets/music-portfolio-button.svg" alt="Music Portfolio: Original music, creative work, and artist identity." width="420">
+    <img src="./assets/music-portfolio-button.svg" alt="Music Portfolio: Original music, creative work, and artist identity." width="520">
   </a>
 </p>
 
