@@ -1,13 +1,14 @@
 <h1 align="center">Hi, I'm Hikari Tsai</h1>
 
 <p align="center">
-  <strong>AI Engineer & Creative Technologist</strong><br>
-  Building practical AI products across creator tools, community automation, generative media, and intelligent software.
+  <strong>Senior Generative AI R&amp;D Engineer · ML Engineer · Independent Musician</strong><br>
+  Building practical AI systems for creators, communities, music, and intelligent software.
 </p>
 
 <p align="center">
   <a href="https://hikari-tsai.github.io/hikari-tsai-portfolio/"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-Visit-7C3AED?style=for-the-badge&logo=githubpages&logoColor=white"></a>
   <a href="https://github.com/Hikari-Tsai?tab=repositories"><img alt="GitHub repositories" src="https://img.shields.io/badge/GitHub-Projects-181717?style=for-the-badge&logo=github"></a>
+  <a href="https://github.com/Hikari-Tsai?tab=achievements"><img alt="GitHub achievements" src="https://img.shields.io/badge/GitHub-Achievements-0969DA?style=for-the-badge&logo=github"></a>
   <a href="https://github.com/Hikari-Tsai/dc-manager"><img alt="Discord AI bot" src="https://img.shields.io/badge/Discord-AI_Bot-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
 </p>
 
@@ -15,9 +16,9 @@
 
 ## About Me
 
-I work at the intersection of AI engineering and creative technology. My projects span generative AI, RAG, Physics AI, AIoT, music generation, singing voice synthesis, creator-facing products, and community automation.
+I work at the intersection of AI engineering and creative technology. My projects span generative AI, RAG, agents, Physics AI, AIoT, music generation, singing voice synthesis, creator-facing products, and community automation.
 
-I enjoy turning emerging AI capabilities into tools people can actually use—from livestream and Discord assistants to Traditional Chinese writing workflows and polished web experiences.
+I enjoy turning emerging AI capabilities into tools people can actually use, from livestream and Discord assistants to Traditional Chinese writing workflows, portfolio systems, and polished web experiences.
 
 ## Current Focus
 
@@ -25,7 +26,7 @@ I enjoy turning emerging AI capabilities into tools people can actually use—fr
 AI products        Generative AI, RAG, agents, structured outputs
 Creator systems    Livestream bots, community operations, content workflows
 Creative AI        Music generation, singing voice synthesis, audio technology
-Web experiences    Next.js, React, TypeScript, static deployment
+Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ```
 
 ## Featured Work
@@ -33,18 +34,28 @@ Web experiences    Next.js, React, TypeScript, static deployment
 | Project | What it does |
 | --- | --- |
 | [hikari-tsai-portfolio](https://github.com/Hikari-Tsai/hikari-tsai-portfolio) | My current portfolio, built with Next.js, React, TypeScript, Tailwind CSS, and GitHub Pages. |
-| [twitch-bot](https://github.com/Hikari-Tsai/twitch-bot) | An OpenAI-powered TwitchIO chatbot with configurable reply rules, cooldowns, context memory, and owner commands. |
-| [dc-manager](https://github.com/Hikari-Tsai/dc-manager) | A Discord bot for AI-assisted moderation, channel analytics, member activity, and Traditional Chinese community operations. |
+| [twitch-bot](https://github.com/Hikari-Tsai/twitch-bot) | An OpenAI-powered TwitchIO chatbot with configurable reply rules, cooldowns, context memory, owner commands, token persistence, and emote-aware behavior. |
+| [dc-manager](https://github.com/Hikari-Tsai/dc-manager) | A Discord management assistant for AI-assisted moderation, channel analytics, member activity, policy enforcement, and Traditional Chinese community operations. |
 | [Humanizer-zh-TW](https://github.com/Hikari-Tsai/Humanizer-zh-TW) | An agent skill that rewrites stiff AI-generated text into natural Taiwan Traditional Chinese while preserving meaning and facts. |
 | [JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator) | Audio plug-in and build-system experimentation across C++, macOS, and DSP-adjacent development. |
 
 ## Recent Activity
 
-- **2026-08-07** — Launched and iterated on [hikari-tsai-portfolio](https://github.com/Hikari-Tsai/hikari-tsai-portfolio), including its GitHub Pages deployment.
-- **2026-07-27** — Updated the [homepage](https://github.com/Hikari-Tsai/homepage) project.
-- **2026-07-21** — Continued development of [dc-manager](https://github.com/Hikari-Tsai/dc-manager), covering AI moderation, Discord analytics, and contributor documentation.
-- **Recently** — Expanded [twitch-bot](https://github.com/Hikari-Tsai/twitch-bot) with configurable triggers, livestream-aware behavior, custom emotes, and automated pull-request workflows.
-- **Recently** — Published [Humanizer-zh-TW](https://github.com/Hikari-Tsai/Humanizer-zh-TW) for higher-quality Taiwan Traditional Chinese AI writing.
+- **2026-08-26** — Updated [dc-manager](https://github.com/Hikari-Tsai/dc-manager) moderation behavior, statistics windows, and configuration docs.
+- **2026-08-26** — Improved [twitch-bot](https://github.com/Hikari-Tsai/twitch-bot) Twitch token synchronization and device-code-flow handling.
+- **2026-08-17** — Added token persistence and available-emote detection to [twitch-bot](https://github.com/Hikari-Tsai/twitch-bot).
+- **2026-08** — Continued RAG and staging work with multiple merged pull requests across public repositories.
+- **2026-08-07** — Launched and iterated on [hikari-tsai-portfolio](https://github.com/Hikari-Tsai/hikari-tsai-portfolio), including GitHub Pages deployment.
+
+## GitHub Activity & Achievements
+
+```text
+Public repositories    24
+Last-year activity     251 contributions
+Merged pull requests   35 public PRs
+Current achievements   Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
+Highlight              GitHub Developer Program Member
+```
 
 ## Tech I Use
 
