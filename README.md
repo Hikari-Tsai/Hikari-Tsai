@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <a href="https://hikari-tsai.github.io/hikari-tsai-portfolio/">
+  <a href="https://hikari-tsai.github.io/code-portfolio/">
     <img src="./assets/code-portfolio-button-v2.svg" alt="Code Portfolio: AI engineering, creator tools, web projects, and software work." width="520">
   </a>
 </p>
@@ -57,7 +57,7 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 - **2026-08-26** — Improved [twitch-bot](https://github.com/Hikari-Tsai/twitch-bot) Twitch token synchronization and device-code-flow handling.
 - **2026-08-17** — Added token persistence and available-emote detection to [twitch-bot](https://github.com/Hikari-Tsai/twitch-bot).
 - **2026-08** — Continued RAG and staging work with multiple merged pull requests across public repositories.
-- **2026-08-07** — Launched and iterated on [hikari-tsai-portfolio](https://github.com/Hikari-Tsai/hikari-tsai-portfolio), including GitHub Pages deployment.
+- **2026-08-07** — Launched and iterated on [code-portfolio](https://github.com/Hikari-Tsai/code-portfolio), including GitHub Pages deployment.
 
 ## GitHub Activity & Achievements
 
