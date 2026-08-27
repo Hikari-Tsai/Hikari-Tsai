@@ -20,6 +20,4 @@
   <text x="106" y="76" fill="#E0F2FE" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500">AI engineering &amp; creator tools</text>
   <rect x="488" y="35" width="92" height="42" rx="21" fill="white" fill-opacity="0.18"/>
   <text x="511" y="62" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">Visit</text>
-  <path d="M560 56H543" stroke="white" stroke-width="3" stroke-linecap="round"/>
-  <path d="M552 48L560 56L552 64" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
