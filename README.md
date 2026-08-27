@@ -44,7 +44,7 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 
 | Project | What it does |
 | --- | --- |
-| Private RAG / Agent Systems | Internal AI systems for retrieval-augmented generation, document workflows, structured outputs, and production-facing automation. |
+| Private RAG / Agent Systems (private) | Internal AI systems for retrieval-augmented generation, document workflows, structured outputs, and production-facing automation. |
 | [twitch-bot](https://github.com/Hikari-Tsai/twitch-bot) | An OpenAI-powered TwitchIO chatbot with configurable reply rules, cooldowns, context memory, owner commands, token persistence, and emote-aware behavior. |
 | [dc-manager](https://github.com/Hikari-Tsai/dc-manager) | A Discord management assistant for AI-assisted moderation, channel analytics, member activity, policy enforcement, and Traditional Chinese community operations. |
 | [Humanizer-zh-TW](https://github.com/Hikari-Tsai/Humanizer-zh-TW) | An agent skill that rewrites stiff AI-generated text into natural Taiwan Traditional Chinese while preserving meaning and facts. |
