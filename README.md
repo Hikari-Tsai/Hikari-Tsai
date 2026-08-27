@@ -31,6 +31,14 @@ I work at the intersection of AI engineering and creative technology. My project
 
 I enjoy turning emerging AI capabilities into tools people can actually use, from livestream and Discord assistants to Traditional Chinese writing workflows, portfolio systems, and polished web experiences.
 
+## AWS Certifications
+
+<p align="center">
+  <a href="https://www.credly.com/badges/406f8ed0-c2f1-48b9-8fef-21bac421a9e8/public_url"><img src="https://images.credly.com/images/0e284c3f-5164-4b21-8660-0d84737941bc/linkedin_thumb_image.png" alt="AWS Certified Solutions Architect – Associate" width="150"></a>
+  <a href="https://www.credly.com/badges/b3d97b71-ae01-41a0-bb13-a3bfd11a27ec/public_url"><img src="https://images.credly.com/images/778bde6c-ad1c-4312-ac33-2fa40d50a147/linkedin_thumb_image.png" alt="AWS Certified Machine Learning – Specialty" width="150"></a>
+  <a href="https://www.credly.com/badges/354046b5-a2fb-4f22-92a9-eb032d9e1d16/public_url"><img src="https://images.credly.com/images/6430efe4-0ac0-4df6-8f1b-9559d8fcdf27/linkedin_thumb_image.png" alt="AWS Certified Data Analytics – Specialty" width="150"></a>
+</p>
+
 ## Current Focus
 
 ```text
