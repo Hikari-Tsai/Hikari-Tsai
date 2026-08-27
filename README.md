@@ -44,6 +44,7 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 
 | Project | What it does |
 | --- | --- |
+| [software-salary](https://github.com/Hikari-Tsai/software-salary) | An interactive website for exploring anonymous Taiwan software-engineering salary data, market percentiles, company comparisons, and job-search insights. |
 | Private RAG / Agent Systems (private) | Internal AI systems for retrieval-augmented generation, document workflows, structured outputs, and production-facing automation. |
 | Web PINN Demo (private) | Frontend demo interface for Physics-Informed Neural Network applications, focused on presenting PINN workflows in a clear web experience. |
 | [twitch-bot](https://github.com/Hikari-Tsai/twitch-bot) | An OpenAI-powered TwitchIO chatbot with configurable reply rules, cooldowns, context memory, owner commands, token persistence, and emote-aware behavior. |
@@ -53,6 +54,7 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 
 ## Recent Activity
 
+- **2026-08-27** — Launched [software-salary](https://github.com/Hikari-Tsai/software-salary), an interactive Taiwan software-engineering salary and career-insights website.
 - **2026-08-26** — Updated [dc-manager](https://github.com/Hikari-Tsai/dc-manager) moderation behavior, statistics windows, and configuration docs.
 - **2026-08-26** — Improved [twitch-bot](https://github.com/Hikari-Tsai/twitch-bot) Twitch token synchronization and device-code-flow handling.
 - **2026-08-17** — Added token persistence and available-emote detection to [twitch-bot](https://github.com/Hikari-Tsai/twitch-bot).
