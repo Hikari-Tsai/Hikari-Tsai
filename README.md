@@ -13,12 +13,15 @@
   <a href="https://github.com/Hikari-Tsai/dc-manager"><img alt="Discord AI bot" src="https://img.shields.io/badge/Discord-AI_Bot-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
 </p>
 
-## Portfolio Sites
+<p align="center">
+  <a href="https://hikari-tsai.github.io/hikari-tsai-portfolio/"><strong>Code Portfolio</strong></a><br>
+  AI engineering, creator tools, web projects, and software work.
+</p>
 
-| Site | Focus |
-| --- | --- |
-| [hikari-tsai-portfolio](https://hikari-tsai.github.io/hikari-tsai-portfolio/) | Code portfolio for AI engineering, creator tools, web projects, and software work. |
-| [homepage](https://hikari-tsai.github.io/homepage/) | Music portfolio for original music, creative work, and artist identity. |
+<p align="center">
+  <a href="https://hikari-tsai.github.io/homepage/"><strong>Music Portfolio</strong></a><br>
+  Original music, creative work, and artist identity.
+</p>
 
 ---
 
