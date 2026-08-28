@@ -5,6 +5,14 @@ const readmePath = process.env.LEETCODE_README_PATH ?? "README.md";
 const startMarker = "<!-- LEETCODE_BADGES_START -->";
 const endMarker = "<!-- LEETCODE_BADGES_END -->";
 const visibleBadgeCount = 8;
+const studyPlanPriority = [
+  "LeetCode 75",
+  "Dynamic Programming II",
+  "Algorithm II",
+  "Graph Theory I",
+  "Data Structure II",
+  "Programming Skills II",
+];
 
 const payload = process.env.LEETCODE_BADGES_JSON
   ? JSON.parse(process.env.LEETCODE_BADGES_JSON)
@@ -18,7 +26,13 @@ if (!Array.isArray(badges)) {
 const sortedBadges = [...badges].sort((left, right) =>
   right.creationDate.localeCompare(left.creationDate),
 );
-const badgeImages = sortedBadges.map((badge) => {
+const featuredBadges = selectFeaturedBadges(sortedBadges);
+const featuredIds = new Set(featuredBadges.map((badge) => badge.id));
+const orderedBadges = [
+  ...featuredBadges,
+  ...sortedBadges.filter((badge) => !featuredIds.has(badge.id)),
+];
+const badgeImages = orderedBadges.map((badge) => {
   const name = escapeHtml(badge.displayName);
   const icon = escapeHtml(new URL(badge.icon, "https://leetcode.com").href);
   return `  <a href="https://leetcode.com/u/${username}/"><img src="${icon}" alt="${name}" title="${name}" width="90"></a>`;
@@ -55,6 +69,27 @@ if (!markerPattern.test(readme)) {
 const updatedReadme = readme.replace(markerPattern, `${startMarker}\n${section}\n${endMarker}`);
 await writeFile(readmePath, updatedReadme);
 console.log(`Updated README with ${sortedBadges.length} LeetCode badges`);
+
+function selectFeaturedBadges(allBadges) {
+  const milestones = new Map();
+  for (const badge of allBadges) {
+    const match = badge.displayName.match(/^(\d+) Days Badge/);
+    const days = Number(match?.[1]);
+    if (days >= 100 && !milestones.has(days)) milestones.set(days, badge);
+  }
+
+  const milestoneEntries = [...milestones.entries()].sort(([left], [right]) => right - left);
+  const highMilestones = milestoneEntries.filter(([days]) => days >= 365).map(([, badge]) => badge);
+  const lowerMilestones = milestoneEntries.filter(([days]) => days < 365).map(([, badge]) => badge);
+  const annualBadge = allBadges.find((badge) => badge.displayName.startsWith("Annual Badge"));
+  const studyPlans = studyPlanPriority
+    .map((name) => allBadges.find((badge) => badge.displayName === name))
+    .filter(Boolean);
+
+  return [...highMilestones, annualBadge, ...lowerMilestones, ...studyPlans]
+    .filter(Boolean)
+    .slice(0, visibleBadgeCount);
+}
 
 async function fetchBadges() {
   const response = await fetch("https://leetcode.com/graphql/", {
