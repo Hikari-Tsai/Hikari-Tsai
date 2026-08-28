@@ -40,7 +40,7 @@ test("shows representative achievements and places routine badges under More", (
   assert.equal(result.status, 0, result.stderr);
   const output = readFileSync(readme, "utf8");
   const detailsStart = output.indexOf("<details>");
-  assert.match(output, /<summary align="right"><strong>Show 2 more badges ▾<\/strong><\/summary>/);
+  assert.match(output, /<summary align="right"><strong>Show 2 more badges<\/strong><\/summary>/);
   assert.equal((output.slice(0, detailsStart).match(/width="90"/g) ?? []).length, 8);
   assert.equal((output.slice(detailsStart).match(/width="90"/g) ?? []).length, 2);
   for (const name of ["500 Days Badge", "365 Days Badge", "Annual Badge 2024", "200 Days Badge 2024", "100 Days Badge 2025", "LeetCode 75", "Dynamic Programming II", "Algorithm II"]) {

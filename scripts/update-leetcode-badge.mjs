@@ -49,7 +49,7 @@ if (hiddenBadges.length > 0) {
   const badgeLabel = hiddenBadges.length === 1 ? "badge" : "badges";
   sectionLines.push(
     "<details>",
-    `<summary align="right"><strong>Show ${hiddenBadges.length} more ${badgeLabel} ▾</strong></summary>`,
+    `<summary align="right"><strong>Show ${hiddenBadges.length} more ${badgeLabel}</strong></summary>`,
     "<br>",
     '<p align="center">',
     hiddenBadges.join("\n"),
