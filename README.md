@@ -42,10 +42,66 @@ I enjoy turning emerging AI capabilities into tools people can actually use, fro
 ## LeetCode
 
 <p align="center">
-  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FHikari-Tsai%2FHikari-Tsai%2Fmain%2Fassets%2Fleetcode-badge.json&amp;style=for-the-badge" alt="LeetCode solved problems badge"></a>
-  <br><br>
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcard.jacoblin.cool/Hikari-Tsai?theme=dark&amp;font=Inter&amp;ext=heatmap" alt="Hikari-Tsai LeetCode statistics" width="500"></a>
 </p>
+
+<!-- LEETCODE_BADGES_START -->
+<details>
+<summary><strong>View all 49 LeetCode badges</strong></summary>
+<br>
+<p align="center">
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2025-5.png" alt="May LeetCoding Challenge" title="May LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2025-6.png" alt="Jun LeetCoding Challenge" title="Jun LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/lg25100.png" alt="100 Days Badge 2025" title="100 Days Badge 2025" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2025-4.png" alt="Apr LeetCoding Challenge" title="Apr LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/lg2550.png" alt="50 Days Badge 2025" title="50 Days Badge 2025" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/marketing/lg500.png" alt="500 Days Badge" title="500 Days Badge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/marketing/lg365.png" alt="365 Days Badge" title="365 Days Badge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2024-10.png" alt="Oct LeetCoding Challenge" title="Oct LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/marketing/2024-lg.png" alt="Annual Badge 2024" title="Annual Badge 2024" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2024-9.png" alt="Sep LeetCoding Challenge" title="Sep LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2024-8.png" alt="Aug LeetCoding Challenge" title="Aug LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2024-7.png" alt="Jul LeetCoding Challenge" title="Jul LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/marketing/2024-200-lg.png" alt="200 Days Badge 2024" title="200 Days Badge 2024" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2024-6.png" alt="Jun LeetCoding Challenge" title="Jun LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2024-5.png" alt="May LeetCoding Challenge" title="May LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2024-4.png" alt="Apr LeetCoding Challenge" title="Apr LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/marketing/2024-100-lg.png" alt="100 Days Badge 2024" title="100 Days Badge 2024" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2024-3.png" alt="Mar LeetCoding Challenge" title="Mar LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/Programming_Skills.png" alt="Programming Skills" title="Programming Skills" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/Dynamic_Programming.png" alt="Dynamic Programming" title="Dynamic Programming" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2024-2.png" alt="Feb LeetCoding Challenge" title="Feb LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/Binary_Search.png" alt="Binary Search" title="Binary Search" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/marketing/2024-50-lg.png" alt="50 Days Badge 2024" title="50 Days Badge 2024" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/Pandas_icon.png" alt="30 Days of Pandas" title="30 Days of Pandas" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2024-1.png" alt="Jan LeetCoding Challenge" title="Jan LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2023-12.png" alt="Dec LeetCoding Challenge" title="Dec LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/marketing/lg50.png" alt="50 Days Badge 2023" title="50 Days Badge 2023" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/marketing/lg100.png" alt="100 Days Badge 2023" title="100 Days Badge 2023" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2023-11.png" alt="Nov LeetCoding Challenge" title="Nov LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/Introduction_to_Pandas_Badge.png" alt="Introduction to Pandas" title="Introduction to Pandas" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/LeetCode_75.png" alt="LeetCode 75" title="LeetCode 75" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2023-6.png" alt="Jun LeetCoding Challenge" title="Jun LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2023-5.png" alt="May LeetCoding Challenge" title="May LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2023-4.png" alt="Apr LeetCoding Challenge" title="Apr LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2023-2.png" alt="Feb LeetCoding Challenge" title="Feb LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2023-1.png" alt="Jan LeetCoding Challenge" title="Jan LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/2022/lg/2022-annual-100.png" alt="100 Days Badge 2022" title="100 Days Badge 2022" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2022-12.png" alt="Dec LeetCoding Challenge" title="Dec LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/DP_II.png" alt="Dynamic Programming II" title="Dynamic Programming II" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/algorithm_II.png" alt="Algorithm II" title="Algorithm II" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2022-11.png" alt="Nov LeetCoding Challenge" title="Nov LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/%E5%9B%BE%E8%AE%BA.png" alt="Graph Theory I" title="Graph Theory I" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/DS_II.png" alt="Data Structure II" title="Data Structure II" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/%E4%BC%9A%E5%91%98.png" alt="Level 3" title="Level 3" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2022-10.png" alt="Oct LeetCoding Challenge" title="Oct LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/%E7%BC%96%E7%A8%8B%E8%83%BD%E5%8A%9B_%E5%9F%BA%E7%A1%80.png" alt="Programming Skills II" title="Programming Skills II" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/algorithm_I.png" alt="Algorithm I" title="Algorithm I" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/%E5%85%A5%E9%97%A8.png" alt="Level 1" title="Level 1" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/%E7%BC%96%E7%A8%8B%E8%83%BD%E5%8A%9B_%E5%85%A5%E9%97%A8.png" alt="Programming Skills I" title="Programming Skills I" width="90"></a>
+</p>
+</details>
+<!-- LEETCODE_BADGES_END -->
 
 ## Current Focus
 

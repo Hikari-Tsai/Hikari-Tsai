@@ -1,4 +1,4 @@
-name: Update LeetCode badge
+name: Update LeetCode badges
 
 on:
   schedule:
@@ -20,12 +20,12 @@ jobs:
         run: node scripts/update-leetcode-badge.mjs
       - name: Commit changes
         run: |
-          if git diff --quiet -- assets/leetcode-badge.json; then
-            echo "LeetCode badge is already up to date."
+          if git diff --quiet -- README.md; then
+            echo "LeetCode badges are already up to date."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/leetcode-badge.json
-          git commit -m "chore: update LeetCode badge"
+          git add README.md
+          git commit -m "chore: update LeetCode badges"
           git push

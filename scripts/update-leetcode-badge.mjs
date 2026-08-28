@@ -1,31 +1,70 @@
-import { mkdir, writeFile } from "node:fs/promises";
-import { dirname } from "node:path";
+import { readFile, writeFile } from "node:fs/promises";
 
-const cardUrl = process.env.LEETCODE_CARD_URL ??
-  "https://leetcard.jacoblin.cool/Hikari-Tsai?theme=dark&font=Inter&ext=heatmap";
-const output = process.env.LEETCODE_BADGE_OUTPUT ?? "assets/leetcode-badge.json";
+const username = "Hikari-Tsai";
+const readmePath = process.env.LEETCODE_README_PATH ?? "README.md";
+const startMarker = "<!-- LEETCODE_BADGES_START -->";
+const endMarker = "<!-- LEETCODE_BADGES_END -->";
 
-const response = await fetch(cardUrl);
-if (!response.ok) {
-  throw new Error(`LeetCode card request failed with HTTP ${response.status}`);
+const payload = process.env.LEETCODE_BADGES_JSON
+  ? JSON.parse(process.env.LEETCODE_BADGES_JSON)
+  : await fetchBadges();
+const badges = payload?.data?.matchedUser?.badges;
+
+if (!Array.isArray(badges)) {
+  throw new Error("LeetCode response did not include a badges array");
 }
 
-const svg = await response.text();
-const match = svg.match(/<text[^>]*id="total-solved-text"[^>]*>([\d,]+)<\/text>/);
-if (!match) {
-  throw new Error("Could not find the total solved count in the LeetCode card");
+const sortedBadges = [...badges].sort((left, right) =>
+  right.creationDate.localeCompare(left.creationDate),
+);
+const badgeImages = sortedBadges.map((badge) => {
+  const name = escapeHtml(badge.displayName);
+  const icon = escapeHtml(new URL(badge.icon, "https://leetcode.com").href);
+  return `  <a href="https://leetcode.com/u/${username}/"><img src="${icon}" alt="${name}" title="${name}" width="90"></a>`;
+}).join("\n");
+const section = [
+  "<details>",
+  `<summary><strong>View all ${sortedBadges.length} LeetCode badges</strong></summary>`,
+  "<br>",
+  '<p align="center">',
+  badgeImages,
+  "</p>",
+  "</details>",
+].join("\n");
+
+const readme = await readFile(readmePath, "utf8");
+const markerPattern = new RegExp(`${startMarker}[\\s\\S]*?${endMarker}`);
+if (!markerPattern.test(readme)) {
+  throw new Error("README is missing the LeetCode badge markers");
 }
 
-const solved = Number.parseInt(match[1].replaceAll(",", ""), 10);
-const badge = {
-  schemaVersion: 1,
-  label: "LeetCode Solved",
-  message: solved.toLocaleString("en-US"),
-  color: "FFA116",
-  namedLogo: "leetcode",
-  logoColor: "white",
-};
+const updatedReadme = readme.replace(markerPattern, `${startMarker}\n${section}\n${endMarker}`);
+await writeFile(readmePath, updatedReadme);
+console.log(`Updated README with ${sortedBadges.length} LeetCode badges`);
 
-await mkdir(dirname(output), { recursive: true });
-await writeFile(output, `${JSON.stringify(badge, null, 2)}\n`);
-console.log(`Updated LeetCode badge: ${badge.message} solved`);
+async function fetchBadges() {
+  const response = await fetch("https://leetcode.com/graphql/", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      referer: `https://leetcode.com/u/${username}/`,
+    },
+    body: JSON.stringify({
+      query: "query userBadges($username: String!) { matchedUser(username: $username) { badges { id displayName icon creationDate } } }",
+      variables: { username },
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`LeetCode request failed with HTTP ${response.status}`);
+  }
+  return response.json();
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;");
+}
