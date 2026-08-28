@@ -5,7 +5,7 @@ import { join } from "node:path";
 import { spawnSync } from "node:child_process";
 import test from "node:test";
 
-test("shows representative achievements and places routine badges under More", () => {
+test("features advanced algorithm badges with visible titles and hides routine badges", () => {
   const directory = mkdtempSync(join(tmpdir(), "leetcode-badge-"));
   const readme = join(directory, "README.md");
   writeFileSync(readme, "# Profile\n\n<!-- LEETCODE_BADGES_START -->\nold\n<!-- LEETCODE_BADGES_END -->\n");
@@ -23,6 +23,11 @@ test("shows representative achievements and places routine badges under More", (
           { id: "8", displayName: "LeetCode 75", icon: "/leetcode-75.png", creationDate: "2024-04-01" },
           { id: "9", displayName: "Dynamic Programming II", icon: "/dp-2.png", creationDate: "2023-04-01" },
           { id: "10", displayName: "Algorithm II", icon: "/algorithm-2.png", creationDate: "2023-03-01" },
+          { id: "11", displayName: "Data Structure II", icon: "/data-structure-2.png", creationDate: "2023-02-01" },
+          { id: "12", displayName: "Programming Skills II", icon: "/programming-skills-2.png", creationDate: "2023-01-01" },
+          { id: "13", displayName: "Graph Theory I", icon: "/graph-1.png", creationDate: "2022-12-01" },
+          { id: "14", displayName: "Level 3", icon: "/level-3.png", creationDate: "2022-11-01" },
+          { id: "15", displayName: "Algorithm III", icon: "/algorithm-3.png", creationDate: "2026-01-01" },
         ],
       },
     },
@@ -40,13 +45,15 @@ test("shows representative achievements and places routine badges under More", (
   assert.equal(result.status, 0, result.stderr);
   const output = readFileSync(readme, "utf8");
   const detailsStart = output.indexOf("<details>");
-  assert.match(output, /<summary align="right"><strong>Show 2 more badges<\/strong><\/summary>/);
-  assert.equal((output.slice(0, detailsStart).match(/width="90"/g) ?? []).length, 8);
-  assert.equal((output.slice(detailsStart).match(/width="90"/g) ?? []).length, 2);
-  for (const name of ["500 Days Badge", "365 Days Badge", "Annual Badge 2024", "200 Days Badge 2024", "100 Days Badge 2025", "LeetCode 75", "Dynamic Programming II", "Algorithm II"]) {
+  assert.match(output, /<summary align="right"><strong>Show 6 more badges<\/strong><\/summary>/);
+  assert.equal((output.slice(0, detailsStart).match(/width="90"/g) ?? []).length, 9);
+  assert.equal((output.slice(detailsStart).match(/width="90"/g) ?? []).length, 6);
+  for (const name of ["500 Days Badge", "LeetCode 75", "Dynamic Programming II", "Algorithm II", "Data Structure II", "Programming Skills II", "Graph Theory I", "Level 3", "Algorithm III"]) {
     assert.ok(output.indexOf(name) < detailsStart, `${name} should be featured`);
+    assert.match(output.slice(0, detailsStart), new RegExp(`<sub><strong>${name}<\\/strong><\\/sub>`));
   }
   assert.ok(output.indexOf("May LeetCoding Challenge") > detailsStart);
   assert.ok(output.indexOf("100 Days Badge 2024") > detailsStart);
+  assert.ok(output.indexOf("365 Days Badge") > detailsStart);
   assert.doesNotMatch(output, /\nold\n/);
 });

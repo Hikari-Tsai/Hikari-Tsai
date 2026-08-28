@@ -4,15 +4,7 @@ const username = "Hikari-Tsai";
 const readmePath = process.env.LEETCODE_README_PATH ?? "README.md";
 const startMarker = "<!-- LEETCODE_BADGES_START -->";
 const endMarker = "<!-- LEETCODE_BADGES_END -->";
-const visibleBadgeCount = 8;
-const studyPlanPriority = [
-  "LeetCode 75",
-  "Dynamic Programming II",
-  "Algorithm II",
-  "Graph Theory I",
-  "Data Structure II",
-  "Programming Skills II",
-];
+const featuredColumns = 4;
 
 const payload = process.env.LEETCODE_BADGES_JSON
   ? JSON.parse(process.env.LEETCODE_BADGES_JSON)
@@ -28,22 +20,8 @@ const sortedBadges = [...badges].sort((left, right) =>
 );
 const featuredBadges = selectFeaturedBadges(sortedBadges);
 const featuredIds = new Set(featuredBadges.map((badge) => badge.id));
-const orderedBadges = [
-  ...featuredBadges,
-  ...sortedBadges.filter((badge) => !featuredIds.has(badge.id)),
-];
-const badgeImages = orderedBadges.map((badge) => {
-  const name = escapeHtml(badge.displayName);
-  const icon = escapeHtml(new URL(badge.icon, "https://leetcode.com").href);
-  return `  <a href="https://leetcode.com/u/${username}/"><img src="${icon}" alt="${name}" title="${name}" width="90"></a>`;
-});
-const visibleBadges = badgeImages.slice(0, visibleBadgeCount);
-const hiddenBadges = badgeImages.slice(visibleBadgeCount);
-const sectionLines = [
-  '<p align="center">',
-  visibleBadges.join("\n"),
-  "</p>",
-];
+const hiddenBadges = sortedBadges.filter((badge) => !featuredIds.has(badge.id));
+const sectionLines = [renderFeaturedGrid(featuredBadges)];
 
 if (hiddenBadges.length > 0) {
   const badgeLabel = hiddenBadges.length === 1 ? "badge" : "badges";
@@ -52,13 +30,31 @@ if (hiddenBadges.length > 0) {
     `<summary align="right"><strong>Show ${hiddenBadges.length} more ${badgeLabel}</strong></summary>`,
     "<br>",
     '<p align="center">',
-    hiddenBadges.join("\n"),
+    hiddenBadges.map(renderBadgeImage).join("\n"),
     "</p>",
     "</details>",
   );
 }
 
 const section = sectionLines.join("\n");
+
+function renderBadgeImage(badge) {
+  const name = escapeHtml(badge.displayName);
+  const icon = escapeHtml(new URL(badge.icon, "https://leetcode.com").href);
+  return `  <a href="https://leetcode.com/u/${username}/"><img src="${icon}" alt="${name}" title="${name}" width="90"></a>`;
+}
+
+function renderFeaturedGrid(featuredBadges) {
+  const rows = [];
+  for (let index = 0; index < featuredBadges.length; index += featuredColumns) {
+    const cells = featuredBadges.slice(index, index + featuredColumns).map((badge) => {
+      const name = escapeHtml(badge.displayName);
+      return `    <td align="center" valign="top" width="140">\n${renderBadgeImage(badge)}<br>\n      <sub><strong>${name}</strong></sub>\n    </td>`;
+    });
+    rows.push(`  <tr>\n${cells.join("\n")}\n  </tr>`);
+  }
+  return `<table align="center">\n${rows.join("\n")}\n</table>`;
+}
 
 const readme = await readFile(readmePath, "utf8");
 const markerPattern = new RegExp(`${startMarker}[\\s\\S]*?${endMarker}`);
@@ -71,24 +67,35 @@ await writeFile(readmePath, updatedReadme);
 console.log(`Updated README with ${sortedBadges.length} LeetCode badges`);
 
 function selectFeaturedBadges(allBadges) {
-  const milestones = new Map();
-  for (const badge of allBadges) {
-    const match = badge.displayName.match(/^(\d+) Days Badge/);
-    const days = Number(match?.[1]);
-    if (days >= 100 && !milestones.has(days)) milestones.set(days, badge);
-  }
+  return allBadges
+    .map((badge) => ({ badge, rank: featuredBadgeRank(badge.displayName) }))
+    .filter(({ rank }) => rank > 0)
+    .sort((left, right) => right.rank - left.rank || right.badge.creationDate.localeCompare(left.badge.creationDate))
+    .map(({ badge }) => badge);
+}
 
-  const milestoneEntries = [...milestones.entries()].sort(([left], [right]) => right - left);
-  const highMilestones = milestoneEntries.filter(([days]) => days >= 365).map(([, badge]) => badge);
-  const lowerMilestones = milestoneEntries.filter(([days]) => days < 365).map(([, badge]) => badge);
-  const annualBadge = allBadges.find((badge) => badge.displayName.startsWith("Annual Badge"));
-  const studyPlans = studyPlanPriority
-    .map((name) => allBadges.find((badge) => badge.displayName === name))
-    .filter(Boolean);
+function featuredBadgeRank(name) {
+  if (name === "500 Days Badge") return 10000;
 
-  return [...highMilestones, annualBadge, ...lowerMilestones, ...studyPlans]
-    .filter(Boolean)
-    .slice(0, visibleBadgeCount);
+  const romanMatch = name.match(/\b([IVXLCDM]+)$/);
+  const romanLevel = romanMatch ? romanToNumber(romanMatch[1]) : 0;
+  if (romanLevel >= 2) return 9000 + romanLevel;
+
+  const levelMatch = name.match(/^Level (\d+)$/);
+  const numericLevel = Number(levelMatch?.[1]);
+  if (numericLevel >= 2) return 8000 + numericLevel;
+
+  if (name === "LeetCode 75") return 7000;
+  if (name === "Graph Theory I") return 6000;
+  return 0;
+}
+
+function romanToNumber(roman) {
+  const values = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
+  return [...roman].reduce((total, character, index, characters) => {
+    const value = values[character];
+    return total + (value < (values[characters[index + 1]] ?? 0) ? -value : value);
+  }, 0);
 }
 
 async function fetchBadges() {
