@@ -4,6 +4,7 @@ const username = "Hikari-Tsai";
 const readmePath = process.env.LEETCODE_README_PATH ?? "README.md";
 const startMarker = "<!-- LEETCODE_BADGES_START -->";
 const endMarker = "<!-- LEETCODE_BADGES_END -->";
+const visibleBadgeCount = 8;
 
 const payload = process.env.LEETCODE_BADGES_JSON
   ? JSON.parse(process.env.LEETCODE_BADGES_JSON)
@@ -21,16 +22,28 @@ const badgeImages = sortedBadges.map((badge) => {
   const name = escapeHtml(badge.displayName);
   const icon = escapeHtml(new URL(badge.icon, "https://leetcode.com").href);
   return `  <a href="https://leetcode.com/u/${username}/"><img src="${icon}" alt="${name}" title="${name}" width="90"></a>`;
-}).join("\n");
-const section = [
-  "<details>",
-  `<summary><strong>View all ${sortedBadges.length} LeetCode badges</strong></summary>`,
-  "<br>",
+});
+const visibleBadges = badgeImages.slice(0, visibleBadgeCount);
+const hiddenBadges = badgeImages.slice(visibleBadgeCount);
+const sectionLines = [
   '<p align="center">',
-  badgeImages,
+  visibleBadges.join("\n"),
   "</p>",
-  "</details>",
-].join("\n");
+];
+
+if (hiddenBadges.length > 0) {
+  sectionLines.push(
+    "<details>",
+    `<summary><strong>More (${hiddenBadges.length})</strong></summary>`,
+    "<br>",
+    '<p align="center">',
+    hiddenBadges.join("\n"),
+    "</p>",
+    "</details>",
+  );
+}
+
+const section = sectionLines.join("\n");
 
 const readme = await readFile(readmePath, "utf8");
 const markerPattern = new RegExp(`${startMarker}[\\s\\S]*?${endMarker}`);

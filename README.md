@@ -46,9 +46,6 @@ I enjoy turning emerging AI capabilities into tools people can actually use, fro
 </p>
 
 <!-- LEETCODE_BADGES_START -->
-<details>
-<summary><strong>View all 49 LeetCode badges</strong></summary>
-<br>
 <p align="center">
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2025-5.png" alt="May LeetCoding Challenge" title="May LeetCoding Challenge" width="90"></a>
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2025-6.png" alt="Jun LeetCoding Challenge" title="Jun LeetCoding Challenge" width="90"></a>
@@ -58,6 +55,11 @@ I enjoy turning emerging AI capabilities into tools people can actually use, fro
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/marketing/lg500.png" alt="500 Days Badge" title="500 Days Badge" width="90"></a>
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/marketing/lg365.png" alt="365 Days Badge" title="365 Days Badge" width="90"></a>
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2024-10.png" alt="Oct LeetCoding Challenge" title="Oct LeetCoding Challenge" width="90"></a>
+</p>
+<details>
+<summary><strong>More (41)</strong></summary>
+<br>
+<p align="center">
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/marketing/2024-lg.png" alt="Annual Badge 2024" title="Annual Badge 2024" width="90"></a>
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2024-9.png" alt="Sep LeetCoding Challenge" title="Sep LeetCoding Challenge" width="90"></a>
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2024-8.png" alt="Aug LeetCoding Challenge" title="Aug LeetCoding Challenge" width="90"></a>
