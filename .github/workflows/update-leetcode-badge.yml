@@ -1,0 +1,31 @@
+name: Update LeetCode badge
+
+on:
+  schedule:
+    - cron: "17 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Update badge data
+        run: node scripts/update-leetcode-badge.mjs
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- assets/leetcode-badge.json; then
+            echo "LeetCode badge is already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/leetcode-badge.json
+          git commit -m "chore: update LeetCode badge"
+          git push

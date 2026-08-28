@@ -42,6 +42,8 @@ I enjoy turning emerging AI capabilities into tools people can actually use, fro
 ## LeetCode
 
 <p align="center">
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FHikari-Tsai%2FHikari-Tsai%2Fmain%2Fassets%2Fleetcode-badge.json&amp;style=for-the-badge" alt="LeetCode solved problems badge"></a>
+  <br><br>
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcard.jacoblin.cool/Hikari-Tsai?theme=dark&amp;font=Inter&amp;ext=heatmap" alt="Hikari-Tsai LeetCode statistics" width="500"></a>
 </p>
 
