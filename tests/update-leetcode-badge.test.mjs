@@ -45,6 +45,9 @@ test("features advanced algorithm badges with visible titles and hides routine b
   assert.equal(result.status, 0, result.stderr);
   const output = readFileSync(readme, "utf8");
   const detailsStart = output.indexOf("<details>");
+  const tableEnd = output.indexOf("</table>", detailsStart);
+  assert.match(output, /<td align="right" colspan="4">\n<details>/);
+  assert.ok(detailsStart < tableEnd, "More should be inside the featured badge table");
   assert.match(output, /<summary align="right"><strong>Show 6 more badges<\/strong><\/summary>/);
   assert.equal((output.slice(0, detailsStart).match(/width="90"/g) ?? []).length, 9);
   assert.equal((output.slice(detailsStart).match(/width="90"/g) ?? []).length, 6);

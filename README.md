@@ -83,7 +83,8 @@ I enjoy turning emerging AI capabilities into tools people can actually use, fro
       <sub><strong>Graph Theory I</strong></sub>
     </td>
   </tr>
-</table>
+  <tr>
+    <td align="right" colspan="4">
 <details>
 <summary align="right"><strong>Show 41 more badges</strong></summary>
 <br>
@@ -131,6 +132,9 @@ I enjoy turning emerging AI capabilities into tools people can actually use, fro
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/%E7%BC%96%E7%A8%8B%E8%83%BD%E5%8A%9B_%E5%85%A5%E9%97%A8.png" alt="Programming Skills I" title="Programming Skills I" width="90"></a>
 </p>
 </details>
+    </td>
+  </tr>
+</table>
 <!-- LEETCODE_BADGES_END -->
 
 ## Current Focus

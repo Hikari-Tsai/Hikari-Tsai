@@ -21,22 +21,7 @@ const sortedBadges = [...badges].sort((left, right) =>
 const featuredBadges = selectFeaturedBadges(sortedBadges);
 const featuredIds = new Set(featuredBadges.map((badge) => badge.id));
 const hiddenBadges = sortedBadges.filter((badge) => !featuredIds.has(badge.id));
-const sectionLines = [renderFeaturedGrid(featuredBadges)];
-
-if (hiddenBadges.length > 0) {
-  const badgeLabel = hiddenBadges.length === 1 ? "badge" : "badges";
-  sectionLines.push(
-    "<details>",
-    `<summary align="right"><strong>Show ${hiddenBadges.length} more ${badgeLabel}</strong></summary>`,
-    "<br>",
-    '<p align="center">',
-    hiddenBadges.map(renderBadgeImage).join("\n"),
-    "</p>",
-    "</details>",
-  );
-}
-
-const section = sectionLines.join("\n");
+const section = renderFeaturedGrid(featuredBadges, hiddenBadges);
 
 function renderBadgeImage(badge) {
   const name = escapeHtml(badge.displayName);
@@ -44,7 +29,7 @@ function renderBadgeImage(badge) {
   return `  <a href="https://leetcode.com/u/${username}/"><img src="${icon}" alt="${name}" title="${name}" width="90"></a>`;
 }
 
-function renderFeaturedGrid(featuredBadges) {
+function renderFeaturedGrid(featuredBadges, hiddenBadges) {
   const rows = [];
   for (let index = 0; index < featuredBadges.length; index += featuredColumns) {
     const cells = featuredBadges.slice(index, index + featuredColumns).map((badge) => {
@@ -53,6 +38,24 @@ function renderFeaturedGrid(featuredBadges) {
     });
     rows.push(`  <tr>\n${cells.join("\n")}\n  </tr>`);
   }
+
+  if (hiddenBadges.length > 0) {
+    const badgeLabel = hiddenBadges.length === 1 ? "badge" : "badges";
+    rows.push([
+      "  <tr>",
+      `    <td align="right" colspan="${featuredColumns}">`,
+      "<details>",
+      `<summary align="right"><strong>Show ${hiddenBadges.length} more ${badgeLabel}</strong></summary>`,
+      "<br>",
+      '<p align="center">',
+      hiddenBadges.map(renderBadgeImage).join("\n"),
+      "</p>",
+      "</details>",
+      "    </td>",
+      "  </tr>",
+    ].join("\n"));
+  }
+
   return `<table align="center">\n${rows.join("\n")}\n</table>`;
 }
 
