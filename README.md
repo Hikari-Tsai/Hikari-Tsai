@@ -39,6 +39,12 @@ I enjoy turning emerging AI capabilities into tools people can actually use, fro
   <a href="https://www.credly.com/badges/354046b5-a2fb-4f22-92a9-eb032d9e1d16/public_url"><img src="assets/aws-certifications/data-analytics-specialty.png" alt="AWS Certified Data Analytics – Specialty" width="220"></a>
 </p>
 
+## LeetCode
+
+<p align="center">
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcard.jacoblin.cool/Hikari-Tsai?theme=dark&amp;font=Inter&amp;ext=heatmap" alt="Hikari-Tsai LeetCode statistics" width="500"></a>
+</p>
+
 ## Current Focus
 
 ```text
