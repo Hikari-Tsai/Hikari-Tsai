@@ -34,7 +34,7 @@ test("shows the newest eight badges and places the rest under More", () => {
   assert.equal(result.status, 0, result.stderr);
   const output = readFileSync(readme, "utf8");
   const detailsStart = output.indexOf("<details>");
-  assert.match(output, /<summary><strong>More \(1\)<\/strong><\/summary>/);
+  assert.match(output, /<summary align="right"><strong>Show 1 more badge ▾<\/strong><\/summary>/);
   assert.equal((output.slice(0, detailsStart).match(/width="90"/g) ?? []).length, 8);
   assert.equal((output.slice(detailsStart).match(/width="90"/g) ?? []).length, 1);
   assert.ok(output.indexOf("Badge 9") < output.indexOf("Badge 8"));

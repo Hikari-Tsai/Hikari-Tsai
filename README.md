@@ -57,7 +57,7 @@ I enjoy turning emerging AI capabilities into tools people can actually use, fro
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2024-10.png" alt="Oct LeetCoding Challenge" title="Oct LeetCoding Challenge" width="90"></a>
 </p>
 <details>
-<summary><strong>More (41)</strong></summary>
+<summary align="right"><strong>Show 41 more badges ▾</strong></summary>
 <br>
 <p align="center">
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/marketing/2024-lg.png" alt="Annual Badge 2024" title="Annual Badge 2024" width="90"></a>
