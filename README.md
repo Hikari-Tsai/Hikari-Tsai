@@ -160,22 +160,30 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 
 ## Recent Activity
 
-- **2026-08-27** — Launched [software-salary](https://github.com/Hikari-Tsai/software-salary), an interactive Taiwan software-engineering salary and career-insights website.
-- **2026-08-26** — Updated [dc-manager](https://github.com/Hikari-Tsai/dc-manager) moderation behavior, statistics windows, and configuration docs.
-- **2026-08-26** — Improved [twitch-bot](https://github.com/Hikari-Tsai/twitch-bot) Twitch token synchronization and device-code-flow handling.
-- **2026-08-17** — Added token persistence and available-emote detection to [twitch-bot](https://github.com/Hikari-Tsai/twitch-bot).
-- **2026-08** — Continued RAG and staging work with multiple merged pull requests across public repositories.
-- **2026-08-07** — Launched and iterated on [code-portfolio](https://github.com/Hikari-Tsai/code-portfolio), including GitHub Pages deployment.
+<!-- GITHUB_RECENT_ACTIVITY_START -->
+- **2026-08-28** — Pushed updates to [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary).
+- **2026-08-28** — Pushed updates to [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio).
+- **2026-08-27** — Pushed updates to [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary).
+- **2026-08-27** — Pushed updates to [Hikari-Tsai/software-salaries](https://github.com/Hikari-Tsai/software-salaries).
+- **2026-08-27** — Pushed updates to [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio).
+- **2026-08-26** — Pushed updates to [Hikari-Tsai/twitch-bot](https://github.com/Hikari-Tsai/twitch-bot).
+<!-- GITHUB_RECENT_ACTIVITY_END -->
 
 ## GitHub Activity & Achievements
 
+<!-- GITHUB_STATS_START -->
 ```text
-Public repositories    24
-Last-year activity     251 contributions
+Public repositories    26
+Last-year activity     174 contributions
 Merged pull requests   35 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
 ```
+<!-- GITHUB_STATS_END -->
+
+<!-- GITHUB_UPDATED_AT_START -->
+<p align="right"><sub>Last updated: 2026-08-31 01:47 (UTC+8)</sub></p>
+<!-- GITHUB_UPDATED_AT_END -->
 
 ## Tech I Use
 
