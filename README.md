@@ -173,7 +173,7 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 Public repositories    24
 Last-year activity     251 contributions
 Merged pull requests   35 public PRs
-Current achievements   Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
+Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
 ```
 
