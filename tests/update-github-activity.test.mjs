@@ -46,6 +46,9 @@ old timestamp
     { id: "8", type: "PushEvent", created_at: "2026-08-25T06:00:00Z", repo: { name: "Hikari-Tsai/three" }, payload: { commits: [{}] } },
     { id: "9", type: "PushEvent", created_at: "2026-08-31T06:00:00Z", repo: { name: "Hikari-Tsai/Hikari-Tsai" }, payload: { commits: Array(9).fill({}) } },
     { id: "10", type: "WatchEvent", created_at: "2026-08-31T07:00:00Z", repo: { name: "someone/ignored" }, payload: {} },
+    { id: "11", type: "PushEvent", created_at: "2026-08-29T12:00:00Z", repo: { name: "Hikari-Tsai/app" }, payload: { commits: [{}] } },
+    { id: "12", type: "PushEvent", created_at: "2026-08-28T12:00:00Z", repo: { name: "Hikari-Tsai/app" }, payload: { commits: [{}] } },
+    { id: "13", type: "PushEvent", created_at: "2026-08-27T12:00:00Z", repo: { name: "Hikari-Tsai/app" }, payload: { commits: [{}] } },
   ];
   const result = spawnSync(process.execPath, ["scripts/update-github-activity.mjs"], {
     cwd: new URL("..", import.meta.url),
@@ -68,12 +71,12 @@ old timestamp
   assert.match(output, /Highlight              Keep This Highlight/);
   assert.ok(output.includes("Merged [Hikari-Tsai/tool#12](https://github.com/Hikari-Tsai/tool/pull/12): Improve \\[parser\\]."));
   assert.match(output, /Pushed 3 commits to \[Hikari-Tsai\/app\]/);
-  assert.match(output, /Pushed updates to \[Hikari-Tsai\/two\]/);
   assert.match(output, /Created \[Hikari-Tsai\/new-repo\]/);
   assert.match(output, /Published \[v1\.0\.0\].*in \[Hikari-Tsai\/lib\]/);
   assert.doesNotMatch(output, /Hikari-Tsai\/Hikari-Tsai/);
   assert.doesNotMatch(output, /Hikari-Tsai\/three/);
   assert.equal((output.match(/^- \*\*2026-/gm) ?? []).length, 6);
+  assert.equal((output.match(/\[Hikari-Tsai\/app\]/g) ?? []).length, 2);
   assert.equal((output.match(/<p align="right"><sub>Last updated: 2026-08-31 09:30 \(UTC\+8\)<\/sub><\/p>/g) ?? []).length, 2);
   assert.ok(output.indexOf("GITHUB_RECENT_UPDATED_AT_START") < output.indexOf("GITHUB_STATS_START"));
 });

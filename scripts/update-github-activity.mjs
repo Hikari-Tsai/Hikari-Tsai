@@ -63,16 +63,25 @@ async function summarize(events) {
       });
     } else if (event.type === "PullRequestEvent" && event.payload?.action === "closed" && event.payload?.pull_request?.merged) {
       const pr = event.payload.pull_request;
-      summaries.push({ timestamp, text: `- **${date}** — Merged [${repo}#${pr.number}](${pr.html_url}): ${markdownText(pr.title)}.` });
+      summaries.push({ repo, timestamp, text: `- **${date}** — Merged [${repo}#${pr.number}](${pr.html_url}): ${markdownText(pr.title)}.` });
     } else if (event.type === "CreateEvent" && event.payload?.ref_type === "repository") {
-      summaries.push({ timestamp, text: `- **${date}** — Created ${repoLink(repo)}.` });
+      summaries.push({ repo, timestamp, text: `- **${date}** — Created ${repoLink(repo)}.` });
     } else if (event.type === "ReleaseEvent" && event.payload?.action === "published") {
       const release = event.payload.release;
-      summaries.push({ timestamp, text: `- **${date}** — Published [${markdownText(release?.tag_name ?? "release")}](${release?.html_url}) in ${repoLink(repo)}.` });
+      summaries.push({ repo, timestamp, text: `- **${date}** — Published [${markdownText(release?.tag_name ?? "release")}](${release?.html_url}) in ${repoLink(repo)}.` });
     }
   }
-  const selected = [...summaries, ...[...pushes.values()].map((push) => ({ timestamp: push.timestamp, push }))]
-    .sort((a, b) => b.timestamp.localeCompare(a.timestamp)).slice(0, 6);
+  const candidates = [...summaries, ...[...pushes.values()].map((push) => ({ repo: push.repo, timestamp: push.timestamp, push }))]
+    .sort((a, b) => b.timestamp.localeCompare(a.timestamp));
+  const selected = [];
+  const repoCounts = new Map();
+  for (const candidate of candidates) {
+    const count = repoCounts.get(candidate.repo) ?? 0;
+    if (count >= 2) continue;
+    selected.push(candidate);
+    repoCounts.set(candidate.repo, count + 1);
+    if (selected.length === 6) break;
+  }
   const rendered = await Promise.all(selected.map(async (activity) => {
     if (!activity.push) return activity.text;
     const generated = await summarizePush(activity.push);

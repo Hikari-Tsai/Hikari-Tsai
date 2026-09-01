@@ -31,6 +31,63 @@ I work at the intersection of AI engineering and creative technology. My project
 
 I enjoy turning emerging AI capabilities into tools people can actually use, from livestream and Discord assistants to Traditional Chinese writing workflows, portfolio systems, and polished web experiences.
 
+<p align="center">
+  Open to collaborations in generative AI, RAG, creator tools, and music technology.<br>
+  <a href="https://www.linkedin.com/in/hikari-tsai/"><strong>Let's connect on LinkedIn →</strong></a>
+</p>
+
+## Current Focus
+
+```text
+AI products        Generative AI, RAG, agents, structured outputs
+Creator systems    Livestream bots, community operations, content workflows
+Creative AI        Music generation, singing voice synthesis, audio technology
+Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
+```
+
+## Featured Work
+
+| Project | What it does |
+| --- | --- |
+| [software-salary](https://github.com/Hikari-Tsai/software-salary) | Taiwan software salary insights built from 635 valid salary samples, with market percentiles, company comparisons, and career guidance. Earned 65+ GitHub stars. |
+| Private RAG / Agent Systems (private) | Internal AI systems for retrieval-augmented generation, document workflows, structured outputs, and production-facing automation. |
+| Web PINN Demo (private) | Frontend demo interface for Physics-Informed Neural Network applications, focused on presenting PINN workflows in a clear web experience. |
+| [twitch-bot](https://github.com/Hikari-Tsai/twitch-bot) | An OpenAI-powered TwitchIO chatbot with configurable reply rules, cooldowns, context memory, owner commands, token persistence, and emote-aware behavior. |
+| [dc-manager](https://github.com/Hikari-Tsai/dc-manager) | A Discord management assistant for AI-assisted moderation, channel analytics, member activity, policy enforcement, and Traditional Chinese community operations. |
+| [Humanizer-zh-TW](https://github.com/Hikari-Tsai/Humanizer-zh-TW) *(customized fork)* | A Taiwan Traditional Chinese adaptation that rewrites stiff AI-generated text naturally while preserving meaning and facts. |
+| [JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator) *(customized fork)* | Audio plug-in and build-system experimentation across C++, macOS, and DSP-adjacent development. |
+
+## Recent Activity
+
+<!-- GITHUB_RECENT_ACTIVITY_START -->
+- **2026-09-01** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Added a local TSMC logo and an experience-data note explaining the 0–1 year salary caveat.
+- **2026-08-31** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Updated salary data, company normalization, and JSON merge tooling to expand sample counts and refresh rankings and site content.
+- **2026-08-28** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Updated the salary site with refreshed data, broader company matching, and improved metadata and guidance for job seekers.
+- **2026-08-28** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Added AWS certification badge cards with images, descriptions, and tests to verify they render correctly.
+- **2026-08-27** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Built a Taiwanese software salary insights site with GitHub Pages deployment and cleaned data-driven charts, rankings, and career guidance.
+- **2026-08-27** — Updated [Hikari-Tsai/software-salaries](https://github.com/Hikari-Tsai/software-salaries): Added GitHub Pages deployment and updated site links and pinned frontend library versions.
+<!-- GITHUB_RECENT_ACTIVITY_END -->
+
+<!-- GITHUB_RECENT_UPDATED_AT_START -->
+<p align="right"><sub>Last updated: 2026-09-01 14:18 (UTC+8)</sub></p>
+<!-- GITHUB_RECENT_UPDATED_AT_END -->
+
+## GitHub Activity & Achievements
+
+<!-- GITHUB_STATS_START -->
+```text
+Public repositories    26
+Last-year activity     181 contributions
+Merged pull requests   30 public PRs
+Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
+Highlight              GitHub Developer Program Member
+```
+<!-- GITHUB_STATS_END -->
+
+<!-- GITHUB_UPDATED_AT_START -->
+<p align="right"><sub>Last updated: 2026-09-01 14:18 (UTC+8)</sub></p>
+<!-- GITHUB_UPDATED_AT_END -->
+
 ## AWS Certifications
 
 <p align="center">
@@ -136,58 +193,6 @@ I enjoy turning emerging AI capabilities into tools people can actually use, fro
   </tr>
 </table>
 <!-- LEETCODE_BADGES_END -->
-
-## Current Focus
-
-```text
-AI products        Generative AI, RAG, agents, structured outputs
-Creator systems    Livestream bots, community operations, content workflows
-Creative AI        Music generation, singing voice synthesis, audio technology
-Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
-```
-
-## Featured Work
-
-| Project | What it does |
-| --- | --- |
-| [software-salary](https://github.com/Hikari-Tsai/software-salary) | An interactive website for exploring anonymous Taiwan software-engineering salary data, market percentiles, company comparisons, and job-search insights. |
-| Private RAG / Agent Systems (private) | Internal AI systems for retrieval-augmented generation, document workflows, structured outputs, and production-facing automation. |
-| Web PINN Demo (private) | Frontend demo interface for Physics-Informed Neural Network applications, focused on presenting PINN workflows in a clear web experience. |
-| [twitch-bot](https://github.com/Hikari-Tsai/twitch-bot) | An OpenAI-powered TwitchIO chatbot with configurable reply rules, cooldowns, context memory, owner commands, token persistence, and emote-aware behavior. |
-| [dc-manager](https://github.com/Hikari-Tsai/dc-manager) | A Discord management assistant for AI-assisted moderation, channel analytics, member activity, policy enforcement, and Traditional Chinese community operations. |
-| [Humanizer-zh-TW](https://github.com/Hikari-Tsai/Humanizer-zh-TW) | An agent skill that rewrites stiff AI-generated text into natural Taiwan Traditional Chinese while preserving meaning and facts. |
-| [JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator) | Audio plug-in and build-system experimentation across C++, macOS, and DSP-adjacent development. |
-
-## Recent Activity
-
-<!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-09-01** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Added a local TSMC logo and an experience-data note explaining the 0–1 year salary caveat.
-- **2026-08-31** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Updated salary data, company normalization, and JSON merge tooling to expand sample counts and refresh rankings and site content.
-- **2026-08-28** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Updated the salary site with refreshed data, broader company matching, and improved metadata and guidance for job seekers.
-- **2026-08-28** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Added AWS certification badge cards with images, descriptions, and tests to verify they render correctly.
-- **2026-08-27** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Built a Taiwanese software salary insights site with GitHub Pages deployment and cleaned data-driven charts, rankings, and career guidance.
-- **2026-08-27** — Updated [Hikari-Tsai/software-salaries](https://github.com/Hikari-Tsai/software-salaries): Added GitHub Pages deployment and updated site links and pinned frontend library versions.
-<!-- GITHUB_RECENT_ACTIVITY_END -->
-
-<!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-01 14:18 (UTC+8)</sub></p>
-<!-- GITHUB_RECENT_UPDATED_AT_END -->
-
-## GitHub Activity & Achievements
-
-<!-- GITHUB_STATS_START -->
-```text
-Public repositories    26
-Last-year activity     181 contributions
-Merged pull requests   30 public PRs
-Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
-Highlight              GitHub Developer Program Member
-```
-<!-- GITHUB_STATS_END -->
-
-<!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-01 14:18 (UTC+8)</sub></p>
-<!-- GITHUB_UPDATED_AT_END -->
 
 ## Tech I Use
 
