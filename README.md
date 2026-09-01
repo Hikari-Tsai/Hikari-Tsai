@@ -55,7 +55,7 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 | [twitch-bot](https://github.com/Hikari-Tsai/twitch-bot) | An OpenAI-powered TwitchIO chatbot with configurable reply rules, cooldowns, context memory, owner commands, token persistence, and emote-aware behavior. |
 | [dc-manager](https://github.com/Hikari-Tsai/dc-manager) | A Discord management assistant for AI-assisted moderation, channel analytics, member activity, policy enforcement, and Traditional Chinese community operations. |
 | [Humanizer-zh-TW](https://github.com/Hikari-Tsai/Humanizer-zh-TW) *(customized fork)* | A Taiwan Traditional Chinese adaptation that rewrites stiff AI-generated text naturally while preserving meaning and facts. |
-| [JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator) *(customized fork)* | Audio plug-in and build-system experimentation across C++, macOS, and DSP-adjacent development. |
+| [JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator) *(customized fork)* | Developed a macOS AAX version of the JS Inflator audio plug-in, including the platform-specific build and integration work. |
 
 ## Recent Activity
 
