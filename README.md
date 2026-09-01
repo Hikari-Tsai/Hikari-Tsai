@@ -36,8 +36,8 @@ I enjoy turning emerging AI capabilities into tools people can actually use, fro
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/hikari-tsai/"><img src="https://img.shields.io/badge/Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a>
-  <a href="mailto:aaatmy@gmail.com"><img src="https://img.shields.io/badge/Send_me_an_email-30363D?style=for-the-badge&logo=gmail&logoColor=white" alt="Send me an email"></a>
+  <a href="https://www.linkedin.com/in/hikari-tsai/"><img src="./assets/linkedin-contact-button.svg" alt="Connect on LinkedIn" width="280"></a>
+  <a href="mailto:aaatmy@gmail.com"><img src="./assets/email-contact-button.svg" alt="Send me an email" width="257"></a>
 </p>
 
 ## Current Focus
