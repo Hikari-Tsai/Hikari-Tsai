@@ -161,12 +161,12 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-09-01** — Pushed updates to [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary).
+- **2026-09-01** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Replaced TSMC logo with a local SVG, added an experience-data note and its styles, and updated tests to reflect these changes.
 - **2026-08-31** — Pushed updates to [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary).
 - **2026-08-28** — Pushed updates to [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary).
-- **2026-08-28** — Pushed updates to [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio).
-- **2026-08-27** — Pushed updates to [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary).
-- **2026-08-27** — Pushed updates to [Hikari-Tsai/software-salaries](https://github.com/Hikari-Tsai/software-salaries).
+- **2026-08-28** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Converted certifications to structured objects with images and descriptions, added badge images and tests, and updated npm scripts.
+- **2026-08-27** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Added GitHub Pages deploy workflow, MIT license, Chinese content, company rankings data, UI floating actions, and updated layout/styles for the Taiwan salary site.
+- **2026-08-27** — Updated [Hikari-Tsai/software-salaries](https://github.com/Hikari-Tsai/software-salaries): Set up a GitHub Pages deployment workflow and updated site links, CDN dependency versions, and README deploy note.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 ## GitHub Activity & Achievements
@@ -174,7 +174,7 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 <!-- GITHUB_STATS_START -->
 ```text
 Public repositories    26
-Last-year activity     181 contributions
+Last-year activity     180 contributions
 Merged pull requests   30 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
@@ -182,7 +182,7 @@ Highlight              GitHub Developer Program Member
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-01 14:03 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-01 14:05 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## Tech I Use
