@@ -104,7 +104,9 @@ old
       for await (const chunk of request) body += chunk;
       responseRequest = JSON.parse(body);
       response.writeHead(200, { "content-type": "application/json" });
-      response.end(JSON.stringify({ output: [{ type: "message", content: [{ type: "output_text", text: "Added salary-range filtering and updated related tests." }] }] }));
+      response.end(JSON.stringify(responseRequest.max_output_tokens < 500
+        ? { status: "incomplete", incomplete_details: { reason: "max_output_tokens" }, output: [] }
+        : { status: "completed", output: [{ type: "message", content: [{ type: "output_text", text: "Added salary-range filtering and updated related tests." }] }] }));
       return;
     }
     response.writeHead(404).end();
