@@ -16,6 +16,10 @@ test("updates stats and six meaningful activities while preserving achievements"
 old activity
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
+<!-- GITHUB_RECENT_UPDATED_AT_START -->
+old recent timestamp
+<!-- GITHUB_RECENT_UPDATED_AT_END -->
+
 <!-- GITHUB_STATS_START -->
 \`\`\`text
 Public repositories    1
@@ -56,7 +60,7 @@ old timestamp
 
   assert.equal(result.status, 0, result.stderr);
   const output = readFileSync(readme, "utf8");
-  assert.doesNotMatch(output, /old activity|old timestamp/);
+  assert.doesNotMatch(output, /old activity|old recent timestamp|old timestamp/);
   assert.match(output, /Public repositories    26/);
   assert.match(output, /Last-year activity     300 contributions/);
   assert.match(output, /Merged pull requests   42 public PRs/);
@@ -70,7 +74,8 @@ old timestamp
   assert.doesNotMatch(output, /Hikari-Tsai\/Hikari-Tsai/);
   assert.doesNotMatch(output, /Hikari-Tsai\/three/);
   assert.equal((output.match(/^- \*\*2026-/gm) ?? []).length, 6);
-  assert.match(output, /<p align="right"><sub>Last updated: 2026-08-31 09:30 \(UTC\+8\)<\/sub><\/p>/);
+  assert.equal((output.match(/<p align="right"><sub>Last updated: 2026-08-31 09:30 \(UTC\+8\)<\/sub><\/p>/g) ?? []).length, 2);
+  assert.ok(output.indexOf("GITHUB_RECENT_UPDATED_AT_START") < output.indexOf("GITHUB_STATS_START"));
 });
 
 test("summarizes a push diff with the configured OpenAI model", async (context) => {
@@ -81,6 +86,9 @@ test("summarizes a push diff with the configured OpenAI model", async (context) 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
 old
 <!-- GITHUB_RECENT_ACTIVITY_END -->
+<!-- GITHUB_RECENT_UPDATED_AT_START -->
+old recent timestamp
+<!-- GITHUB_RECENT_UPDATED_AT_END -->
 <!-- GITHUB_STATS_START -->
 \`\`\`text
 Current achievements   Keep This Sentinel
@@ -96,7 +104,7 @@ old
   const server = createServer(async (request, response) => {
     if (request.url?.startsWith("/repos/Hikari-Tsai/") && request.url.includes("/compare/")) {
       response.writeHead(200, { "content-type": "application/json" });
-      response.end(JSON.stringify({ files: [{ filename: "src/filter.ts", status: "modified", additions: 12, deletions: 3, patch: "@@ -1 +1 @@\n-old filter\n+add salary range filter" }] }));
+      response.end(JSON.stringify({ files: Array.from({ length: 20 }, (_, index) => ({ filename: index === 0 ? "src/filter.ts" : `src/file-${index}.ts`, status: "modified", additions: 12, deletions: 3, patch: index === 0 ? "@@ -1 +1 @@\n-old filter\n+add salary range filter" : "x".repeat(1500) })) }));
       return;
     }
     if (request.url === "/v1/responses" && request.method === "POST") {
@@ -153,6 +161,8 @@ old
   const [responseRequest] = responseRequests;
   assert.equal(responseRequest.model, "test-model");
   assert.equal(responseRequest.store, false);
+  assert.equal(responseRequest.max_output_tokens, 500);
+  assert.ok(responseRequest.input.length > 20_000, "diff input should exceed the former 12,000-character limit");
   assert.match(JSON.stringify(responseRequest.input), /src\/filter\.ts/);
   assert.doesNotMatch(JSON.stringify(responseRequest.input), /test-key/);
 });

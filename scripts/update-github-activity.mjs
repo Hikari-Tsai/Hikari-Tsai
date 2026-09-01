@@ -101,7 +101,7 @@ async function summarizePush(push) {
       `File: ${file.filename}`,
       `Status: ${file.status}; +${file.additions ?? 0}; -${file.deletions ?? 0}`,
       file.patch ? `Patch:\n${file.patch.slice(0, 1500)}` : "Patch unavailable",
-    ].join("\n")).join("\n\n").slice(0, 12000);
+    ].join("\n")).join("\n\n").slice(0, 50000);
     if (!changes) return null;
     const response = await fetch(`${OPENAI_BASE_URL}/responses`, {
       method: "POST",
@@ -175,6 +175,7 @@ const highlight = statsSection.match(/^Highlight\s+.*$/m)?.[0];
 if (!achievements || !highlight) throw new Error("Manual achievements or highlight line is missing");
 const stats = `\`\`\`text\nPublic repositories    ${data.publicRepos}\nLast-year activity     ${data.totalContributions} contributions\nMerged pull requests   ${data.mergedPullRequests} public PRs\n${achievements}\n${highlight}\n\`\`\``;
 readme = replaceSection(readme, "GITHUB_RECENT_ACTIVITY", await summarize(data.events));
+readme = replaceSection(readme, "GITHUB_RECENT_UPDATED_AT", updatedAt(now));
 readme = replaceSection(readme, "GITHUB_STATS", stats);
 readme = replaceSection(readme, "GITHUB_UPDATED_AT", updatedAt(now));
 await writeFile(README_PATH, readme);

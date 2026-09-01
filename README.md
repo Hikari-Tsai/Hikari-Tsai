@@ -169,6 +169,10 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 - **2026-08-27** — Updated [Hikari-Tsai/software-salaries](https://github.com/Hikari-Tsai/software-salaries): Added GitHub Pages deployment and updated the site to use pinned Vue/Element Plus assets and links.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
+<!-- GITHUB_RECENT_UPDATED_AT_START -->
+<p align="right"><sub>Last updated: 2026-09-01 14:07 (UTC+8)</sub></p>
+<!-- GITHUB_RECENT_UPDATED_AT_END -->
+
 ## GitHub Activity & Achievements
 
 <!-- GITHUB_STATS_START -->
