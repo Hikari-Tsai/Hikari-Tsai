@@ -32,8 +32,12 @@ I work at the intersection of AI engineering and creative technology. My project
 I enjoy turning emerging AI capabilities into tools people can actually use, from livestream and Discord assistants to Traditional Chinese writing workflows, portfolio systems, and polished web experiences.
 
 <p align="center">
-  Open to collaborations in generative AI, RAG, creator tools, and music technology.<br>
-  <a href="https://www.linkedin.com/in/hikari-tsai/"><strong>Let's connect on LinkedIn →</strong></a>
+  Open to collaborations in generative AI, RAG, creator tools, and music technology.
+</p>
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/hikari-tsai/"><img src="https://img.shields.io/badge/Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a>
+  <a href="mailto:aaatmy@gmail.com"><img src="https://img.shields.io/badge/Send_me_an_email-30363D?style=for-the-badge&logo=gmail&logoColor=white" alt="Send me an email"></a>
 </p>
 
 ## Current Focus
