@@ -60,16 +60,16 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-09-01** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Added a local TSMC logo and an experience-data note explaining the 0–1 year salary caveat.
-- **2026-08-31** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Updated salary data, company normalization, and JSON merge tooling to expand sample counts and refresh rankings and site content.
-- **2026-08-28** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Updated the salary site with refreshed data, broader company matching, and improved metadata and guidance for job seekers.
-- **2026-08-28** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Added AWS certification badge cards with images, descriptions, and tests to verify they render correctly.
-- **2026-08-27** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Built a Taiwanese software salary insights site with GitHub Pages deployment and cleaned data-driven charts, rankings, and career guidance.
-- **2026-08-27** — Updated [Hikari-Tsai/software-salaries](https://github.com/Hikari-Tsai/software-salaries): Added GitHub Pages deployment and updated site links and pinned frontend library versions.
+- **2026-09-01** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Added a local TSMC logo asset and an experience-data note explaining the 0–1 year salary chart caveat.
+- **2026-08-31** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Updated the salary survey data pipeline and rankings to reflect more samples, normalized company aliases, and added JSON merge tooling.
+- **2026-08-28** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Added verifiable AWS certification cards with badge links, images, and tests to validate the rendered credentials.
+- **2026-08-27** — Updated [Hikari-Tsai/software-salaries](https://github.com/Hikari-Tsai/software-salaries): Added GitHub Pages deployment and updated the site links and frontend library versions.
+- **2026-08-27** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Updated the portfolio for the new code-portfolio URL, refreshed hero styling, and added new project and visual showcase content.
+- **2026-08-26** — Updated [Hikari-Tsai/twitch-bot](https://github.com/Hikari-Tsai/twitch-bot): Kept TwitchIO’s app token in sync with refreshed user tokens to prevent fallback to client-credentials flow and updated the docs.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-01 14:18 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-01 14:54 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
@@ -77,7 +77,7 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 <!-- GITHUB_STATS_START -->
 ```text
 Public repositories    26
-Last-year activity     181 contributions
+Last-year activity     180 contributions
 Merged pull requests   30 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
@@ -85,7 +85,7 @@ Highlight              GitHub Developer Program Member
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-01 14:18 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-01 14:54 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
