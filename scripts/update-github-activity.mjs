@@ -5,7 +5,7 @@ const PROFILE_REPO = `${USERNAME}/${USERNAME}`;
 const README_PATH = process.env.GITHUB_ACTIVITY_README_PATH ?? "README.md";
 const GITHUB_API_URL = process.env.GITHUB_API_URL ?? "https://api.github.com";
 const OPENAI_BASE_URL = process.env.OPENAI_BASE_URL ?? "https://api.openai.com/v1";
-const OPENAI_MODEL = process.env.OPENAI_MODEL ?? "gpt-5-mini";
+const OPENAI_MODEL = process.env.OPENAI_MODEL ?? "gpt-5.4-mini";
 const API_HEADERS = {
   Accept: "application/vnd.github+json",
   Authorization: `Bearer ${process.env.GITHUB_TOKEN ?? process.env.GH_TOKEN ?? ""}`,
