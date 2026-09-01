@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "30 1 * * *"
   workflow_dispatch:
+    inputs:
+      model:
+        description: OpenAI model override (leave blank to use OPENAI_MODEL variable)
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -19,6 +24,8 @@ jobs:
       - name: Update activity data
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ inputs.model || vars.OPENAI_MODEL || 'gpt-5-mini' }}
         run: node scripts/update-github-activity.mjs
       - name: Commit changes
         run: |
