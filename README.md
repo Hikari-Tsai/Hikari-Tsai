@@ -161,16 +161,16 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-09-01** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Added a local TSMC logo asset and an experience-note disclaimer to clarify salary data interpretation.
-- **2026-08-31** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Updated salary data, company normalization, and merge tooling to reflect newer survey samples and rankings.
-- **2026-08-28** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Updated the salary site with richer metadata, expanded company aliases, and refreshed content and guidance while removing legacy starter files.
-- **2026-08-28** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Added verified AWS certification badges, images, and tests for the certification section.
-- **2026-08-27** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Launched a Taiwan software salary insights site and added GitHub Pages deployment with branding, data, and contribution links.
-- **2026-08-27** — Updated [Hikari-Tsai/software-salaries](https://github.com/Hikari-Tsai/software-salaries): Added GitHub Pages deployment and updated the site to use pinned Vue/Element Plus assets and links.
+- **2026-09-01** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Added a local TSMC logo and an experience-data note explaining the 0–1 year salary caveat.
+- **2026-08-31** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Updated salary data, company normalization, and JSON merge tooling to expand sample counts and refresh rankings and site content.
+- **2026-08-28** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Updated the salary site with refreshed data, broader company matching, and improved metadata and guidance for job seekers.
+- **2026-08-28** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Added AWS certification badge cards with images, descriptions, and tests to verify they render correctly.
+- **2026-08-27** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Built a Taiwanese software salary insights site with GitHub Pages deployment and cleaned data-driven charts, rankings, and career guidance.
+- **2026-08-27** — Updated [Hikari-Tsai/software-salaries](https://github.com/Hikari-Tsai/software-salaries): Added GitHub Pages deployment and updated site links and pinned frontend library versions.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-01 14:07 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-01 14:18 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
@@ -186,7 +186,7 @@ Highlight              GitHub Developer Program Member
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-01 14:07 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-01 14:18 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## Tech I Use
