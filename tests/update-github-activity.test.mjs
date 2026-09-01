@@ -92,9 +92,9 @@ old
 <!-- GITHUB_UPDATED_AT_END -->
 `);
 
-  let responseRequest;
+  const responseRequests = [];
   const server = createServer(async (request, response) => {
-    if (request.url?.startsWith("/repos/Hikari-Tsai/app/compare/")) {
+    if (request.url?.startsWith("/repos/Hikari-Tsai/") && request.url.includes("/compare/")) {
       response.writeHead(200, { "content-type": "application/json" });
       response.end(JSON.stringify({ files: [{ filename: "src/filter.ts", status: "modified", additions: 12, deletions: 3, patch: "@@ -1 +1 @@\n-old filter\n+add salary range filter" }] }));
       return;
@@ -102,7 +102,8 @@ old
     if (request.url === "/v1/responses" && request.method === "POST") {
       let body = "";
       for await (const chunk of request) body += chunk;
-      responseRequest = JSON.parse(body);
+      const responseRequest = JSON.parse(body);
+      responseRequests.push(responseRequest);
       response.writeHead(200, { "content-type": "application/json" });
       response.end(JSON.stringify(responseRequest.max_output_tokens < 500
         ? { status: "incomplete", incomplete_details: { reason: "max_output_tokens" }, output: [] }
@@ -118,7 +119,13 @@ old
     publicRepos: 26,
     totalContributions: 300,
     mergedPullRequests: 42,
-    events: [{ id: "push-1", type: "PushEvent", created_at: "2026-08-30T10:00:00Z", repo: { name: "Hikari-Tsai/app" }, payload: { before: "before-sha", head: "head-sha" } }],
+    events: ["app", "repo-2", "repo-3", "repo-4", "repo-5", "repo-6", "repo-7"].map((repo, index) => ({
+      id: `push-${index + 1}`,
+      type: "PushEvent",
+      created_at: `2026-08-${30 - index}T10:00:00Z`,
+      repo: { name: `Hikari-Tsai/${repo}` },
+      payload: { before: `before-${index}`, head: `head-${index}` },
+    })),
   };
   const result = await new Promise((resolve) => {
     const child = spawn(process.execPath, ["scripts/update-github-activity.mjs"], {
@@ -142,6 +149,8 @@ old
   assert.equal(result.status, 0, result.stderr);
   const output = readFileSync(readme, "utf8");
   assert.match(output, /Updated \[Hikari-Tsai\/app\].*Added salary-range filtering and updated related tests\./);
+  assert.equal(responseRequests.length, 6);
+  const [responseRequest] = responseRequests;
   assert.equal(responseRequest.model, "test-model");
   assert.equal(responseRequest.store, false);
   assert.match(JSON.stringify(responseRequest.input), /src\/filter\.ts/);

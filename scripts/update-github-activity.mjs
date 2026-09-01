@@ -71,14 +71,16 @@ async function summarize(events) {
       summaries.push({ timestamp, text: `- **${date}** — Published [${markdownText(release?.tag_name ?? "release")}](${release?.html_url}) in ${repoLink(repo)}.` });
     }
   }
-  const pushSummaries = await Promise.all([...pushes.values()].map(async (push) => {
-    const generated = await summarizePush(push);
-    if (generated) return { timestamp: push.timestamp, text: `- **${push.date}** — Updated ${repoLink(push.repo)}: ${generated}` };
-    const description = push.count === null ? "updates" : `${push.count} ${push.count === 1 ? "commit" : "commits"}`;
-    return { timestamp: push.timestamp, text: `- **${push.date}** — Pushed ${description} to ${repoLink(push.repo)}.` };
+  const selected = [...summaries, ...[...pushes.values()].map((push) => ({ timestamp: push.timestamp, push }))]
+    .sort((a, b) => b.timestamp.localeCompare(a.timestamp)).slice(0, 6);
+  const rendered = await Promise.all(selected.map(async (activity) => {
+    if (!activity.push) return activity.text;
+    const generated = await summarizePush(activity.push);
+    if (generated) return `- **${activity.push.date}** — Updated ${repoLink(activity.push.repo)}: ${generated}`;
+    const description = activity.push.count === null ? "updates" : `${activity.push.count} ${activity.push.count === 1 ? "commit" : "commits"}`;
+    return `- **${activity.push.date}** — Pushed ${description} to ${repoLink(activity.push.repo)}.`;
   }));
-  summaries.push(...pushSummaries);
-  return summaries.sort((a, b) => b.timestamp.localeCompare(a.timestamp)).slice(0, 6).map(({ text }) => text).join("\n") || "- No recent public activity found.";
+  return rendered.join("\n") || "- No recent public activity found.";
 }
 
 function responseText(response) {
