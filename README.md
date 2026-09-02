@@ -6,9 +6,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Hikari-Tsai?tab=repositories"><img alt="GitHub repositories" src="https://img.shields.io/badge/GitHub-Projects-181717?style=for-the-badge&logo=github"></a>
-  <a href="https://github.com/Hikari-Tsai?tab=achievements"><img alt="GitHub achievements" src="https://img.shields.io/badge/GitHub-Achievements-0969DA?style=for-the-badge&logo=github"></a>
-  <a href="https://github.com/Hikari-Tsai/dc-manager"><img alt="Discord AI bot" src="https://img.shields.io/badge/Discord-AI_Bot-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
+  <a href="https://github.com/Hikari-Tsai?tab=repositories"><img alt="GitHub repositories" src="https://img.shields.io/badge/Projects-181717?style=for-the-badge&logo=github"></a>
+  <a href="https://github.com/Hikari-Tsai?tab=achievements"><img alt="GitHub achievements" src="https://img.shields.io/badge/Achievements-0969DA?style=for-the-badge&logo=github"></a>
+  <a href="https://github.com/Hikari-Tsai/dc-manager"><img alt="Discord AI bot" src="https://img.shields.io/badge/AI_Bot-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
 </p>
 
 <p align="center">
