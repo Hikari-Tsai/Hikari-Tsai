@@ -64,16 +64,16 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-09-01** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Added a local TSMC logo and an experience-data note explaining the 0–1 year salary caveat.
-- **2026-08-31** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Updated salary stats, company aliases, and JSON merging to reflect the larger dataset and new sample outputs.
-- **2026-08-28** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Added verified AWS certification cards with badge images and tests to confirm they render correctly.
-- **2026-08-27** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Refreshed the portfolio branding, updated deployment paths and metadata, and added new project visuals and content.
-- **2026-08-26** — Updated [Hikari-Tsai/twitch-bot](https://github.com/Hikari-Tsai/twitch-bot): Kept TwitchIO’s app token synced with refreshed user tokens to prevent client-credentials fallback during Device Code Flow.
-- **2026-08-26** — Updated [Hikari-Tsai/dc-manager](https://github.com/Hikari-Tsai/dc-manager): Changed auto-mute to trigger immediately when warnings reached the threshold, even before scheduled reports reset the stats.
+- **2026-09-01** — Updated [Hikari-Tsai/dc-bot](https://github.com/Hikari-Tsai/dc-bot): Added licensing and refreshed the README to present the bot as an AI digital twin for Discord interactions.
+- **2026-09-01** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Added a local TSMC wordmark asset and an experience-data note explaining the salary chart’s sample bias.
+- **2026-08-31** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Updated salary data, company normalization, and JSON merge tooling to reflect more samples and refreshed rankings.
+- **2026-08-28** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Added AWS certification badges, images, and tests to verify the certifications render on the page.
+- **2026-08-27** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Rebranded the portfolio site, updated its deployment paths and metadata, and added new project visuals and a refreshed hero layout.
+- **2026-08-26** — Updated [Hikari-Tsai/twitch-bot](https://github.com/Hikari-Tsai/twitch-bot): Kept TwitchIO’s app token synced with refreshed user tokens to prevent fallback to client-credentials when no client secret was set.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-01 17:16 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-02 09:43 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
@@ -81,7 +81,7 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 <!-- GITHUB_STATS_START -->
 ```text
 Public repositories    26
-Last-year activity     180 contributions
+Last-year activity     200 contributions
 Merged pull requests   30 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
@@ -89,7 +89,7 @@ Highlight              GitHub Developer Program Member
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-01 17:16 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-02 09:43 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
