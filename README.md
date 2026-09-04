@@ -64,16 +64,16 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-09-02** — Updated [Hikari-Tsai/dc-bot](https://github.com/Hikari-Tsai/dc-bot): Added configurable OpenAI reply model support with updated docs and defaults.
-- **2026-09-01** — Updated [Hikari-Tsai/dc-bot](https://github.com/Hikari-Tsai/dc-bot): Added licensing and refreshed the README to present the bot as a Discord AI digital twin with updated visuals and usage details.
-- **2026-09-01** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Added a local TSMC logo asset and a data caveat for experience-based salary charts.
-- **2026-08-31** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Expanded salary data, company aliases, and JSON merge tooling while updating rankings, docs, and tests for the new sample set.
-- **2026-08-28** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Added rich AWS certification cards with images, badge links, and tests to verify they rendered correctly.
-- **2026-08-27** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Refreshed the portfolio site branding, deployment paths, and showcased new project and visual sections.
+- **2026-09-03** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Updated the salary thumbnail image used for social sharing previews.
+- **2026-09-02** — Updated [Hikari-Tsai/dc-bot](https://github.com/Hikari-Tsai/dc-bot): Added configurable OpenAI model selection for bot replies and documented the supported model options.
+- **2026-09-01** — Updated [Hikari-Tsai/dc-bot](https://github.com/Hikari-Tsai/dc-bot): Added licensing and updated the README to present the bot as an AI digital twin for Discord interactions.
+- **2026-09-01** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Added a local TSMC logo asset and displayed an experience data note to clarify salary chart interpretation.
+- **2026-08-28** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Added styled AWS certification badges, images, and tests to verify the credentials rendered on the page.
+- **2026-08-27** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Refreshed the portfolio branding, deployed paths, and visuals while adding featured project and hero artwork updates.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-03 09:44 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-04 09:36 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
@@ -81,15 +81,15 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 <!-- GITHUB_STATS_START -->
 ```text
 Public repositories    26
-Last-year activity     200 contributions
-Merged pull requests   30 public PRs
+Last-year activity     205 contributions
+Merged pull requests   31 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
 ```
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-03 09:44 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-04 09:36 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
