@@ -81,6 +81,66 @@ old timestamp
   assert.ok(output.indexOf("GITHUB_RECENT_UPDATED_AT_START") < output.indexOf("GITHUB_STATS_START"));
 });
 
+test("supplements missing public events from recently pushed repositories", () => {
+  const directory = mkdtempSync(join(tmpdir(), "github-activity-repos-"));
+  const readme = join(directory, "README.md");
+  writeFileSync(readme, `# Profile
+
+<!-- GITHUB_RECENT_ACTIVITY_START -->
+old activity
+<!-- GITHUB_RECENT_ACTIVITY_END -->
+<!-- GITHUB_RECENT_UPDATED_AT_START -->
+old recent timestamp
+<!-- GITHUB_RECENT_UPDATED_AT_END -->
+<!-- GITHUB_STATS_START -->
+\`\`\`text
+Current achievements   Keep This Sentinel
+Highlight              Keep This Highlight
+\`\`\`
+<!-- GITHUB_STATS_END -->
+<!-- GITHUB_UPDATED_AT_START -->
+old timestamp
+<!-- GITHUB_UPDATED_AT_END -->
+`);
+
+  const events = ["one", "two", "three", "four", "five", "six"].map((repo, index) => ({
+    id: `push-${index}`,
+    type: "PushEvent",
+    created_at: `2026-09-0${3 - Math.floor(index / 2)}T0${index}:00:00Z`,
+    repo: { name: `Hikari-Tsai/${repo}` },
+    payload: { commits: [{}] },
+  }));
+  const data = {
+    publicRepos: 27,
+    totalContributions: 310,
+    mergedPullRequests: 42,
+    events,
+    repositories: [{ full_name: "Hikari-Tsai/auto-mr", pushed_at: "2026-09-04T09:33:24Z", default_branch: "main" }],
+    repositoryCommits: {
+      "Hikari-Tsai/auto-mr": [
+        { sha: "head-auto-mr", commit: { committer: { date: "2026-09-04T09:33:21Z" } } },
+        { sha: "before-auto-mr", commit: { committer: { date: "2026-09-04T09:14:59Z" } } },
+      ],
+    },
+  };
+  const result = spawnSync(process.execPath, ["scripts/update-github-activity.mjs"], {
+    cwd: new URL("..", import.meta.url),
+    encoding: "utf8",
+    env: {
+      ...process.env,
+      GITHUB_ACTIVITY_DATA_JSON: JSON.stringify(data),
+      GITHUB_ACTIVITY_README_PATH: readme,
+      GITHUB_ACTIVITY_NOW: "2026-09-06T01:30:00.000Z",
+      OPENAI_API_KEY: "",
+    },
+  });
+
+  assert.equal(result.status, 0, result.stderr);
+  const output = readFileSync(readme, "utf8");
+  assert.match(output, /Pushed 1 commit to \[Hikari-Tsai\/auto-mr\]/);
+  assert.equal((output.match(/^- \*\*2026-/gm) ?? []).length, 6);
+});
+
 test("summarizes a push diff with the configured OpenAI model", async (context) => {
   const directory = mkdtempSync(join(tmpdir(), "github-activity-llm-"));
   const readme = join(directory, "README.md");

@@ -92,6 +92,31 @@ async function summarize(events) {
   return rendered.join("\n") || "- No recent public activity found.";
 }
 
+function supplementPushEvents(events, repositories = [], repositoryCommits = {}) {
+  const supplemented = [...events];
+  const pushKeys = new Set(events
+    .filter((event) => event?.type === "PushEvent" && event?.repo?.name && event?.created_at)
+    .map((event) => `${event.repo.name.toLowerCase()}|${localDate(event.created_at)}`));
+  for (const repository of repositories) {
+    const repo = repository?.full_name;
+    if (!repo || repo.toLowerCase() === PROFILE_REPO.toLowerCase()) continue;
+    const commits = repositoryCommits[repo] ?? [];
+    const [latest, previous] = commits;
+    const timestamp = latest?.commit?.committer?.date ?? latest?.commit?.author?.date ?? repository?.pushed_at;
+    if (!latest?.sha || !timestamp) continue;
+    const key = `${repo.toLowerCase()}|${localDate(timestamp)}`;
+    if (pushKeys.has(key)) continue;
+    supplemented.push({
+      type: "PushEvent",
+      created_at: timestamp,
+      repo: { name: repo },
+      payload: { commits: [{ sha: latest.sha }], size: 1, before: previous?.sha, head: latest.sha },
+    });
+    pushKeys.add(key);
+  }
+  return supplemented;
+}
+
 function responseText(response) {
   return response?.output?.flatMap((item) => item.content ?? []).find((item) => item.type === "output_text")?.text;
 }
@@ -148,16 +173,30 @@ async function fetchData(now) {
   const fromDate = new Date(now);
   fromDate.setUTCFullYear(fromDate.getUTCFullYear() - 1);
   const query = `query($login:String!,$from:DateTime!,$to:DateTime!,$searchQuery:String!){user(login:$login){contributionsCollection(from:$from,to:$to){contributionCalendar{totalContributions}}}search(query:$searchQuery,type:ISSUE){issueCount}}`;
-  const [user, graph, ...pages] = await Promise.all([
+  const [user, graph, repositories, ...pages] = await Promise.all([
     getJson(`${GITHUB_API_URL}/users/${USERNAME}`),
     getJson(`${GITHUB_API_URL}/graphql`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ query, variables: { login: USERNAME, from: fromDate.toISOString(), to, searchQuery: `author:${USERNAME} is:pr is:merged` } }) }),
+    getJson(`${GITHUB_API_URL}/users/${USERNAME}/repos?type=owner&sort=pushed&direction=desc&per_page=20`),
     ...[1, 2, 3].map((page) => getJson(`${GITHUB_API_URL}/users/${USERNAME}/events/public?per_page=100&page=${page}`)),
   ]);
+  const recentRepositories = repositories.filter((repository) => repository?.full_name?.toLowerCase() !== PROFILE_REPO.toLowerCase()).slice(0, 10);
+  const repositoryCommits = Object.fromEntries(await Promise.all(recentRepositories.map(async (repository) => {
+    try {
+      const branch = encodeURIComponent(repository.default_branch ?? "main");
+      const commits = await getJson(`${GITHUB_API_URL}/repos/${repository.full_name}/commits?sha=${branch}&per_page=2`);
+      return [repository.full_name, commits];
+    } catch (error) {
+      console.warn(`Recent commits unavailable for ${repository.full_name}: ${error.message}`);
+      return [repository.full_name, []];
+    }
+  })));
   return {
     publicRepos: user.public_repos,
     totalContributions: graph.data?.user?.contributionsCollection?.contributionCalendar?.totalContributions,
     mergedPullRequests: graph.data?.search?.issueCount,
     events: pages.flat(),
+    repositories: recentRepositories,
+    repositoryCommits,
   };
 }
 
@@ -176,6 +215,7 @@ for (const key of ["publicRepos", "totalContributions", "mergedPullRequests"]) {
   if (!Number.isInteger(data[key]) || data[key] < 0) throw new Error(`Invalid ${key}`);
 }
 if (!Array.isArray(data.events)) throw new Error("Invalid events");
+const events = supplementPushEvents(data.events, data.repositories, data.repositoryCommits);
 
 let readme = await readFile(README_PATH, "utf8");
 const statsSection = readme.match(/<!-- GITHUB_STATS_START -->([\s\S]*?)<!-- GITHUB_STATS_END -->/)?.[1] ?? "";
@@ -183,7 +223,7 @@ const achievements = statsSection.match(/^Current achievements\s+.*$/m)?.[0];
 const highlight = statsSection.match(/^Highlight\s+.*$/m)?.[0];
 if (!achievements || !highlight) throw new Error("Manual achievements or highlight line is missing");
 const stats = `\`\`\`text\nPublic repositories    ${data.publicRepos}\nLast-year activity     ${data.totalContributions} contributions\nMerged pull requests   ${data.mergedPullRequests} public PRs\n${achievements}\n${highlight}\n\`\`\``;
-readme = replaceSection(readme, "GITHUB_RECENT_ACTIVITY", await summarize(data.events));
+readme = replaceSection(readme, "GITHUB_RECENT_ACTIVITY", await summarize(events));
 readme = replaceSection(readme, "GITHUB_RECENT_UPDATED_AT", updatedAt(now));
 readme = replaceSection(readme, "GITHUB_STATS", stats);
 readme = replaceSection(readme, "GITHUB_UPDATED_AT", updatedAt(now));
