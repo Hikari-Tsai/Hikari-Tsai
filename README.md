@@ -64,16 +64,16 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-09-03** — Updated [Hikari-Tsai/twitch-bot](https://github.com/Hikari-Tsai/twitch-bot): Updated TwitchIO to use native Device Code Flow token refresh and removed manual app-token syncing logic.
+- **2026-09-04** — Updated [Hikari-Tsai/auto-mr](https://github.com/Hikari-Tsai/auto-mr): Switched the promotion workflow and docs to run daily at 08:00 Asia/Taipei instead of every two hours.
+- **2026-09-03** — Updated [Hikari-Tsai/twitch-bot](https://github.com/Hikari-Tsai/twitch-bot): Updated TwitchIO integration to use native Device Code Flow token management with secretless refresh support and synced docs/version.
 - **2026-09-03** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Updated the salary thumbnail image used for social sharing previews.
-- **2026-09-02** — Updated [Hikari-Tsai/dc-bot](https://github.com/Hikari-Tsai/dc-bot): Added configurable OpenAI model selection and updated the docs and example env settings for it.
-- **2026-09-01** — Updated [Hikari-Tsai/dc-bot](https://github.com/Hikari-Tsai/dc-bot): Added licensing and updated the README to present the bot as an AI digital twin for Discord.
-- **2026-09-01** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Added a local TSMC logo asset and explained the experience-salary chart with a data caveat note.
-- **2026-08-28** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Added AWS certification badge cards with images and descriptions, and added tests to verify they render correctly.
+- **2026-09-02** — Updated [Hikari-Tsai/dc-bot](https://github.com/Hikari-Tsai/dc-bot): Added configurable OpenAI model selection with documentation and a default fallback for chat responses.
+- **2026-09-01** — Updated [Hikari-Tsai/dc-bot](https://github.com/Hikari-Tsai/dc-bot): Added a license and refreshed the README to present the bot as an AI digital twin for Discord.
+- **2026-09-01** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Added a local TSMC wordmark, clarified the experience chart with a caveat note, and updated tests for the new copy.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-06 09:41 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-06 13:47 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
@@ -81,7 +81,7 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 <!-- GITHUB_STATS_START -->
 ```text
 Public repositories    27
-Last-year activity     210 contributions
+Last-year activity     211 contributions
 Merged pull requests   31 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
@@ -89,7 +89,7 @@ Highlight              GitHub Developer Program Member
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-06 09:41 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-06 13:47 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
