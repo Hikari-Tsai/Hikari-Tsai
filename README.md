@@ -64,16 +64,16 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-09-07** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a new vocal recording project entry with video, title, author, and production gear details.
-- **2026-09-04** — Updated [Hikari-Tsai/auto-mr](https://github.com/Hikari-Tsai/auto-mr): Updated the workflow and docs to run daily at 08:00 Asia/Taipei, add project targets, and introduce MIT licensing and branding.
-- **2026-09-03** — Updated [Hikari-Tsai/twitch-bot](https://github.com/Hikari-Tsai/twitch-bot): Updated the bot to use TwitchIO 3.3 native Device Code Flow token management and removed manual app-token syncing.
+- **2026-09-07** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a new vocal recording portfolio entry with video, credits, and gear details to the homepage.
+- **2026-09-04** — Updated [Hikari-Tsai/auto-mr](https://github.com/Hikari-Tsai/auto-mr): Updated the automation to run daily at 08:00 Taipei time, added licensing and branding, and configured target repositories for promotion.
+- **2026-09-03** — Updated [Hikari-Tsai/twitch-bot](https://github.com/Hikari-Tsai/twitch-bot): Updated the bot to use TwitchIO 3.3’s native Device Code Flow token refresh and removed custom app-token syncing logic.
 - **2026-09-03** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Updated the salary thumbnail image used for social sharing previews.
-- **2026-09-02** — Updated [Hikari-Tsai/dc-bot](https://github.com/Hikari-Tsai/dc-bot): Added configurable OpenAI model selection with updated defaults and documentation for the new model options.
-- **2026-09-01** — Updated [Hikari-Tsai/dc-bot](https://github.com/Hikari-Tsai/dc-bot): Updated the README to present the bot as an AI digital twin for Discord and added branding images and licensing.
+- **2026-09-02** — Updated [Hikari-Tsai/dc-bot](https://github.com/Hikari-Tsai/dc-bot): Added configurable OpenAI model selection and documented the available model options for bot replies.
+- **2026-09-01** — Updated [Hikari-Tsai/dc-bot](https://github.com/Hikari-Tsai/dc-bot): Added licensing and refreshed the README to present the Discord bot as an AI digital twin with new visuals.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-08 09:40 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-09 09:40 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
@@ -89,7 +89,7 @@ Highlight              GitHub Developer Program Member
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-08 09:40 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-09 09:40 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
