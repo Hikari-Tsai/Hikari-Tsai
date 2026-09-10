@@ -64,16 +64,16 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-09-07** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a new vocal recording portfolio entry with video, credits, and gear details to the homepage.
-- **2026-09-04** — Updated [Hikari-Tsai/auto-mr](https://github.com/Hikari-Tsai/auto-mr): Updated the automation to run daily at 08:00 Taipei time, added licensing and branding, and configured target repositories for promotion.
-- **2026-09-03** — Updated [Hikari-Tsai/twitch-bot](https://github.com/Hikari-Tsai/twitch-bot): Updated the bot to use TwitchIO 3.3’s native Device Code Flow token refresh and removed custom app-token syncing logic.
+- **2026-09-09** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Added a validated interactive 3D hero, portfolio checks, and PR review automation while updating docs and styles.
+- **2026-09-09** — Updated [Hikari-Tsai/auto-mr](https://github.com/Hikari-Tsai/auto-mr): Added a new project entry to the configured projects list.
+- **2026-09-07** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a new vocal recording gallery entry linking to a cover video and its studio equipment details.
+- **2026-09-04** — Updated [Hikari-Tsai/auto-mr](https://github.com/Hikari-Tsai/auto-mr): Updated the automation to run daily at 08:00 Taipei time and documented the project, license, and configured repositories.
+- **2026-09-03** — Updated [Hikari-Tsai/twitch-bot](https://github.com/Hikari-Tsai/twitch-bot): Updated the bot to use TwitchIO 3.3’s built-in Device Code Flow token handling, removed manual app-token syncing, and refreshed the docs/dependency.
 - **2026-09-03** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Updated the salary thumbnail image used for social sharing previews.
-- **2026-09-02** — Updated [Hikari-Tsai/dc-bot](https://github.com/Hikari-Tsai/dc-bot): Added configurable OpenAI model selection and documented the available model options for bot replies.
-- **2026-09-01** — Updated [Hikari-Tsai/dc-bot](https://github.com/Hikari-Tsai/dc-bot): Added licensing and refreshed the README to present the Discord bot as an AI digital twin with new visuals.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-09 09:40 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-10 09:38 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
@@ -81,15 +81,15 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 <!-- GITHUB_STATS_START -->
 ```text
 Public repositories    27
-Last-year activity     213 contributions
-Merged pull requests   31 public PRs
+Last-year activity     234 contributions
+Merged pull requests   35 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
 ```
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-09 09:40 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-10 09:38 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
