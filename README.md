@@ -64,16 +64,16 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-09-10** — Updated [samoyedtopa1120-cmd/topa-homepage](https://github.com/samoyedtopa1120-cmd/topa-homepage): Added a GitHub Pages workflow to build and deploy main and staging together with versioned assets and deployment checks.
-- **2026-09-09** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Added CI checks and replaced the static hero with an interactive 3D scene and updated PR review automation.
-- **2026-09-09** — Updated [Hikari-Tsai/auto-mr](https://github.com/Hikari-Tsai/auto-mr): Added a new project entry to the configured projects list.
-- **2026-09-07** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a new vocal recording portfolio entry with video, thumbnail, credits, and session gear details.
-- **2026-09-04** — Updated [Hikari-Tsai/auto-mr](https://github.com/Hikari-Tsai/auto-mr): Updated the automation to run daily at 08:00 Taipei time, added MIT licensing, and documented the configured staging-to-main PR workflow.
-- **2026-09-03** — Updated [Hikari-Tsai/twitch-bot](https://github.com/Hikari-Tsai/twitch-bot): Updated the bot to use TwitchIO 3.3's native Device Code Flow token handling and removed manual app-token syncing.
+- **2026-09-10** — Updated [samoyedtopa1120-cmd/topa-homepage](https://github.com/samoyedtopa1120-cmd/topa-homepage): Added a dual-branch GitHub Pages build and deploy flow with cache-busted assets and a refreshed blue-white homepage redesign.
+- **2026-09-09** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Added CI checks, PR review automation, and a new interactive 3D hero scene for the portfolio.
+- **2026-09-09** — Updated [Hikari-Tsai/auto-mr](https://github.com/Hikari-Tsai/auto-mr): Added a new project entry to the configured project list.
+- **2026-09-07** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a new vocal recording entry to the portfolio grid with video, title, credits, and production notes.
+- **2026-09-04** — Updated [Hikari-Tsai/auto-mr](https://github.com/Hikari-Tsai/auto-mr): Updated the automation to run daily at 08:00 Taipei time, added licensing, and documented/configured target repositories.
+- **2026-09-03** — Updated [Hikari-Tsai/twitch-bot](https://github.com/Hikari-Tsai/twitch-bot): Updated the bot to use TwitchIO 3.3’s native Device Code Flow token refresh and removed manual app-token syncing.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-11 09:38 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-12 09:35 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
@@ -89,7 +89,7 @@ Highlight              GitHub Developer Program Member
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-11 09:38 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-12 09:35 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
