@@ -64,16 +64,16 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-09-10** — Updated [samoyedtopa1120-cmd/topa-homepage](https://github.com/samoyedtopa1120-cmd/topa-homepage): Added a dual-branch Pages deployment that assembles and tests main and staging sites with cache-busted assets and a refreshed blue-white redesign.
-- **2026-09-09** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Added CI checks and a live 3D hero scene with PR review automation and updated deployment tests.
-- **2026-09-09** — Updated [Hikari-Tsai/auto-mr](https://github.com/Hikari-Tsai/auto-mr): Added a new project entry to the configured list of tracked repositories.
-- **2026-09-07** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a new vocal recording entry with video, metadata, and gear details to the portfolio page.
-- **2026-09-04** — Updated [Hikari-Tsai/auto-mr](https://github.com/Hikari-Tsai/auto-mr): Switched promotion automation to a daily Taipei schedule, added MIT licensing, and refreshed docs and project config for the new workflow.
-- **2026-09-03** — Updated [Hikari-Tsai/twitch-bot](https://github.com/Hikari-Tsai/twitch-bot): Updated TwitchIO token handling to use native Device Code Flow refresh support and removed manual app-token sync logic.
+- **2026-09-14** — Updated [samoyedtopa1120-cmd/topa-homepage](https://github.com/samoyedtopa1120-cmd/topa-homepage): Updated the hero section to refresh the profile’s introductory artwork and layout.
+- **2026-09-10** — Updated [samoyedtopa1120-cmd/topa-homepage](https://github.com/samoyedtopa1120-cmd/topa-homepage): Added a GitHub Pages workflow that bundled and tested main and staging sites together with cache-busted assets.
+- **2026-09-09** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Added CI checks, an interactive 3D hero scene, PR review automation, and updated docs and badges for the redesigned portfolio.
+- **2026-09-09** — Updated [Hikari-Tsai/auto-mr](https://github.com/Hikari-Tsai/auto-mr): Added a new project entry to the configured project list.
+- **2026-09-07** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a new vocal recording entry with video, metadata, and description to the profile page.
+- **2026-09-04** — Updated [Hikari-Tsai/auto-mr](https://github.com/Hikari-Tsai/auto-mr): Updated the automation to run daily at 08:00 Taipei time, added licensing, and documented the staged-branch promotion workflow.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-14 09:45 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-15 09:42 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
@@ -81,15 +81,15 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 <!-- GITHUB_STATS_START -->
 ```text
 Public repositories    27
-Last-year activity     234 contributions
-Merged pull requests   35 public PRs
+Last-year activity     237 contributions
+Merged pull requests   36 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
 ```
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-14 09:45 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-15 09:42 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
