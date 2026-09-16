@@ -64,16 +64,16 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-09-14** — Updated [samoyedtopa1120-cmd/topa-homepage](https://github.com/samoyedtopa1120-cmd/topa-homepage): Updated the hero section to refine the page’s profile presentation and visual content.
-- **2026-09-10** — Updated [samoyedtopa1120-cmd/topa-homepage](https://github.com/samoyedtopa1120-cmd/topa-homepage): Added a blue-and-white redesign with static deployment tooling for separate main and staging Pages publishing.
-- **2026-09-09** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Added CI checks, PR review automation, and a live 3D interactive hero to the portfolio site.
-- **2026-09-09** — Updated [Hikari-Tsai/auto-mr](https://github.com/Hikari-Tsai/auto-mr): Added a new project entry to the configured project list.
-- **2026-09-07** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a new vocal recording entry with video, thumbnail, credits, and recording gear details.
-- **2026-09-04** — Updated [Hikari-Tsai/auto-mr](https://github.com/Hikari-Tsai/auto-mr): Shifted the promotion workflow to a daily Taipei-time schedule and updated docs and config for the new AUTO MR setup.
+- **2026-09-16** — Updated [Hikari-Tsai/JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator): Added AAX macOS build and GUI fixes with tests and docs for Pro Tools meter and resize behavior.
+- **2026-09-14** — Updated [samoyedtopa1120-cmd/topa-homepage](https://github.com/samoyedtopa1120-cmd/topa-homepage): Updated the hero section to refresh the page’s introductory artwork and profile presentation.
+- **2026-09-10** — Updated [samoyedtopa1120-cmd/topa-homepage](https://github.com/samoyedtopa1120-cmd/topa-homepage): Redesigned the homepage with a blue-white responsive layout and added a combined Pages deployment for main and staging.
+- **2026-09-09** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Added CI checks and an interactive 3D hero scene to the portfolio while documenting PR-Agent and AWS badge assets.
+- **2026-09-09** — Updated [Hikari-Tsai/auto-mr](https://github.com/Hikari-Tsai/auto-mr): Added a new project entry and updated the project list configuration.
+- **2026-09-07** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a new vocal recording entry with YouTube thumbnail, title, credits, and gear details to the portfolio grid.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-16 09:40 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-16 14:56 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
@@ -81,15 +81,15 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 <!-- GITHUB_STATS_START -->
 ```text
 Public repositories    27
-Last-year activity     238 contributions
-Merged pull requests   36 public PRs
+Last-year activity     239 contributions
+Merged pull requests   37 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
 ```
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-16 09:40 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-16 14:56 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
