@@ -68,24 +68,24 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
+- **2026-09-17** — Updated [Hikari-Tsai/music-detection](https://github.com/Hikari-Tsai/music-detection): Added Hugging Face model sources, fallback downloads, and UI messaging for verified browser model loading and deployment.
+- **2026-09-17** — Updated [Hikari-Tsai/auto-mr](https://github.com/Hikari-Tsai/auto-mr): Added a new project entry to the configuration so it would include the music detection repository.
 - **2026-09-17** — Pushed updates to [Hikari-Tsai/JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator).
-- **2026-09-16** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a new video entry to the portfolio grid with cover details and recording/mixing credits.
-- **2026-09-16** — Updated [Hikari-Tsai/JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator): Added macOS/Windows plug-in CI and release packaging, plus AAX-specific UI and meter fixes for macOS.
+- **2026-09-16** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a new featured video entry to the portfolio grid with title, thumbnail, credits, and production notes.
+- **2026-09-16** — Updated [Hikari-Tsai/JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator): Added a macOS/Windows plug-in build and release workflow with AAX GUI/meter fixes and regression tests.
 - **2026-09-16** — Pushed 1 commit to [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio).
-- **2026-09-16** — Updated [Hikari-Tsai/auto-mr](https://github.com/Hikari-Tsai/auto-mr): Added a new project entry to the configured projects list.
-- **2026-09-14** — Updated [samoyedtopa1120-cmd/topa-homepage](https://github.com/samoyedtopa1120-cmd/topa-homepage): Updated the homepage hero section to change the profile artwork and accompanying intro content.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-17 09:41 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-17 14:42 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
 
 <!-- GITHUB_STATS_START -->
 ```text
-Public repositories    27
-Last-year activity     246 contributions
+Public repositories    28
+Last-year activity     255 contributions
 Merged pull requests   40 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
@@ -93,7 +93,7 @@ Highlight              GitHub Developer Program Member
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-17 09:41 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-17 14:42 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
