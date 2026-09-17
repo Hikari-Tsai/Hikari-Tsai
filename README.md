@@ -1,8 +1,8 @@
 <h1 align="center">Hi, I'm Hikari Tsai</h1>
 
 <p align="center">
-  <strong>Senior Generative AI R&amp;D Engineer · ML Engineer · Independent Musician</strong><br>
-  Building practical AI systems for creators, communities, music, and intelligent software.
+  <strong>Senior Generative AI R&amp;D Engineer · Audio Plugin Developer · Independent Musician</strong><br>
+  Building practical AI systems, audio plugins, and music technology for creators, communities, and intelligent workflows.
 </p>
 
 <p align="center">
@@ -27,9 +27,9 @@
 
 ## About Me
 
-I work at the intersection of AI engineering and creative technology. My projects span generative AI, RAG, agents, Physics AI, AIoT, music generation, singing voice synthesis, creator-facing products, and community automation.
+I work at the intersection of AI engineering, audio software, and creative technology. My projects span generative AI, RAG, agents, Physics AI, AIoT, browser-based music analysis, singing voice synthesis, and cross-platform audio plugin development for VST3, AUv2, and AAX.
 
-I enjoy turning emerging AI capabilities into tools people can actually use, from livestream and Discord assistants to Traditional Chinese writing workflows, portfolio systems, and polished web experiences.
+I enjoy turning emerging AI and audio technologies into tools people can actually use, from livestream and Discord assistants to DAW plugins, music-analysis workflows, Traditional Chinese writing tools, portfolio systems, and polished web experiences.
 
 <p align="center">
   Open to collaborations in generative AI, RAG, creator tools, and music technology.
@@ -45,7 +45,8 @@ I enjoy turning emerging AI capabilities into tools people can actually use, fro
 ```text
 AI products        Generative AI, RAG, agents, structured outputs
 Creator systems    Livestream bots, community operations, content workflows
-Creative AI        Music generation, singing voice synthesis, audio technology
+Audio software     VST3, AUv2, AAX, DSP tooling, cross-platform packaging
+Music AI           Browser ONNX inference, BPM/key analysis, singing voice synthesis
 Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ```
 
@@ -53,13 +54,16 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 
 | Project | What it does |
 | --- | --- |
+| [music-detection](https://github.com/Hikari-Tsai/music-detection) | A browser-first music analysis tool that detects BPM, time signature, and musical key with ONNX inference, with an optional local Python engine and MIDI Tempo export. |
+| [JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator) *(customized fork)* | A cross-platform audio plugin fork with macOS and Windows builds for VST3, AUv2, and AAX, including platform integration, packaging, and audio/UI regression testing. |
 | [software-salary](https://github.com/Hikari-Tsai/software-salary) | Taiwan software salary insights built from 635 valid salary samples, with market percentiles, company comparisons, and career guidance. Earned 65+ GitHub stars. |
+| [auto-mr](https://github.com/Hikari-Tsai/auto-mr) | A centralized GitHub Actions workflow that promotes staging branches through reviewable pull requests while preserving each repository's CI, reviews, and branch protection. |
 | Private RAG / Agent Systems (private) | Internal AI systems for retrieval-augmented generation, document workflows, structured outputs, and production-facing automation. |
 | Web PINN Demo (private) | Frontend demo interface for Physics-Informed Neural Network applications, focused on presenting PINN workflows in a clear web experience. |
 | [twitch-bot](https://github.com/Hikari-Tsai/twitch-bot) | An OpenAI-powered TwitchIO chatbot with configurable reply rules, cooldowns, context memory, owner commands, token persistence, and emote-aware behavior. |
+| [dc-bot](https://github.com/Hikari-Tsai/dc-bot) | An AI Discord digital twin that distills a creator's persona, knowledge, and voice into prompts that sustain community conversations. |
 | [dc-manager](https://github.com/Hikari-Tsai/dc-manager) | A Discord management assistant for AI-assisted moderation, channel analytics, member activity, policy enforcement, and Traditional Chinese community operations. |
 | [Humanizer-zh-TW](https://github.com/Hikari-Tsai/Humanizer-zh-TW) *(customized fork)* | A Taiwan Traditional Chinese adaptation whose skill rules were individually reviewed and refined under human supervision for more natural, meaning-preserving rewrites. |
-| [JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator) *(customized fork)* | Developed a macOS AAX version of the JS Inflator audio plug-in, including the platform-specific build and integration work. |
 
 ## Recent Activity
 
