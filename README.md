@@ -151,9 +151,10 @@ Highlight              GitHub Developer Program Member
   <tr>
     <td align="right" colspan="4">
 <details>
-<summary align="right"><strong>Show 41 more badges</strong></summary>
+<summary align="right"><strong>Show 42 more badges</strong></summary>
 <br>
 <p align="center">
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/knight.png" alt="Knight" title="Knight" width="90"></a>
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2025-5.png" alt="May LeetCoding Challenge" title="May LeetCoding Challenge" width="90"></a>
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2025-6.png" alt="Jun LeetCoding Challenge" title="Jun LeetCoding Challenge" width="90"></a>
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/lg25100.png" alt="100 Days Badge 2025" title="100 Days Badge 2025" width="90"></a>
