@@ -68,32 +68,32 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-09-18** — Pushed updates to [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio).
-- **2026-09-17** — Updated [Hikari-Tsai/music-detection](https://github.com/Hikari-Tsai/music-detection): Added range-based audio analysis, broader video/audio support, and safer dual-branch Pages deployment with updated docs and buttons.
-- **2026-09-17** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Refreshed the portfolio with new music analysis, audio plug-in, and automation projects, plus updated metadata and validation tests.
-- **2026-09-17** — Updated [Hikari-Tsai/auto-mr](https://github.com/Hikari-Tsai/auto-mr): Added a new project entry to the configured project list.
-- **2026-09-17** — Pushed updates to [Hikari-Tsai/JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator).
-- **2026-09-16** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a new video gallery entry showcasing a cover with vocal recording and mixing credits.
+- **2026-09-18** — Updated [Hikari-Tsai/HT-76](https://github.com/Hikari-Tsai/HT-76): Switched macOS builds and packaging to universal binaries, updated release docs, and added tests for dual-arch verification.
+- **2026-09-18** — Updated [Hikari-Tsai/music-detection](https://github.com/Hikari-Tsai/music-detection): Added official GAME Small pitch analysis with bundled model files and updated MIDI export to include vocal notes.
+- **2026-09-18** — Published [v0.91](https://github.com/Hikari-Tsai/HT-76/releases/tag/v0.91) in [Hikari-Tsai/HT-76](https://github.com/Hikari-Tsai/HT-76).
+- **2026-09-18** — Updated [Hikari-Tsai/JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator): Added signed-off installer packaging and uninstall workflows for macOS and Windows, with smoke tests and updated install docs.
+- **2026-09-18** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Added a silent, accessible audio signal lab to the contact section and verified the contact links remained intact.
+- **2026-09-18** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a new portfolio entry showcasing a vocal cover recording and mixing project with video, credits, and studio details.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-18 09:40 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-19 00:31 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
 
 <!-- GITHUB_STATS_START -->
 ```text
-Public repositories    28
-Last-year activity     296 contributions
-Merged pull requests   49 public PRs
+Public repositories    29
+Last-year activity     339 contributions
+Merged pull requests   57 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
 ```
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-18 09:40 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-19 00:31 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
