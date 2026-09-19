@@ -78,6 +78,7 @@ function selectFeaturedBadges(allBadges) {
 }
 
 function featuredBadgeRank(name) {
+  if (name === "Knight") return 11000;
   if (name === "500 Days Badge") return 10000;
 
   const romanMatch = name.match(/\b([IVXLCDM]+)$/);
@@ -86,6 +87,7 @@ function featuredBadgeRank(name) {
 
   const levelMatch = name.match(/^Level (\d+)$/);
   const numericLevel = Number(levelMatch?.[1]);
+  if (name === "Level 3") return 0;
   if (numericLevel >= 2) return 8000 + numericLevel;
 
   if (name === "LeetCode 75") return 7000;

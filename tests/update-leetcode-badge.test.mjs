@@ -28,6 +28,7 @@ test("features advanced algorithm badges with visible titles and hides routine b
           { id: "13", displayName: "Graph Theory I", icon: "/graph-1.png", creationDate: "2022-12-01" },
           { id: "14", displayName: "Level 3", icon: "/level-3.png", creationDate: "2022-11-01" },
           { id: "15", displayName: "Algorithm III", icon: "/algorithm-3.png", creationDate: "2026-01-01" },
+          { id: "16", displayName: "Knight", icon: "/knight.png", creationDate: "2026-02-01" },
         ],
       },
     },
@@ -48,15 +49,17 @@ test("features advanced algorithm badges with visible titles and hides routine b
   const tableEnd = output.indexOf("</table>", detailsStart);
   assert.match(output, /<td align="right" colspan="4">\n<details>/);
   assert.ok(detailsStart < tableEnd, "More should be inside the featured badge table");
-  assert.match(output, /<summary align="right"><strong>Show 6 more badges<\/strong><\/summary>/);
+  assert.match(output, /<summary align="right"><strong>Show 7 more badges<\/strong><\/summary>/);
   assert.equal((output.slice(0, detailsStart).match(/width="90"/g) ?? []).length, 9);
-  assert.equal((output.slice(detailsStart).match(/width="90"/g) ?? []).length, 6);
-  for (const name of ["500 Days Badge", "LeetCode 75", "Dynamic Programming II", "Algorithm II", "Data Structure II", "Programming Skills II", "Graph Theory I", "Level 3", "Algorithm III"]) {
+  assert.equal((output.slice(detailsStart).match(/width="90"/g) ?? []).length, 7);
+  assert.match(output.slice(0, detailsStart), /alt="Knight"[\s\S]*alt="500 Days Badge"/);
+  for (const name of ["Knight", "500 Days Badge", "LeetCode 75", "Dynamic Programming II", "Algorithm II", "Data Structure II", "Programming Skills II", "Graph Theory I", "Algorithm III"]) {
     assert.ok(output.indexOf(name) < detailsStart, `${name} should be featured`);
     assert.match(output.slice(0, detailsStart), new RegExp(`<sub><strong>${name}<\\/strong><\\/sub>`));
   }
   assert.ok(output.indexOf("May LeetCoding Challenge") > detailsStart);
   assert.ok(output.indexOf("100 Days Badge 2024") > detailsStart);
   assert.ok(output.indexOf("365 Days Badge") > detailsStart);
+  assert.ok(output.indexOf("Level 3") > detailsStart);
   assert.doesNotMatch(output, /\nold\n/);
 });
