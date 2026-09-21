@@ -58,11 +58,9 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 | [HT-76](https://github.com/Hikari-Tsai/HT-76) | A JUCE FET compressor audio plugin with Rev D and experimental Rev H circuit models, vintage rack controls, and a dynamic modern interface. |
 | [JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator) *(customized fork)* | A cross-platform audio plugin fork with macOS and Windows builds for VST3, AUv2, and AAX, including platform integration, packaging, and audio/UI regression testing. |
 | [software-salary](https://github.com/Hikari-Tsai/software-salary) | Taiwan software salary insights built from 635 valid salary samples, with market percentiles, company comparisons, and career guidance. Earned 81 GitHub stars. |
-| [auto-mr](https://github.com/Hikari-Tsai/auto-mr) | A centralized GitHub Actions workflow that promotes staging branches through reviewable pull requests while preserving each repository's CI, reviews, and branch protection. |
 | Private RAG / Agent Systems (private) | Internal AI systems for retrieval-augmented generation, document workflows, structured outputs, and production-facing automation. |
 | Web PINN Demo (private) | Frontend demo interface for Physics-Informed Neural Network applications, focused on presenting PINN workflows in a clear web experience. |
 | [twitch-bot](https://github.com/Hikari-Tsai/twitch-bot) | An OpenAI-powered TwitchIO chatbot with configurable reply rules, cooldowns, context memory, owner commands, token persistence, and emote-aware behavior. |
-| [dc-bot](https://github.com/Hikari-Tsai/dc-bot) | An AI Discord digital twin that distills a creator's persona, knowledge, and voice into prompts that sustain community conversations. |
 | [dc-manager](https://github.com/Hikari-Tsai/dc-manager) | A Discord management assistant for AI-assisted moderation, channel analytics, member activity, policy enforcement, and Traditional Chinese community operations. |
 
 ## Recent Activity
