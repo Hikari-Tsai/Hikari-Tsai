@@ -55,14 +55,14 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 | Project | What it does |
 | --- | --- |
 | [ai-interview](https://github.com/Hikari-Tsai/ai-interview) | A multilingual AI engineering interview platform with source-linked flashcards in Traditional Chinese, English, and Japanese, structured AI-assisted study notes, community contributions, and daily incremental updates via GitHub Actions. |
-| [music-detection](https://github.com/Hikari-Tsai/music-detection) | A browser-first music analysis tool that detects BPM, time signature, and musical key with ONNX inference, with an optional local Python engine and MIDI Tempo export. |
-| [HT-76](https://github.com/Hikari-Tsai/HT-76) | A JUCE FET compressor audio plugin with Rev D and experimental Rev H circuit models, vintage rack controls, and a dynamic modern interface. |
-| [JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator) *(customized fork)* | A cross-platform audio plugin fork with macOS and Windows builds for VST3, AUv2, and AAX, including platform integration, packaging, and audio/UI regression testing. |
-| [software-salary](https://github.com/Hikari-Tsai/software-salary) | Taiwan software salary insights built from 635 valid salary samples, with market percentiles, company comparisons, and career guidance. Earned 81 GitHub stars. |
+| [music-detection](https://github.com/Hikari-Tsai/music-detection) | A privacy-first browser music analysis tool that detects BPM, time signature, key, and vocal pitch range with ONNX inference, previews beat and pitch results, and exports Tempo + Lead Vocal MIDI, with an optional local Python engine. |
+| [HT-76](https://github.com/Hikari-Tsai/HT-76) | A JUCE-based 1176-style FET compressor for macOS and Windows, with Rev D and experimental Rev H circuit models, VST3, AU, and AAX builds, plus switchable classic rack and real-time analysis views. |
+| [JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator) *(customized fork)* | A cross-platform JS Inflator fork with macOS and Windows VST3, AUv2, and AAX builds, installer packaging, and audio/UI regression testing; its AAX adaptation targets Pro Tools Developer and remains in testing. |
+| [software-salary](https://github.com/Hikari-Tsai/software-salary) | Taiwan software salary insights based on 709 analyzed salary samples, with market percentiles, company rankings, experience-based estimates, interview guidance, and 83 GitHub stars. |
 | Private RAG / Agent Systems (private) | Internal AI systems for retrieval-augmented generation, document workflows, structured outputs, and production-facing automation. |
 | Web PINN Demo (private) | Frontend demo interface for Physics-Informed Neural Network applications, focused on presenting PINN workflows in a clear web experience. |
-| [twitch-bot](https://github.com/Hikari-Tsai/twitch-bot) | An OpenAI-powered TwitchIO chatbot with configurable reply rules, cooldowns, context memory, owner commands, token persistence, and emote-aware behavior. |
-| [dc-manager](https://github.com/Hikari-Tsai/dc-manager) | A Discord management assistant for AI-assisted moderation, channel analytics, member activity, policy enforcement, and Traditional Chinese community operations. |
+| [twitch-bot](https://github.com/Hikari-Tsai/twitch-bot) | An OpenAI Responses API-powered TwitchIO EventSub chatbot with creator-persona prompts, configurable reply rules, cooldowns, viewer context, owner commands, token validation, and offline-aware behavior. |
+| [dc-manager](https://github.com/Hikari-Tsai/dc-manager) | An LLM-powered Discord community assistant for rule-violation detection, configurable moderation responses, channel analytics, activity summaries, member tracking, and Traditional Chinese operations. |
 
 ## Recent Activity
 
