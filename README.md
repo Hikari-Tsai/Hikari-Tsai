@@ -54,6 +54,7 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 
 | Project | What it does |
 | --- | --- |
+| [ai-interview](https://github.com/Hikari-Tsai/ai-interview) | A multilingual AI engineering interview platform with source-linked flashcards in Traditional Chinese, English, and Japanese, structured AI-assisted study notes, community contributions, and daily incremental updates via GitHub Actions. |
 | [music-detection](https://github.com/Hikari-Tsai/music-detection) | A browser-first music analysis tool that detects BPM, time signature, and musical key with ONNX inference, with an optional local Python engine and MIDI Tempo export. |
 | [HT-76](https://github.com/Hikari-Tsai/HT-76) | A JUCE FET compressor audio plugin with Rev D and experimental Rev H circuit models, vintage rack controls, and a dynamic modern interface. |
 | [JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator) *(customized fork)* | A cross-platform audio plugin fork with macOS and Windows builds for VST3, AUv2, and AAX, including platform integration, packaging, and audio/UI regression testing. |
