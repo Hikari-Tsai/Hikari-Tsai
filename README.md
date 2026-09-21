@@ -67,24 +67,24 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-09-19** — Updated [Hikari-Tsai/HT-76](https://github.com/Hikari-Tsai/HT-76): Updated release versioning, CI release handling, and bilingual docs to support and explain the new 0.9.3 build and installers.
+- **2026-09-21** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Added contribution workflows, community answer guidelines, and expanded generated interview answers with higher token limits.
+- **2026-09-19** — Updated [Hikari-Tsai/HT-76](https://github.com/Hikari-Tsai/HT-76): Updated release/versioning and CI checks, and added bilingual README and installation docs for the HT-76 plugin.
 - **2026-09-19** — Published [v0.93](https://github.com/Hikari-Tsai/HT-76/releases/tag/v0.93) in [Hikari-Tsai/HT-76](https://github.com/Hikari-Tsai/HT-76).
-- **2026-09-18** — Updated [Hikari-Tsai/music-detection](https://github.com/Hikari-Tsai/music-detection): Added GAME pitch analysis and bundled its official ONNX model so MIDI exports could include lead vocal notes.
-- **2026-09-18** — Updated [Hikari-Tsai/JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator): Added macOS and Windows installer packaging, smoke tests, and uninstall tools for selectable plug-in installs.
-- **2026-09-18** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Added a silent, accessible audio signal visualization to the contact section and preserved the existing contact links.
-- **2026-09-18** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a new portfolio entry showcasing a vocal cover with recording and mixing details.
+- **2026-09-18** — Updated [Hikari-Tsai/music-detection](https://github.com/Hikari-Tsai/music-detection): Added GAME pitch analysis and bundled its official ONNX models, enabling MIDI exports with vocal notes.
+- **2026-09-18** — Updated [Hikari-Tsai/JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator): Added macOS and Windows installer packaging with install/uninstall smoke tests and updated docs for the new download and removal flow.
+- **2026-09-18** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Added a silent, accessible audio visualization to the contact section and verified the contact links remained intact.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-21 09:46 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-21 21:23 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
 
 <!-- GITHUB_STATS_START -->
 ```text
-Public repositories    29
-Last-year activity     348 contributions
+Public repositories    30
+Last-year activity     383 contributions
 Merged pull requests   57 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
@@ -92,7 +92,7 @@ Highlight              GitHub Developer Program Member
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-21 09:46 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-21 21:23 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
