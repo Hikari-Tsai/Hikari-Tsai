@@ -6,11 +6,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Hikari-Tsai?tab=repositories&amp;q=&amp;type=&amp;language=&amp;sort=&amp;topic=audio-plugin"><img alt="DSP and VST3 projects" src="https://img.shields.io/badge/DSP%20%2F%20VST3-6F42C1?style=for-the-badge&amp;logo=steinberg&amp;logoColor=white"></a>
-  <a href="https://github.com/Hikari-Tsai?tab=repositories&amp;q=&amp;type=&amp;language=&amp;sort=&amp;topic=music"><img alt="Music projects" src="https://img.shields.io/badge/MUSIC-E91E63?style=for-the-badge&amp;logo=applemusic&amp;logoColor=white"></a>
-  <a href="https://github.com/Hikari-Tsai?tab=repositories&amp;q=&amp;type=&amp;language=&amp;sort=&amp;topic=bot"><img alt="Bot projects" src="https://img.shields.io/badge/BOT-5865F2?style=for-the-badge&amp;logo=robotframework&amp;logoColor=white"></a>
-  <a href="https://github.com/Hikari-Tsai?tab=repositories&amp;q=&amp;type=&amp;language=&amp;sort=&amp;topic=automation"><img alt="CI and CD automation projects" src="https://img.shields.io/badge/CI%20%2F%20CD-2088FF?style=for-the-badge&amp;logo=githubactions&amp;logoColor=white"></a>
-  <a href="https://github.com/Hikari-Tsai?tab=repositories&amp;q=&amp;type=&amp;language=&amp;sort=&amp;topic=career"><img alt="Career projects" src="https://img.shields.io/badge/CAREER-2EA44F?style=for-the-badge&amp;logo=indeed&amp;logoColor=white"></a>
+  <a href="https://github.com/Hikari-Tsai?tab=repositories&amp;q=topic%3Aaudio-plugin"><img alt="DSP and VST3 projects" src="https://img.shields.io/badge/DSP%20%2F%20VST3-6F42C1?style=for-the-badge&amp;logo=steinberg&amp;logoColor=white"></a>
+  <a href="https://github.com/Hikari-Tsai?tab=repositories&amp;q=topic%3Amusic"><img alt="Music projects" src="https://img.shields.io/badge/MUSIC-E91E63?style=for-the-badge&amp;logo=applemusic&amp;logoColor=white"></a>
+  <a href="https://github.com/Hikari-Tsai?tab=repositories&amp;q=topic%3Abot"><img alt="Bot projects" src="https://img.shields.io/badge/BOT-5865F2?style=for-the-badge&amp;logo=robotframework&amp;logoColor=white"></a>
+  <a href="https://github.com/Hikari-Tsai?tab=repositories&amp;q=topic%3Aautomation"><img alt="CI and CD automation projects" src="https://img.shields.io/badge/CI%20%2F%20CD-2088FF?style=for-the-badge&amp;logo=githubactions&amp;logoColor=white"></a>
+  <a href="https://github.com/Hikari-Tsai?tab=repositories&amp;q=topic%3Acareer"><img alt="Career projects" src="https://img.shields.io/badge/CAREER-2EA44F?style=for-the-badge&amp;logo=indeed&amp;logoColor=white"></a>
 </p>
 
 <p align="center">
