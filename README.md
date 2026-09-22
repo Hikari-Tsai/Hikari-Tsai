@@ -38,8 +38,9 @@ I enjoy turning emerging AI and audio technologies into tools people can actuall
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/hikari-tsai/"><img src="./assets/linkedin-contact-button.svg" alt="Connect on LinkedIn" width="168"></a>
-  <a href="mailto:aaatmy@gmail.com"><img src="./assets/email-contact-button.svg" alt="Send me an email" width="154"></a>
+  <a href="https://www.linkedin.com/in/hikari-tsai/"><img src="https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&amp;logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NiA0OCI%2BPGcgZmlsbD0id2hpdGUiPjxjaXJjbGUgY3g9IjgiIGN5PSI4IiByPSI1Ii8%2BPHJlY3QgeD0iMyIgeT0iMTYiIHdpZHRoPSIxMCIgaGVpZ2h0PSIyOSIgcng9IjEiLz48cGF0aCBkPSJNMTggMTZoMTB2NGMzLTQgNy02IDEyLTYgMTAgMCAxNCA2IDE0IDE4djEzSDQ0VjMzYzAtNy0yLTEwLTctMTAtNiAwLTkgNC05IDExdjExSDE4eiIvPjwvZz48L3N2Zz4%3D" alt="Connect on LinkedIn"></a>
+  <a href="mailto:aaatmy@gmail.com"><img src="https://img.shields.io/badge/EMAIL-EA4335?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" alt="Send me an email"></a>
+  <a href="https://discord.com/users/hikari_tsai"><img src="https://img.shields.io/badge/DISCORD-5865F2?style=for-the-badge&amp;logo=discord&amp;logoColor=white" alt="Contact me on Discord"></a>
 </p>
 
 ## Current Focus
