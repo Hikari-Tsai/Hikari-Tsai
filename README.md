@@ -71,16 +71,16 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-09-22** — Updated [Hikari-Tsai/music-detection](https://github.com/Hikari-Tsai/music-detection): Added opt-in enhanced vocal analysis with model downloads, browser/native DSP workers, and updated deployment/docs.
-- **2026-09-22** — Published [enhanced-models-v1](https://github.com/Hikari-Tsai/music-detection/releases/tag/enhanced-models-v1) in [Hikari-Tsai/music-detection](https://github.com/Hikari-Tsai/music-detection).
-- **2026-09-21** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Added contribution workflows and refreshed answers to support community review, targeted retries, and longer model-generated explanations.
-- **2026-09-19** — Updated [Hikari-Tsai/HT-76](https://github.com/Hikari-Tsai/HT-76): Updated release versioning, release packaging rules, and added bilingual installation and README docs for the plugin.
-- **2026-09-19** — Published [v0.93](https://github.com/Hikari-Tsai/HT-76/releases/tag/v0.93) in [Hikari-Tsai/HT-76](https://github.com/Hikari-Tsai/HT-76).
-- **2026-09-18** — Updated [Hikari-Tsai/JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator): Added installer packaging and CI smoke tests for macOS and Windows builds, with new uninstallers and updated install docs.
+- **2026-09-23** — Updated [Hikari-Tsai/music-detection](https://github.com/Hikari-Tsai/music-detection): Simplified the analysis options UI by removing extra controls and tightening the engine selector layout.
+- **2026-09-23** — Pushed 1 commit to [Hikari-Tsai/JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator).
+- **2026-09-22** — Updated [Hikari-Tsai/JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator): Updated the README links with badge-style navigation for English, Chinese, and downloads.
+- **2026-09-22** — Updated [Hikari-Tsai/HT-76](https://github.com/Hikari-Tsai/HT-76): Updated the README with animated previews, new download badges, and scripts/tests to render and package them.
+- **2026-09-22** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Updated the READMEs with language badges for easier switching between English and Traditional Chinese.
+- **2026-09-22** — Updated [Hikari-Tsai/music-detection](https://github.com/Hikari-Tsai/music-detection): Added an optional enhanced vocal-analysis pipeline with separate model downloads, browser/server support, and updated docs.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-22 09:40 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-23 09:40 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
@@ -88,15 +88,15 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 <!-- GITHUB_STATS_START -->
 ```text
 Public repositories    30
-Last-year activity     387 contributions
-Merged pull requests   58 public PRs
+Last-year activity     404 contributions
+Merged pull requests   60 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
 ```
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-22 09:40 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-23 09:40 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
