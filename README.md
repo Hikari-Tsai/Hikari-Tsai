@@ -6,7 +6,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Hikari-Tsai?tab=repositories&amp;q=topic%3Aaudio-plugin"><img alt="DSP and VST3 projects" src="https://img.shields.io/badge/DSP%20%2F%20VST3-6F42C1?style=for-the-badge&amp;logo=steinberg&amp;logoColor=white"></a>
+  <a href="https://github.com/Hikari-Tsai?tab=repositories&amp;q=topic%3Aaudio-plugin"><img alt="AAX audio plugin projects" src="https://img.shields.io/badge/AAX-6F42C1?style=for-the-badge&amp;logo=protools&amp;logoColor=white"></a>
+  <a href="https://github.com/Hikari-Tsai?tab=repositories&amp;q=topic%3Aaudio-plugin"><img alt="VST3 audio plugin projects" src="https://img.shields.io/badge/VST3-C90526?style=for-the-badge&amp;logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ijk3MCAwIDQyMCA1MDAiPjxwYXRoIGZpbGw9IndoaXRlIiBkPSJNMTIyMC4xIDcuMWw4MC4yIDgwLjJjLTgyLjIgNS42LTE0Ny4xIDc0LjEtMTQ3LjEgMTU3LjcgMCA4Ny4xIDcwLjMgMTU3LjcgMTU3LjMgMTU4LjFsLTkwLjMgOTAuM0w5NzcgMjUwLjMgMTIyMC4xIDcuMXpNMTI0NC4xIDI0NS4xYzAtMzcuMSAzMC4xLTY3LjIgNjcuMi02Ny4yczY3LjIgMzAuMSA2Ny4yIDY3LjItMzAuMSA2Ny4yLTY3LjIgNjcuMi02Ny4yLTMwLTY3LjItNjcuMnoiLz48L3N2Zz4%3D"></a>
   <a href="https://github.com/Hikari-Tsai?tab=repositories&amp;q=topic%3Amusic"><img alt="Music projects" src="https://img.shields.io/badge/MUSIC-E91E63?style=for-the-badge&amp;logo=applemusic&amp;logoColor=white"></a>
   <a href="https://github.com/Hikari-Tsai?tab=repositories&amp;q=topic%3Abot"><img alt="Bot projects" src="https://img.shields.io/badge/BOT-5865F2?style=for-the-badge&amp;logo=robotframework&amp;logoColor=white"></a>
   <a href="https://github.com/Hikari-Tsai?tab=repositories&amp;q=topic%3Aautomation"><img alt="CI and CD automation projects" src="https://img.shields.io/badge/CI%20%2F%20CD-2088FF?style=for-the-badge&amp;logo=githubactions&amp;logoColor=white"></a>
