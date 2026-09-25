@@ -64,7 +64,6 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 | [JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator) *(customized fork)* | A cross-platform JS Inflator fork with macOS and Windows VST3, AUv2, and AAX builds, installer packaging, and audio/UI regression testing; its AAX adaptation targets Pro Tools Developer and remains in testing. |
 | [software-salary](https://github.com/Hikari-Tsai/software-salary) | Taiwan software salary insights based on 709 analyzed salary samples, with market percentiles, company rankings, experience-based estimates, interview guidance, and 83 GitHub stars. |
 | Private RAG / Agent Systems (private) | Internal AI systems for retrieval-augmented generation, document workflows, structured outputs, and production-facing automation. |
-| Web PINN Demo (private) | Frontend demo interface for Physics-Informed Neural Network applications, focused on presenting PINN workflows in a clear web experience. |
 | [twitch-bot](https://github.com/Hikari-Tsai/twitch-bot) | An OpenAI Responses API-powered TwitchIO EventSub chatbot with creator-persona prompts, configurable reply rules, cooldowns, viewer context, owner commands, token validation, and offline-aware behavior. |
 | [dc-manager](https://github.com/Hikari-Tsai/dc-manager) | An LLM-powered Discord community assistant for rule-violation detection, configurable moderation responses, channel analytics, activity summaries, member tracking, and Traditional Chinese operations. |
 
