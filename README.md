@@ -235,6 +235,14 @@ Highlight              GitHub Developer Program Member
     </td>
   </tr>
   <tr>
+    <td valign="top"><strong>DSP &amp; Audio Plug-ins</strong></td>
+    <td>
+      <a href="https://developer.avid.com/aax/"><img alt="AAX" src="https://img.shields.io/badge/AAX-6F42C1?style=flat-square&logo=protools&logoColor=white"></a>
+      <a href="https://steinbergmedia.github.io/vst3_dev_portal/"><img alt="VST3" src="https://img.shields.io/badge/VST3-C90526?style=flat-square&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ijk3MCAwIDQyMCA1MDAiPjxwYXRoIGZpbGw9IndoaXRlIiBkPSJNMTIyMC4xIDcuMWw4MC4yIDgwLjJjLTgyLjIgNS42LTE0Ny4xIDc0LjEtMTQ3LjEgMTU3LjcgMCA4Ny4xIDcwLjMgMTU3LjcgMTU3LjMgMTU4LjFsLTkwLjMgOTAuM0w5NzcgMjUwLjMgMTIyMC4xIDcuMXpNMTI0NC4xIDI0NS4xYzAtMzcuMSAzMC4xLTY3LjIgNjcuMi02Ny4yczY3LjIgMzAuMSA2Ny4yIDY3LjItMzAuMSA2Ny4yLTY3LjIgNjcuMi02Ny4yLTMwLTY3LjItNjcuMnoiLz48L3N2Zz4%3D"></a>
+      <a href="https://developer.apple.com/documentation/audiotoolbox/audio-unit-v3-plug-ins"><img alt="Audio Units" src="https://img.shields.io/badge/AU-555555?style=flat-square&logo=apple&logoColor=white"></a>
+    </td>
+  </tr>
+  <tr>
     <td valign="top"><strong>Automation &amp; Platforms</strong></td>
     <td>
       <a href="https://docs.github.com/actions"><img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white"></a>
