@@ -221,14 +221,20 @@ Highlight              GitHub Developer Program Member
       <a href="https://www.typescriptlang.org/"><img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"></a>
       <a href="https://isocpp.org/"><img alt="C++" src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white"></a>
       <a href="https://cmake.org/"><img alt="CMake" src="https://img.shields.io/badge/CMake-064F8C?style=flat-square&logo=cmake&logoColor=white"></a>
-      <a href="https://juce.com/"><img alt="JUCE" src="https://img.shields.io/badge/JUCE-8DC63F?style=flat-square&logo=juce&logoColor=white"></a>
     </td>
   </tr>
   <tr>
-    <td valign="top"><strong>AI &amp; Web</strong></td>
+    <td valign="top"><strong>AI &amp; ML</strong></td>
     <td>
       <a href="https://platform.openai.com/docs/"><img alt="OpenAI" src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white"></a>
       <a href="https://onnxruntime.ai/"><img alt="ONNX Runtime" src="https://img.shields.io/badge/ONNX_Runtime-005CED?style=flat-square&logo=onnx&logoColor=white"></a>
+      <a href="https://www.langchain.com/"><img alt="LangChain" src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white"></a>
+      <a href="https://www.llamaindex.ai/"><img alt="LlamaIndex" src="https://img.shields.io/badge/LlamaIndex-6C63FF?style=flat-square&logoColor=white"></a>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><strong>Web</strong></td>
+    <td>
       <a href="https://fastapi.tiangolo.com/"><img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"></a>
       <a href="https://astro.build/"><img alt="Astro" src="https://img.shields.io/badge/Astro-BC52EE?style=flat-square&logo=astro&logoColor=white"></a>
       <a href="https://react.dev/"><img alt="React" src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB"></a>
@@ -239,6 +245,9 @@ Highlight              GitHub Developer Program Member
   <tr>
     <td valign="top"><strong>DSP &amp; Audio Plug-ins</strong></td>
     <td>
+      <a href="https://juce.com/"><img alt="JUCE" src="https://img.shields.io/badge/JUCE-8DC63F?style=flat-square&logo=juce&logoColor=white"></a>
+      <a href="https://github.com/topics/singing-voice-synthesis"><img alt="Singing Voice Synthesis" src="https://img.shields.io/badge/SVS-8E44AD?style=flat-square&logo=musicbrainz&logoColor=white"></a>
+      <a href="https://github.com/stakira/OpenUtau"><img alt="OpenUtau" src="https://img.shields.io/badge/OpenUtau-7B61FF?style=flat-square&logo=github&logoColor=white"></a>
       <a href="https://developer.avid.com/aax/"><img alt="AAX" src="https://img.shields.io/badge/AAX-6F42C1?style=flat-square&logo=protools&logoColor=white"></a>
       <a href="https://steinbergmedia.github.io/vst3_dev_portal/"><img alt="VST3" src="https://img.shields.io/badge/VST3-C90526?style=flat-square&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ijk3MCAwIDQyMCA1MDAiPjxwYXRoIGZpbGw9IndoaXRlIiBkPSJNMTIyMC4xIDcuMWw4MC4yIDgwLjJjLTgyLjIgNS42LTE0Ny4xIDc0LjEtMTQ3LjEgMTU3LjcgMCA4Ny4xIDcwLjMgMTU3LjcgMTU3LjMgMTU4LjFsLTkwLjMgOTAuM0w5NzcgMjUwLjMgMTIyMC4xIDcuMXpNMTI0NC4xIDI0NS4xYzAtMzcuMSAzMC4xLTY3LjIgNjcuMi02Ny4yczY3LjIgMzAuMSA2Ny4yIDY3LjItMzAuMSA2Ny4yLTY3LjIgNjcuMi02Ny4yLTMwLTY3LjItNjcuMnoiLz48L3N2Zz4%3D"></a>
       <a href="https://developer.apple.com/documentation/audiotoolbox/audio-unit-v3-plug-ins"><img alt="Audio Units" src="https://img.shields.io/badge/AU-555555?style=flat-square&logo=apple&logoColor=white"></a>
