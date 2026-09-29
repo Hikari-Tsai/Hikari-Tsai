@@ -70,16 +70,16 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-09-27** — Updated [Hikari-Tsai/JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator): Added bilingual docs explaining the audio algorithm, build, install, and AAX signing steps while simplifying the README navigation.
-- **2026-09-27** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Updated the timestamp for a failed source check after an HTTP 403 error.
-- **2026-09-27** — Updated [Hikari-Tsai/HT-76](https://github.com/Hikari-Tsai/HT-76): Added local PACE-signed AAX release signing, verification, and updated docs to reflect the new macOS AAX packaging and Windows removal.
-- **2026-09-25** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added a separate PhysicsNeMo audio-training flow for stereo dry/wet S4 and S6 models with docs, configs, tests, and packaging support.
-- **2026-09-24** — Updated [Hikari-Tsai/HT-76](https://github.com/Hikari-Tsai/HT-76): Excluded design reference files from GitHub language statistics.
-- **2026-09-24** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Added CI commit-message summarization for staged data updates, with LLM fallback logic and docs/tests for the new workflow.
+- **2026-09-28** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Refactored salary stats into generated data with richer company details, updated docs/meta, and refreshed the sharing image badge.
+- **2026-09-28** — Updated [Hikari-Tsai/HT-76](https://github.com/Hikari-Tsai/HT-76): Updated the plugin version and branding while refining silver-panel knob rendering and tests to keep the knob body opaque.
+- **2026-09-28** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Refreshed several answer records with updated content and marked affected cached answers stale.
+- **2026-09-27** — Updated [Hikari-Tsai/JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator): Added English and Traditional Chinese docs for the audio algorithm, build, and installation/signing workflow.
+- **2026-09-27** — Updated [Hikari-Tsai/HT-76](https://github.com/Hikari-Tsai/HT-76): Added local PACE-signed AAX release signing and verification support, with updated installer/docs to reflect the new signed macOS AAX packages.
+- **2026-09-25** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added a new PhysicsNeMo stereo audio training pipeline with S4/S6 models, configs, docs, tests, and packaging updates.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-28 09:50 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-29 09:47 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
@@ -87,7 +87,7 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 <!-- GITHUB_STATS_START -->
 ```text
 Public repositories    31
-Last-year activity     422 contributions
+Last-year activity     427 contributions
 Merged pull requests   61 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
@@ -95,7 +95,7 @@ Highlight              GitHub Developer Program Member
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-09-28 09:50 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-09-29 09:47 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
