@@ -230,6 +230,8 @@ Highlight              GitHub Developer Program Member
       <a href="https://onnxruntime.ai/"><img alt="ONNX Runtime" src="https://img.shields.io/badge/ONNX_Runtime-005CED?style=flat-square&logo=onnx&logoColor=white"></a>
       <a href="https://www.langchain.com/"><img alt="LangChain" src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white"></a>
       <a href="https://www.llamaindex.ai/"><img alt="LlamaIndex" src="https://img.shields.io/badge/LlamaIndex-6C63FF?style=flat-square&logoColor=white"></a>
+      <a href="https://github.com/QwenLM/Qwen"><img alt="Qwen" src="https://img.shields.io/badge/Qwen-615CED?style=flat-square&logo=alibabacloud&logoColor=white"></a>
+      <a href="https://vllm.ai/"><img alt="vLLM" src="https://img.shields.io/badge/vLLM-00A6A6?style=flat-square&logoColor=white"></a>
     </td>
   </tr>
   <tr>
