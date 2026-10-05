@@ -70,16 +70,16 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-10-02** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added a public comparison page with new listening excerpts, waveform summaries, and audio attribution while hiding metrics on the site build.
-- **2026-10-02** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Refreshed AI interview answer content and source metadata, marking updated responses ready and rechecking reference pages.
-- **2026-10-01** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added an offline comparison site and docs to compare compressor models, full-corpus training, and threshold filename compatibility.
-- **2026-09-28** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Expanded the salary dashboard with generated data, company detail summaries, updated stats, and regenerated sharing metadata.
-- **2026-09-28** — Updated [Hikari-Tsai/HT-76](https://github.com/Hikari-Tsai/HT-76): Updated the plugin branding, docs, and rendering so the silver-panel UI kept black knobs consistently opaque.
-- **2026-09-27** — Updated [Hikari-Tsai/JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator): Added bilingual docs explaining the plugin’s audio algorithm, build and install steps, and AAX signing details.
+- **2026-10-02** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added a public listening page with new audition excerpts, waveform summaries, and safer build checks while keeping audio paths publishable.
+- **2026-10-02** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Refreshed interview-answer data and source checks, marking regenerated entries ready and updating content metadata.
+- **2026-10-01** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added an offline comparison page and expanded training docs to support a full-corpus benchmark workflow and threshold filename compatibility.
+- **2026-09-28** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Expanded the salary survey site with generated data, company detail panels, updated stats, and refreshed tests and sharing assets.
+- **2026-09-28** — Updated [Hikari-Tsai/HT-76](https://github.com/Hikari-Tsai/HT-76): Updated the plugin’s branding, version, visuals, and tests to keep knobs opaque across faceplate themes.
+- **2026-09-27** — Updated [Hikari-Tsai/JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator): Added detailed bilingual docs for the audio algorithm, build/release workflow, and installation/signing instructions while simplifying the READMEs.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-10-04 10:16 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-10-05 09:54 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
@@ -95,7 +95,7 @@ Highlight              GitHub Developer Program Member
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-10-04 10:16 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-10-05 09:54 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
