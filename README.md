@@ -70,16 +70,16 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-10-02** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added a public listening view with waveform excerpts, audio attribution, and report updates for the comparison page.
-- **2026-10-02** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Refreshed AI interview answers and source checks, marking regenerated items ready and updating fetch timestamps and metadata.
-- **2026-10-01** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added an offline comparison site and docs for full-corpus PINN training, evaluation, and threshold filename compatibility.
-- **2026-09-28** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Updated the salary survey with fresh analyzed samples, company details, and generated rankings and sharing assets.
-- **2026-09-28** — Updated [Hikari-Tsai/HT-76](https://github.com/Hikari-Tsai/HT-76): Updated the plugin version and branding while keeping the silver/black UI knob rendering consistent across faceplates.
-- **2026-09-27** — Updated [Hikari-Tsai/JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator): Added bilingual docs explaining the plugin’s audio algorithm, build/release workflow, and installation and AAX signing details.
+- **2026-10-06** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Updated the generator and docs to use GPT-6.1 Sol-compatible request parameters and freshness checks for stale answers.
+- **2026-10-02** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added a public listening page with new audition clips, waveform summaries, and updated validation to keep audio and scripts out of the report.
+- **2026-10-01** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added offline comparison and training docs plus a GitHub Pages deploy workflow for the CL 1B benchmark page.
+- **2026-09-28** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Refreshed salary stats generation, company detail views, and sharing metadata with the latest survey data.
+- **2026-09-28** — Updated [Hikari-Tsai/HT-76](https://github.com/Hikari-Tsai/HT-76): Updated the plugin branding and docs, and made the silver/black faceplates keep knobs opaque across themes.
+- **2026-09-27** — Updated [Hikari-Tsai/JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator): Documented the plug-in’s audio algorithm, build, install, and AAX signing details while simplifying the bilingual README links.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-10-06 09:46 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-10-07 09:52 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
@@ -87,7 +87,7 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 <!-- GITHUB_STATS_START -->
 ```text
 Public repositories    31
-Last-year activity     431 contributions
+Last-year activity     433 contributions
 Merged pull requests   61 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
@@ -95,7 +95,7 @@ Highlight              GitHub Developer Program Member
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-10-06 09:46 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-10-07 09:52 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
