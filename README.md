@@ -70,16 +70,16 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-10-08** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Refreshed RAG and agent-interview answer data and source checks, marking the entries ready with updated content hashes and timestamps.
-- **2026-10-06** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Updated model handling and docs to support GPT-6.1 Sol, plus added stale-answer detection and tests.
-- **2026-10-02** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added public listening excerpts and waveform summaries to the comparison page while keeping generated audio publishable and metrics private.
-- **2026-10-01** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added a deployment workflow and docs for the new comparison page and clarified threshold filename handling and training/evaluation reports.
-- **2026-09-28** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Refreshed the salary survey with regenerated stats, company detail views, and updated data-driven rankings and share image.
-- **2026-09-28** — Updated [Hikari-Tsai/HT-76](https://github.com/Hikari-Tsai/HT-76): Updated the plugin version and branding, and made the silver panel keep knobs black while adding tests and refreshed screenshots.
+- **2026-10-09** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Refreshed AI interview Q&A entries and source checks, updating answer metadata and content hashes to ready status.
+- **2026-10-06** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Updated model configuration and tests to support GPT-6.1 Sol reasoning parameters and stale-answer detection.
+- **2026-10-02** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added publishable listening excerpts, waveform summaries, and UI support for an audio-focused comparison page without embedding metrics.
+- **2026-10-01** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added a GitHub Pages workflow and docs for the new comparison page, full-corpus training, and threshold-file compatibility.
+- **2026-09-28** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Refreshed the salary report with generated stats, company detail drilldowns, updated metadata, and a new sample-based sharing image badge.
+- **2026-09-28** — Updated [Hikari-Tsai/HT-76](https://github.com/Hikari-Tsai/HT-76): Updated the plugin version and branding, and refined the silver-panel UI so knobs stay black and opaque across faceplates.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-10-09 09:54 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-10-10 09:51 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
@@ -95,7 +95,7 @@ Highlight              GitHub Developer Program Member
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-10-09 09:54 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-10-10 09:51 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
