@@ -5,6 +5,7 @@ const readmePath = process.env.LEETCODE_README_PATH ?? "README.md";
 const startMarker = "<!-- LEETCODE_BADGES_START -->";
 const endMarker = "<!-- LEETCODE_BADGES_END -->";
 const featuredColumns = 4;
+const minimumFeaturedBadges = 8;
 
 const payload = process.env.LEETCODE_BADGES_JSON
   ? JSON.parse(process.env.LEETCODE_BADGES_JSON)
@@ -70,15 +71,30 @@ await writeFile(readmePath, updatedReadme);
 console.log(`Updated README with ${sortedBadges.length} LeetCode badges`);
 
 function selectFeaturedBadges(allBadges) {
-  return allBadges
+  const guardian = allBadges.find((badge) => badge.displayName === "Guardian");
+  const knight = allBadges.find((badge) => badge.displayName === "Knight");
+  const primaryBadge = guardian ?? knight;
+  const competitiveBadgeIds = new Set([guardian?.id, knight?.id].filter(Boolean));
+  const rankedBadges = allBadges
+    .filter((badge) => !competitiveBadgeIds.has(badge.id))
     .map((badge) => ({ badge, rank: featuredBadgeRank(badge.displayName) }))
     .filter(({ rank }) => rank > 0)
     .sort((left, right) => right.rank - left.rank || right.badge.creationDate.localeCompare(left.badge.creationDate))
     .map(({ badge }) => badge);
+  const featuredBadges = primaryBadge ? [primaryBadge, ...rankedBadges] : rankedBadges;
+  const featuredIds = new Set(featuredBadges.map((badge) => badge.id));
+
+  for (const badge of allBadges) {
+    if (featuredBadges.length >= minimumFeaturedBadges) break;
+    if (featuredIds.has(badge.id) || competitiveBadgeIds.has(badge.id)) continue;
+    featuredBadges.push(badge);
+    featuredIds.add(badge.id);
+  }
+
+  return featuredBadges;
 }
 
 function featuredBadgeRank(name) {
-  if (name === "Knight") return 11000;
   if (name === "500 Days Badge") return 10000;
 
   const romanMatch = name.match(/\b([IVXLCDM]+)$/);
