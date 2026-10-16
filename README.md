@@ -116,10 +116,6 @@ Highlight              GitHub Developer Program Member
 <table align="center">
   <tr>
     <td align="center" valign="top" width="140">
-  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/knight.png" alt="Knight" title="Knight" width="90"></a><br>
-      <sub><strong>Knight</strong></sub>
-    </td>
-    <td align="center" valign="top" width="140">
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/marketing/lg500.png" alt="500 Days Badge" title="500 Days Badge" width="90"></a><br>
       <sub><strong>500 Days Badge</strong></sub>
     </td>
@@ -131,12 +127,12 @@ Highlight              GitHub Developer Program Member
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/algorithm_II.png" alt="Algorithm II" title="Algorithm II" width="90"></a><br>
       <sub><strong>Algorithm II</strong></sub>
     </td>
-  </tr>
-  <tr>
     <td align="center" valign="top" width="140">
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/DS_II.png" alt="Data Structure II" title="Data Structure II" width="90"></a><br>
       <sub><strong>Data Structure II</strong></sub>
     </td>
+  </tr>
+  <tr>
     <td align="center" valign="top" width="140">
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/%E7%BC%96%E7%A8%8B%E8%83%BD%E5%8A%9B_%E5%9F%BA%E7%A1%80.png" alt="Programming Skills II" title="Programming Skills II" width="90"></a><br>
       <sub><strong>Programming Skills II</strong></sub>
@@ -153,12 +149,13 @@ Highlight              GitHub Developer Program Member
   <tr>
     <td align="right" colspan="4">
 <details>
-<summary align="right"><strong>Show 45 more badges</strong></summary>
+<summary align="right"><strong>Show 46 more badges</strong></summary>
 <br>
 <p align="center">
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2026-9.png" alt="Sep LeetCoding Challenge" title="Sep LeetCoding Challenge" width="90"></a>
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/50_1080_1080.png" alt="50 Days Badge 2026" title="50 Days Badge 2026" width="90"></a>
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/Quest_Math_Large.png" alt="Mathematical Insight Badge" title="Mathematical Insight Badge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/guardian.png" alt="Guardian" title="Guardian" width="90"></a>
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2025-5.png" alt="May LeetCoding Challenge" title="May LeetCoding Challenge" width="90"></a>
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2025-6.png" alt="Jun LeetCoding Challenge" title="Jun LeetCoding Challenge" width="90"></a>
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/lg25100.png" alt="100 Days Badge 2025" title="100 Days Badge 2025" width="90"></a>
