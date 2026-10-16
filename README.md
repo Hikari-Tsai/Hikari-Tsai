@@ -226,6 +226,9 @@ Highlight              GitHub Developer Program Member
     <td>
       <a href="https://platform.openai.com/docs/"><img alt="OpenAI" src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white"></a>
       <a href="https://onnxruntime.ai/"><img alt="ONNX Runtime" src="https://img.shields.io/badge/ONNX_Runtime-005CED?style=flat-square&logo=onnx&logoColor=white"></a>
+      <a href="https://pytorch.org/"><img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"></a>
+      <a href="https://github.com/apache/mxnet"><img alt="Apache MXNet" src="https://img.shields.io/badge/MXNet-D22128?style=flat-square&logo=apache&logoColor=white"></a>
+      <a href="https://github.com/NVIDIA/physicsnemo"><img alt="NVIDIA PhysicsNeMo" src="https://img.shields.io/badge/PhysicsNeMo-76B900?style=flat-square&logo=nvidia&logoColor=white"></a>
       <a href="https://www.langchain.com/"><img alt="LangChain" src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white"></a>
       <a href="https://www.llamaindex.ai/"><img alt="LlamaIndex" src="https://img.shields.io/badge/LlamaIndex-6C63FF?style=flat-square&logoColor=white"></a>
       <a href="https://github.com/QwenLM/Qwen"><img alt="Qwen" src="https://img.shields.io/badge/Qwen-615CED?style=flat-square&logo=alibabacloud&logoColor=white"></a>
