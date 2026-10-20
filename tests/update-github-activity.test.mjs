@@ -23,6 +23,7 @@ old recent timestamp
 <!-- GITHUB_STATS_START -->
 \`\`\`text
 Public repositories    1
+Private repositories   4
 Last-year activity     2 contributions
 Merged pull requests   3 public PRs
 Current achievements   Keep This Sentinel
@@ -55,7 +56,7 @@ old timestamp
     encoding: "utf8",
     env: {
       ...process.env,
-      GITHUB_ACTIVITY_DATA_JSON: JSON.stringify({ publicRepos: 26, totalContributions: 300, mergedPullRequests: 42, events }),
+      GITHUB_ACTIVITY_DATA_JSON: JSON.stringify({ publicRepos: 26, privateRepos: 9, totalContributions: 300, mergedPullRequests: 42, events }),
       GITHUB_ACTIVITY_README_PATH: readme,
       GITHUB_ACTIVITY_NOW: "2026-08-31T01:30:00.000Z",
     },
@@ -65,6 +66,7 @@ old timestamp
   const output = readFileSync(readme, "utf8");
   assert.doesNotMatch(output, /old activity|old recent timestamp|old timestamp/);
   assert.match(output, /Public repositories    26/);
+  assert.match(output, /Private repositories   9/);
   assert.match(output, /Last-year activity     300 contributions/);
   assert.match(output, /Merged pull requests   42 public PRs/);
   assert.match(output, /Current achievements   Keep This Sentinel/);
@@ -79,6 +81,131 @@ old timestamp
   assert.equal((output.match(/\[Hikari-Tsai\/app\]/g) ?? []).length, 2);
   assert.equal((output.match(/<p align="right"><sub>Last updated: 2026-08-31 09:30 \(UTC\+8\)<\/sub><\/p>/g) ?? []).length, 2);
   assert.ok(output.indexOf("GITHUB_RECENT_UPDATED_AT_START") < output.indexOf("GITHUB_STATS_START"));
+});
+
+test("preserves the previous private repository count when it is unavailable", () => {
+  const directory = mkdtempSync(join(tmpdir(), "github-activity-private-fallback-"));
+  const readme = join(directory, "README.md");
+  writeFileSync(readme, `# Profile
+
+<!-- GITHUB_RECENT_ACTIVITY_START -->
+old activity
+<!-- GITHUB_RECENT_ACTIVITY_END -->
+<!-- GITHUB_RECENT_UPDATED_AT_START -->
+old recent timestamp
+<!-- GITHUB_RECENT_UPDATED_AT_END -->
+<!-- GITHUB_STATS_START -->
+\`\`\`text
+Public repositories    1
+Private repositories   7
+Last-year activity     2 contributions
+Merged pull requests   3 public PRs
+Current achievements   Keep This Sentinel
+Highlight              Keep This Highlight
+\`\`\`
+<!-- GITHUB_STATS_END -->
+<!-- GITHUB_UPDATED_AT_START -->
+old timestamp
+<!-- GITHUB_UPDATED_AT_END -->
+`);
+
+  const result = spawnSync(process.execPath, ["scripts/update-github-activity.mjs"], {
+    cwd: new URL("..", import.meta.url),
+    encoding: "utf8",
+    env: {
+      ...process.env,
+      GITHUB_ACTIVITY_DATA_JSON: JSON.stringify({
+        publicRepos: 26,
+        totalContributions: 300,
+        mergedPullRequests: 42,
+        events: [],
+      }),
+      GITHUB_ACTIVITY_README_PATH: readme,
+      GITHUB_ACTIVITY_NOW: "2026-08-31T01:30:00.000Z",
+      OPENAI_API_KEY: "",
+    },
+  });
+
+  assert.equal(result.status, 0, result.stderr);
+  assert.match(readFileSync(readme, "utf8"), /Private repositories   7/);
+});
+
+test("counts only private repositories owned by the profile user", async (context) => {
+  const directory = mkdtempSync(join(tmpdir(), "github-activity-private-owned-"));
+  const readme = join(directory, "README.md");
+  writeFileSync(readme, `# Profile
+
+<!-- GITHUB_RECENT_ACTIVITY_START -->old<!-- GITHUB_RECENT_ACTIVITY_END -->
+<!-- GITHUB_RECENT_UPDATED_AT_START -->old<!-- GITHUB_RECENT_UPDATED_AT_END -->
+<!-- GITHUB_STATS_START -->
+\`\`\`text
+Public repositories    1
+Private repositories   2
+Current achievements   Keep This Sentinel
+Highlight              Keep This Highlight
+\`\`\`
+<!-- GITHUB_STATS_END -->
+<!-- GITHUB_UPDATED_AT_START -->old<!-- GITHUB_UPDATED_AT_END -->
+`);
+
+  let privateQuery = "";
+  const server = createServer(async (request, response) => {
+    if (request.url === "/graphql" && request.method === "POST") {
+      let body = "";
+      for await (const chunk of request) body += chunk;
+      if (request.headers.authorization === "Bearer private-token") {
+        privateQuery = JSON.parse(body).query;
+        response.writeHead(200, { "content-type": "application/json" });
+        response.end(JSON.stringify({ data: { user: { repositories: { totalCount: 11 } } } }));
+      } else {
+        response.writeHead(200, { "content-type": "application/json" });
+        response.end(JSON.stringify({ data: { user: { contributionsCollection: { contributionCalendar: { totalContributions: 300 } } }, search: { issueCount: 42 } } }));
+      }
+      return;
+    }
+    if (request.url === "/users/Hikari-Tsai") {
+      response.writeHead(200, { "content-type": "application/json" });
+      response.end(JSON.stringify({ public_repos: 26 }));
+      return;
+    }
+    if (request.url?.startsWith("/users/Hikari-Tsai/repos?")) {
+      response.writeHead(200, { "content-type": "application/json" });
+      response.end("[]");
+      return;
+    }
+    if (request.url?.startsWith("/users/Hikari-Tsai/events/public?")) {
+      response.writeHead(200, { "content-type": "application/json" });
+      response.end("[]");
+      return;
+    }
+    response.writeHead(404).end();
+  });
+  await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
+  context.after(() => server.close());
+  const { port } = server.address();
+
+  const result = await new Promise((resolve) => {
+    const child = spawn(process.execPath, ["scripts/update-github-activity.mjs"], {
+      cwd: new URL("..", import.meta.url),
+      env: {
+        ...process.env,
+        GITHUB_ACTIVITY_README_PATH: readme,
+        GITHUB_ACTIVITY_NOW: "2026-08-31T01:30:00.000Z",
+        GITHUB_API_URL: `http://127.0.0.1:${port}`,
+        GITHUB_TOKEN: "public-token",
+        GH_PRIVATE_REPOS_TOKEN: "private-token",
+        OPENAI_API_KEY: "",
+      },
+    });
+    let stderr = "";
+    child.stderr.on("data", (chunk) => stderr += chunk);
+    child.on("close", (status) => resolve({ status, stderr }));
+  });
+
+  assert.equal(result.status, 0, result.stderr);
+  assert.match(readFileSync(readme, "utf8"), /Private repositories   11/);
+  assert.match(privateQuery, /privacy:\s*PRIVATE/);
+  assert.match(privateQuery, /ownerAffiliations:\s*OWNER/);
 });
 
 test("supplements missing public events from recently pushed repositories", () => {

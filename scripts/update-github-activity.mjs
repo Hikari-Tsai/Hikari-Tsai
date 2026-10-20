@@ -173,6 +173,7 @@ async function fetchData(now) {
   const fromDate = new Date(now);
   fromDate.setUTCFullYear(fromDate.getUTCFullYear() - 1);
   const query = `query($login:String!,$from:DateTime!,$to:DateTime!,$searchQuery:String!){user(login:$login){contributionsCollection(from:$from,to:$to){contributionCalendar{totalContributions}}}search(query:$searchQuery,type:ISSUE){issueCount}}`;
+  const privateRepositoriesQuery = `query($login:String!){user(login:$login){repositories(privacy:PRIVATE,ownerAffiliations:OWNER){totalCount}}}`;
   const [user, graph, repositories, ...pages] = await Promise.all([
     getJson(`${GITHUB_API_URL}/users/${USERNAME}`),
     getJson(`${GITHUB_API_URL}/graphql`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ query, variables: { login: USERNAME, from: fromDate.toISOString(), to, searchQuery: `author:${USERNAME} is:pr is:merged` } }) }),
@@ -190,8 +191,25 @@ async function fetchData(now) {
       return [repository.full_name, []];
     }
   })));
+  let privateRepos;
+  if (process.env.GH_PRIVATE_REPOS_TOKEN) {
+    try {
+      const privateGraph = await getJson(`${GITHUB_API_URL}/graphql`, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${process.env.GH_PRIVATE_REPOS_TOKEN}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ query: privateRepositoriesQuery, variables: { login: USERNAME } }),
+      });
+      privateRepos = privateGraph.data?.user?.repositories?.totalCount;
+    } catch (error) {
+      console.warn(`Private repository count unavailable: ${error.message}`);
+    }
+  }
   return {
     publicRepos: user.public_repos,
+    privateRepos,
     totalContributions: graph.data?.user?.contributionsCollection?.contributionCalendar?.totalContributions,
     mergedPullRequests: graph.data?.search?.issueCount,
     events: pages.flat(),
@@ -214,6 +232,9 @@ const data = process.env.GITHUB_ACTIVITY_DATA_JSON ? JSON.parse(process.env.GITH
 for (const key of ["publicRepos", "totalContributions", "mergedPullRequests"]) {
   if (!Number.isInteger(data[key]) || data[key] < 0) throw new Error(`Invalid ${key}`);
 }
+if (data.privateRepos !== undefined && (!Number.isInteger(data.privateRepos) || data.privateRepos < 0)) {
+  throw new Error("Invalid privateRepos");
+}
 if (!Array.isArray(data.events)) throw new Error("Invalid events");
 const events = supplementPushEvents(data.events, data.repositories, data.repositoryCommits);
 
@@ -221,8 +242,12 @@ let readme = await readFile(README_PATH, "utf8");
 const statsSection = readme.match(/<!-- GITHUB_STATS_START -->([\s\S]*?)<!-- GITHUB_STATS_END -->/)?.[1] ?? "";
 const achievements = statsSection.match(/^Current achievements\s+.*$/m)?.[0];
 const highlight = statsSection.match(/^Highlight\s+.*$/m)?.[0];
+const previousPrivateRepos = statsSection.match(/^Private repositories\s+\d+$/m)?.[0];
 if (!achievements || !highlight) throw new Error("Manual achievements or highlight line is missing");
-const stats = `\`\`\`text\nPublic repositories    ${data.publicRepos}\nLast-year activity     ${data.totalContributions} contributions\nMerged pull requests   ${data.mergedPullRequests} public PRs\n${achievements}\n${highlight}\n\`\`\``;
+const privateRepos = Number.isInteger(data.privateRepos)
+  ? `Private repositories   ${data.privateRepos}`
+  : previousPrivateRepos;
+const stats = `\`\`\`text\nPublic repositories    ${data.publicRepos}${privateRepos ? `\n${privateRepos}` : ""}\nLast-year activity     ${data.totalContributions} contributions\nMerged pull requests   ${data.mergedPullRequests} public PRs\n${achievements}\n${highlight}\n\`\`\``;
 readme = replaceSection(readme, "GITHUB_RECENT_ACTIVITY", await summarize(events));
 readme = replaceSection(readme, "GITHUB_RECENT_UPDATED_AT", updatedAt(now));
 readme = replaceSection(readme, "GITHUB_STATS", stats);
