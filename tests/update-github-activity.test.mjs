@@ -23,7 +23,7 @@ old recent timestamp
 <!-- GITHUB_STATS_START -->
 \`\`\`text
 Public repositories    1
-Private repositories   4
+Admin private org repos 4
 Last-year activity     2 contributions
 Merged pull requests   3 public PRs
 Current achievements   Keep This Sentinel
@@ -56,7 +56,7 @@ old timestamp
     encoding: "utf8",
     env: {
       ...process.env,
-      GITHUB_ACTIVITY_DATA_JSON: JSON.stringify({ publicRepos: 26, privateRepos: 9, totalContributions: 300, mergedPullRequests: 42, events }),
+      GITHUB_ACTIVITY_DATA_JSON: JSON.stringify({ publicRepos: 26, adminPrivateOrgRepos: 9, totalContributions: 300, mergedPullRequests: 42, events }),
       GITHUB_ACTIVITY_README_PATH: readme,
       GITHUB_ACTIVITY_NOW: "2026-08-31T01:30:00.000Z",
     },
@@ -66,7 +66,7 @@ old timestamp
   const output = readFileSync(readme, "utf8");
   assert.doesNotMatch(output, /old activity|old recent timestamp|old timestamp/);
   assert.match(output, /Public repositories    26/);
-  assert.match(output, /Private repositories   9/);
+  assert.match(output, /Admin private org repos 9/);
   assert.match(output, /Last-year activity     300 contributions/);
   assert.match(output, /Merged pull requests   42 public PRs/);
   assert.match(output, /Current achievements   Keep This Sentinel/);
@@ -83,7 +83,7 @@ old timestamp
   assert.ok(output.indexOf("GITHUB_RECENT_UPDATED_AT_START") < output.indexOf("GITHUB_STATS_START"));
 });
 
-test("preserves the previous private repository count when it is unavailable", () => {
+test("preserves the previous admin private organization repository count when it is unavailable", () => {
   const directory = mkdtempSync(join(tmpdir(), "github-activity-private-fallback-"));
   const readme = join(directory, "README.md");
   writeFileSync(readme, `# Profile
@@ -97,7 +97,7 @@ old recent timestamp
 <!-- GITHUB_STATS_START -->
 \`\`\`text
 Public repositories    1
-Private repositories   7
+Admin private org repos 7
 Last-year activity     2 contributions
 Merged pull requests   3 public PRs
 Current achievements   Keep This Sentinel
@@ -127,10 +127,10 @@ old timestamp
   });
 
   assert.equal(result.status, 0, result.stderr);
-  assert.match(readFileSync(readme, "utf8"), /Private repositories   7/);
+  assert.match(readFileSync(readme, "utf8"), /Admin private org repos 7/);
 });
 
-test("counts only private repositories owned by the profile user", async (context) => {
+test("counts only private repositories administered by the user in itri-ai-team across pages", async (context) => {
   const directory = mkdtempSync(join(tmpdir(), "github-activity-private-owned-"));
   const readme = join(directory, "README.md");
   writeFileSync(readme, `# Profile
@@ -140,7 +140,7 @@ test("counts only private repositories owned by the profile user", async (contex
 <!-- GITHUB_STATS_START -->
 \`\`\`text
 Public repositories    1
-Private repositories   2
+Admin private org repos 2
 Current achievements   Keep This Sentinel
 Highlight              Keep This Highlight
 \`\`\`
@@ -148,15 +148,18 @@ Highlight              Keep This Highlight
 <!-- GITHUB_UPDATED_AT_START -->old<!-- GITHUB_UPDATED_AT_END -->
 `);
 
-  let privateQuery = "";
+  const privateRequests = [];
   const server = createServer(async (request, response) => {
     if (request.url === "/graphql" && request.method === "POST") {
       let body = "";
       for await (const chunk of request) body += chunk;
       if (request.headers.authorization === "Bearer private-token") {
-        privateQuery = JSON.parse(body).query;
+        const privateRequest = JSON.parse(body);
+        privateRequests.push(privateRequest);
         response.writeHead(200, { "content-type": "application/json" });
-        response.end(JSON.stringify({ data: { user: { repositories: { totalCount: 11 } } } }));
+        response.end(JSON.stringify(privateRequest.variables.after
+          ? { data: { organization: { repositories: { nodes: [{ viewerPermission: "ADMIN" }, { viewerPermission: "READ" }], pageInfo: { hasNextPage: false, endCursor: null } } } } }
+          : { data: { organization: { repositories: { nodes: [{ viewerPermission: "ADMIN" }, { viewerPermission: "WRITE" }, { viewerPermission: "ADMIN" }], pageInfo: { hasNextPage: true, endCursor: "next-page" } } } } }));
       } else {
         response.writeHead(200, { "content-type": "application/json" });
         response.end(JSON.stringify({ data: { user: { contributionsCollection: { contributionCalendar: { totalContributions: 300 } } }, search: { issueCount: 42 } } }));
@@ -203,9 +206,15 @@ Highlight              Keep This Highlight
   });
 
   assert.equal(result.status, 0, result.stderr);
-  assert.match(readFileSync(readme, "utf8"), /Private repositories   11/);
-  assert.match(privateQuery, /privacy:\s*PRIVATE/);
-  assert.match(privateQuery, /ownerAffiliations:\s*OWNER/);
+  assert.match(readFileSync(readme, "utf8"), /Admin private org repos 3/);
+  assert.equal(privateRequests.length, 2);
+  assert.deepEqual(privateRequests.map(({ variables }) => variables), [
+    { login: "itri-ai-team", after: null },
+    { login: "itri-ai-team", after: "next-page" },
+  ]);
+  assert.match(privateRequests[0].query, /organization\(login:\s*\$login\)/);
+  assert.match(privateRequests[0].query, /privacy:\s*PRIVATE/);
+  assert.match(privateRequests[0].query, /viewerPermission/);
 });
 
 test("supplements missing public events from recently pushed repositories", () => {

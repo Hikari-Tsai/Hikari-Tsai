@@ -1,6 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 
 const USERNAME = "Hikari-Tsai";
+const PRIVATE_REPOSITORY_ORGANIZATION = "itri-ai-team";
 const PROFILE_REPO = `${USERNAME}/${USERNAME}`;
 const README_PATH = process.env.GITHUB_ACTIVITY_README_PATH ?? "README.md";
 const GITHUB_API_URL = process.env.GITHUB_API_URL ?? "https://api.github.com";
@@ -173,7 +174,7 @@ async function fetchData(now) {
   const fromDate = new Date(now);
   fromDate.setUTCFullYear(fromDate.getUTCFullYear() - 1);
   const query = `query($login:String!,$from:DateTime!,$to:DateTime!,$searchQuery:String!){user(login:$login){contributionsCollection(from:$from,to:$to){contributionCalendar{totalContributions}}}search(query:$searchQuery,type:ISSUE){issueCount}}`;
-  const privateRepositoriesQuery = `query($login:String!){user(login:$login){repositories(privacy:PRIVATE,ownerAffiliations:OWNER){totalCount}}}`;
+  const privateRepositoriesQuery = `query($login:String!,$after:String){organization(login:$login){repositories(first:100,after:$after,privacy:PRIVATE){nodes{viewerPermission}pageInfo{hasNextPage endCursor}}}}`;
   const [user, graph, repositories, ...pages] = await Promise.all([
     getJson(`${GITHUB_API_URL}/users/${USERNAME}`),
     getJson(`${GITHUB_API_URL}/graphql`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ query, variables: { login: USERNAME, from: fromDate.toISOString(), to, searchQuery: `author:${USERNAME} is:pr is:merged` } }) }),
@@ -191,25 +192,34 @@ async function fetchData(now) {
       return [repository.full_name, []];
     }
   })));
-  let privateRepos;
+  let adminPrivateOrgRepos;
   if (process.env.GH_PRIVATE_REPOS_TOKEN) {
     try {
-      const privateGraph = await getJson(`${GITHUB_API_URL}/graphql`, {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${process.env.GH_PRIVATE_REPOS_TOKEN}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ query: privateRepositoriesQuery, variables: { login: USERNAME } }),
-      });
-      privateRepos = privateGraph.data?.user?.repositories?.totalCount;
+      adminPrivateOrgRepos = 0;
+      let after = null;
+      do {
+        const privateGraph = await getJson(`${GITHUB_API_URL}/graphql`, {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${process.env.GH_PRIVATE_REPOS_TOKEN}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ query: privateRepositoriesQuery, variables: { login: PRIVATE_REPOSITORY_ORGANIZATION, after } }),
+        });
+        const repositories = privateGraph.data?.organization?.repositories;
+        if (!repositories) throw new Error(`Organization ${PRIVATE_REPOSITORY_ORGANIZATION} is unavailable to the token`);
+        adminPrivateOrgRepos += (repositories.nodes ?? []).filter((repository) => repository?.viewerPermission === "ADMIN").length;
+        after = repositories.pageInfo?.hasNextPage ? repositories.pageInfo.endCursor : null;
+        if (repositories.pageInfo?.hasNextPage && !after) throw new Error("GitHub returned an invalid repository cursor");
+      } while (after);
     } catch (error) {
-      console.warn(`Private repository count unavailable: ${error.message}`);
+      adminPrivateOrgRepos = undefined;
+      console.warn(`Admin private organization repository count unavailable: ${error.message}`);
     }
   }
   return {
     publicRepos: user.public_repos,
-    privateRepos,
+    adminPrivateOrgRepos,
     totalContributions: graph.data?.user?.contributionsCollection?.contributionCalendar?.totalContributions,
     mergedPullRequests: graph.data?.search?.issueCount,
     events: pages.flat(),
@@ -232,8 +242,8 @@ const data = process.env.GITHUB_ACTIVITY_DATA_JSON ? JSON.parse(process.env.GITH
 for (const key of ["publicRepos", "totalContributions", "mergedPullRequests"]) {
   if (!Number.isInteger(data[key]) || data[key] < 0) throw new Error(`Invalid ${key}`);
 }
-if (data.privateRepos !== undefined && (!Number.isInteger(data.privateRepos) || data.privateRepos < 0)) {
-  throw new Error("Invalid privateRepos");
+if (data.adminPrivateOrgRepos !== undefined && (!Number.isInteger(data.adminPrivateOrgRepos) || data.adminPrivateOrgRepos < 0)) {
+  throw new Error("Invalid adminPrivateOrgRepos");
 }
 if (!Array.isArray(data.events)) throw new Error("Invalid events");
 const events = supplementPushEvents(data.events, data.repositories, data.repositoryCommits);
@@ -242,12 +252,15 @@ let readme = await readFile(README_PATH, "utf8");
 const statsSection = readme.match(/<!-- GITHUB_STATS_START -->([\s\S]*?)<!-- GITHUB_STATS_END -->/)?.[1] ?? "";
 const achievements = statsSection.match(/^Current achievements\s+.*$/m)?.[0];
 const highlight = statsSection.match(/^Highlight\s+.*$/m)?.[0];
-const previousPrivateRepos = statsSection.match(/^Private repositories\s+\d+$/m)?.[0];
+const previousAdminPrivateOrgRepos = statsSection.match(/^(?:Admin private org repos|Private repositories)\s+(\d+)$/m)?.[1];
 if (!achievements || !highlight) throw new Error("Manual achievements or highlight line is missing");
-const privateRepos = Number.isInteger(data.privateRepos)
-  ? `Private repositories   ${data.privateRepos}`
-  : previousPrivateRepos;
-const stats = `\`\`\`text\nPublic repositories    ${data.publicRepos}${privateRepos ? `\n${privateRepos}` : ""}\nLast-year activity     ${data.totalContributions} contributions\nMerged pull requests   ${data.mergedPullRequests} public PRs\n${achievements}\n${highlight}\n\`\`\``;
+const adminPrivateOrgRepos = Number.isInteger(data.adminPrivateOrgRepos)
+  ? data.adminPrivateOrgRepos
+  : previousAdminPrivateOrgRepos;
+const adminPrivateOrgReposLine = adminPrivateOrgRepos === undefined
+  ? ""
+  : `\nAdmin private org repos ${adminPrivateOrgRepos}`;
+const stats = `\`\`\`text\nPublic repositories    ${data.publicRepos}${adminPrivateOrgReposLine}\nLast-year activity     ${data.totalContributions} contributions\nMerged pull requests   ${data.mergedPullRequests} public PRs\n${achievements}\n${highlight}\n\`\`\``;
 readme = replaceSection(readme, "GITHUB_RECENT_ACTIVITY", await summarize(events));
 readme = replaceSection(readme, "GITHUB_RECENT_UPDATED_AT", updatedAt(now));
 readme = replaceSection(readme, "GITHUB_STATS", stats);
