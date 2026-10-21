@@ -174,6 +174,7 @@ async function fetchData(now) {
   const fromDate = new Date(now);
   fromDate.setUTCFullYear(fromDate.getUTCFullYear() - 1);
   const query = `query($login:String!,$from:DateTime!,$to:DateTime!,$searchQuery:String!){user(login:$login){contributionsCollection(from:$from,to:$to){contributionCalendar{totalContributions}}}search(query:$searchQuery,type:ISSUE){issueCount}}`;
+  const starredRepositoriesQuery = `query($login:String!,$after:String){user(login:$login){repositories(first:100,after:$after,privacy:PUBLIC,ownerAffiliations:OWNER){nodes{stargazerCount isFork}pageInfo{hasNextPage endCursor}}}}`;
   const privateRepositoriesQuery = `query($login:String!,$after:String){organization(login:$login){repositories(first:100,after:$after,privacy:PRIVATE){nodes{viewerPermission}pageInfo{hasNextPage endCursor}}}}`;
   const [user, graph, repositories, ...pages] = await Promise.all([
     getJson(`${GITHUB_API_URL}/users/${USERNAME}`),
@@ -192,6 +193,28 @@ async function fetchData(now) {
       return [repository.full_name, []];
     }
   })));
+  let totalStars;
+  try {
+    totalStars = 0;
+    let after = null;
+    do {
+      const starredGraph = await getJson(`${GITHUB_API_URL}/graphql`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query: starredRepositoriesQuery, variables: { login: USERNAME, after } }),
+      });
+      const starredRepositories = starredGraph.data?.user?.repositories;
+      if (!starredRepositories) throw new Error(`Public repositories for ${USERNAME} are unavailable`);
+      totalStars += (starredRepositories.nodes ?? [])
+        .filter((repository) => !repository?.isFork)
+        .reduce((sum, repository) => sum + (repository?.stargazerCount ?? 0), 0);
+      after = starredRepositories.pageInfo?.hasNextPage ? starredRepositories.pageInfo.endCursor : null;
+      if (starredRepositories.pageInfo?.hasNextPage && !after) throw new Error("GitHub returned an invalid starred repository cursor");
+    } while (after);
+  } catch (error) {
+    totalStars = undefined;
+    console.warn(`Total star count unavailable: ${error.message}`);
+  }
   let adminPrivateOrgRepos;
   if (process.env.GH_PRIVATE_REPOS_TOKEN) {
     try {
@@ -219,6 +242,7 @@ async function fetchData(now) {
   }
   return {
     publicRepos: user.public_repos,
+    totalStars,
     adminPrivateOrgRepos,
     totalContributions: graph.data?.user?.contributionsCollection?.contributionCalendar?.totalContributions,
     mergedPullRequests: graph.data?.search?.issueCount,
@@ -245,6 +269,9 @@ for (const key of ["publicRepos", "totalContributions", "mergedPullRequests"]) {
 if (data.adminPrivateOrgRepos !== undefined && (!Number.isInteger(data.adminPrivateOrgRepos) || data.adminPrivateOrgRepos < 0)) {
   throw new Error("Invalid adminPrivateOrgRepos");
 }
+if (data.totalStars !== undefined && (!Number.isInteger(data.totalStars) || data.totalStars < 0)) {
+  throw new Error("Invalid totalStars");
+}
 if (!Array.isArray(data.events)) throw new Error("Invalid events");
 const events = supplementPushEvents(data.events, data.repositories, data.repositoryCommits);
 
@@ -253,6 +280,7 @@ const statsSection = readme.match(/<!-- GITHUB_STATS_START -->([\s\S]*?)<!-- GIT
 const achievements = statsSection.match(/^Current achievements\s+.*$/m)?.[0];
 const highlight = statsSection.match(/^Highlight\s+.*$/m)?.[0];
 const previousAdminPrivateOrgRepos = statsSection.match(/^(?:Admin private org repos|Private repositories)\s+(\d+)$/m)?.[1];
+const previousTotalStars = statsSection.match(/^Total stars\s+(\d+)$/m)?.[1];
 if (!achievements || !highlight) throw new Error("Manual achievements or highlight line is missing");
 const adminPrivateOrgRepos = Number.isInteger(data.adminPrivateOrgRepos)
   ? data.adminPrivateOrgRepos
@@ -260,7 +288,9 @@ const adminPrivateOrgRepos = Number.isInteger(data.adminPrivateOrgRepos)
 const adminPrivateOrgReposLine = adminPrivateOrgRepos === undefined
   ? ""
   : `\nAdmin private org repos ${adminPrivateOrgRepos}`;
-const stats = `\`\`\`text\nPublic repositories    ${data.publicRepos}${adminPrivateOrgReposLine}\nLast-year activity     ${data.totalContributions} contributions\nMerged pull requests   ${data.mergedPullRequests} public PRs\n${achievements}\n${highlight}\n\`\`\``;
+const totalStars = Number.isInteger(data.totalStars) ? data.totalStars : previousTotalStars;
+const totalStarsLine = totalStars === undefined ? "" : `\nTotal stars             ${totalStars}`;
+const stats = `\`\`\`text\nPublic repositories    ${data.publicRepos}${adminPrivateOrgReposLine}${totalStarsLine}\nLast-year activity     ${data.totalContributions} contributions\nMerged pull requests   ${data.mergedPullRequests} public PRs\n${achievements}\n${highlight}\n\`\`\``;
 readme = replaceSection(readme, "GITHUB_RECENT_ACTIVITY", await summarize(events));
 readme = replaceSection(readme, "GITHUB_RECENT_UPDATED_AT", updatedAt(now));
 readme = replaceSection(readme, "GITHUB_STATS", stats);

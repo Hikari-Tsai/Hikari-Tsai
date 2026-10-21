@@ -24,6 +24,7 @@ old recent timestamp
 \`\`\`text
 Public repositories    1
 Admin private org repos 4
+Total stars             5
 Last-year activity     2 contributions
 Merged pull requests   3 public PRs
 Current achievements   Keep This Sentinel
@@ -56,7 +57,7 @@ old timestamp
     encoding: "utf8",
     env: {
       ...process.env,
-      GITHUB_ACTIVITY_DATA_JSON: JSON.stringify({ publicRepos: 26, adminPrivateOrgRepos: 9, totalContributions: 300, mergedPullRequests: 42, events }),
+      GITHUB_ACTIVITY_DATA_JSON: JSON.stringify({ publicRepos: 26, adminPrivateOrgRepos: 9, totalStars: 15, totalContributions: 300, mergedPullRequests: 42, events }),
       GITHUB_ACTIVITY_README_PATH: readme,
       GITHUB_ACTIVITY_NOW: "2026-08-31T01:30:00.000Z",
     },
@@ -67,6 +68,7 @@ old timestamp
   assert.doesNotMatch(output, /old activity|old recent timestamp|old timestamp/);
   assert.match(output, /Public repositories    26/);
   assert.match(output, /Admin private org repos 9/);
+  assert.match(output, /Total stars             15/);
   assert.match(output, /Last-year activity     300 contributions/);
   assert.match(output, /Merged pull requests   42 public PRs/);
   assert.match(output, /Current achievements   Keep This Sentinel/);
@@ -83,7 +85,7 @@ old timestamp
   assert.ok(output.indexOf("GITHUB_RECENT_UPDATED_AT_START") < output.indexOf("GITHUB_STATS_START"));
 });
 
-test("preserves the previous admin private organization repository count when it is unavailable", () => {
+test("preserves previous optional repository stats when they are unavailable", () => {
   const directory = mkdtempSync(join(tmpdir(), "github-activity-private-fallback-"));
   const readme = join(directory, "README.md");
   writeFileSync(readme, `# Profile
@@ -98,6 +100,7 @@ old recent timestamp
 \`\`\`text
 Public repositories    1
 Admin private org repos 7
+Total stars             13
 Last-year activity     2 contributions
 Merged pull requests   3 public PRs
 Current achievements   Keep This Sentinel
@@ -128,6 +131,89 @@ old timestamp
 
   assert.equal(result.status, 0, result.stderr);
   assert.match(readFileSync(readme, "utf8"), /Admin private org repos 7/);
+  assert.match(readFileSync(readme, "utf8"), /Total stars             13/);
+});
+
+test("sums stars from owned public non-fork repositories across pages", async (context) => {
+  const directory = mkdtempSync(join(tmpdir(), "github-activity-stars-"));
+  const readme = join(directory, "README.md");
+  writeFileSync(readme, `# Profile
+
+<!-- GITHUB_RECENT_ACTIVITY_START -->old<!-- GITHUB_RECENT_ACTIVITY_END -->
+<!-- GITHUB_RECENT_UPDATED_AT_START -->old<!-- GITHUB_RECENT_UPDATED_AT_END -->
+<!-- GITHUB_STATS_START -->
+\`\`\`text
+Public repositories    1
+Total stars             2
+Current achievements   Keep This Sentinel
+Highlight              Keep This Highlight
+\`\`\`
+<!-- GITHUB_STATS_END -->
+<!-- GITHUB_UPDATED_AT_START -->old<!-- GITHUB_UPDATED_AT_END -->
+`);
+
+  const starRequests = [];
+  const server = createServer(async (request, response) => {
+    if (request.url === "/graphql" && request.method === "POST") {
+      let body = "";
+      for await (const chunk of request) body += chunk;
+      const graphRequest = JSON.parse(body);
+      response.writeHead(200, { "content-type": "application/json" });
+      if (graphRequest.query.includes("stargazerCount")) {
+        starRequests.push(graphRequest);
+        response.end(JSON.stringify(graphRequest.variables.after
+          ? { data: { user: { repositories: { nodes: [{ stargazerCount: 6, isFork: false }], pageInfo: { hasNextPage: false, endCursor: null } } } } }
+          : { data: { user: { repositories: { nodes: [{ stargazerCount: 4, isFork: false }, { stargazerCount: 100, isFork: true }], pageInfo: { hasNextPage: true, endCursor: "stars-next" } } } } }));
+      } else {
+        response.end(JSON.stringify({ data: { user: { contributionsCollection: { contributionCalendar: { totalContributions: 300 } } }, search: { issueCount: 42 } } }));
+      }
+      return;
+    }
+    if (request.url === "/users/Hikari-Tsai") {
+      response.writeHead(200, { "content-type": "application/json" });
+      response.end(JSON.stringify({ public_repos: 26 }));
+      return;
+    }
+    if (request.url?.startsWith("/users/Hikari-Tsai/repos?")) {
+      response.writeHead(200, { "content-type": "application/json" });
+      response.end("[]");
+      return;
+    }
+    if (request.url?.startsWith("/users/Hikari-Tsai/events/public?")) {
+      response.writeHead(200, { "content-type": "application/json" });
+      response.end("[]");
+      return;
+    }
+    response.writeHead(404).end();
+  });
+  await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
+  context.after(() => server.close());
+  const { port } = server.address();
+
+  const result = await new Promise((resolve) => {
+    const child = spawn(process.execPath, ["scripts/update-github-activity.mjs"], {
+      cwd: new URL("..", import.meta.url),
+      env: {
+        ...process.env,
+        GITHUB_ACTIVITY_README_PATH: readme,
+        GITHUB_ACTIVITY_NOW: "2026-08-31T01:30:00.000Z",
+        GITHUB_API_URL: `http://127.0.0.1:${port}`,
+        GITHUB_TOKEN: "public-token",
+        GH_PRIVATE_REPOS_TOKEN: "",
+        OPENAI_API_KEY: "",
+      },
+    });
+    let stderr = "";
+    child.stderr.on("data", (chunk) => stderr += chunk);
+    child.on("close", (status) => resolve({ status, stderr }));
+  });
+
+  assert.equal(result.status, 0, result.stderr);
+  assert.match(readFileSync(readme, "utf8"), /Total stars             10/);
+  assert.deepEqual(starRequests.map(({ variables }) => variables), [
+    { login: "Hikari-Tsai", after: null },
+    { login: "Hikari-Tsai", after: "stars-next" },
+  ]);
 });
 
 test("counts only private repositories administered by the user in itri-ai-team across pages", async (context) => {
