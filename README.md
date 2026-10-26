@@ -71,16 +71,16 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-10-24** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Refreshed interview Q&A metadata to a new source commit and regenerated several answers, including a new TTS streaming entry.
-- **2026-10-06** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Updated the workflow to support GPT-6.1 Sol reasoning parameters and added freshness checks for staleness detection.
-- **2026-10-02** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added a public listening page with waveform summaries, new audio excerpts, and updated comparison UI and checks.
-- **2026-10-01** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added automated comparison pages and docs for full-corpus training, GPU runs, and threshold-file compatibility.
-- **2026-09-28** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Refreshed the salary report with regenerated stats, company detail views, and updated metadata based on the latest survey data.
-- **2026-09-28** — Updated [Hikari-Tsai/HT-76](https://github.com/Hikari-Tsai/HT-76): Updated the UI and docs so the silver faceplate kept black knobs, with tests added to verify knob opacity.
+- **2026-10-26** — Updated [samoyedtopa1120-cmd/topa-secrets](https://github.com/samoyedtopa1120-cmd/topa-secrets): Added a README documenting the curated Topa VTuber notes and fan quiz collection with scope, method, and caveats.
+- **2026-10-25** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a new portfolio entry for a cover video with thumbnail, title, credits, and recording/mixing details.
+- **2026-10-25** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Refreshed several answer records and marked outdated entries stale to align regenerated content with the latest source data.
+- **2026-10-06** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Updated documentation and generation code to support GPT-6.1 Sol, share model parameter handling, and detect newly stale answers.
+- **2026-10-02** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added public listening excerpts, waveform summaries, and UI updates to support audio auditioning on the comparison page.
+- **2026-10-01** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added an offline comparison page workflow and expanded docs to support full-corpus training, evaluation, and threshold filename compatibility.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-10-25 09:42 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-10-26 09:46 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
@@ -90,7 +90,7 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 Public repositories    31
 Admin private org repos 6
 Total stars             123
-Last-year activity     439 contributions
+Last-year activity     443 contributions
 Merged pull requests   61 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
@@ -98,7 +98,7 @@ Highlight              GitHub Developer Program Member
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-10-25 09:42 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-10-26 09:46 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
