@@ -71,16 +71,16 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-10-26** — Updated [samoyedtopa1120-cmd/topa-secrets](https://github.com/samoyedtopa1120-cmd/topa-secrets): Added a README documenting the curated Topa VTuber notes and fan quiz collection with scope, method, and caveats.
-- **2026-10-25** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a new portfolio entry for a cover video with thumbnail, title, credits, and recording/mixing details.
-- **2026-10-25** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Refreshed several answer records and marked outdated entries stale to align regenerated content with the latest source data.
-- **2026-10-06** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Updated documentation and generation code to support GPT-6.1 Sol, share model parameter handling, and detect newly stale answers.
-- **2026-10-02** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added public listening excerpts, waveform summaries, and UI updates to support audio auditioning on the comparison page.
-- **2026-10-01** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added an offline comparison page workflow and expanded docs to support full-corpus training, evaluation, and threshold filename compatibility.
+- **2026-10-26** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Refreshed several answer entries with updated prompts and marked outdated ones stale to keep the dataset aligned.
+- **2026-10-26** — Updated [samoyedtopa1120-cmd/topa-secrets](https://github.com/samoyedtopa1120-cmd/topa-secrets): Added a README and a 50-question fan quiz documenting Topa’s shared lore and sourcing each answer to livestream timestamps.
+- **2026-10-25** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a new portfolio card linking a cover video and describing its vocal recording and mixing work.
+- **2026-10-06** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Updated documentation and generation logic for GPT-6.1 Sol while adding freshness checks to mark stale answers and reuse shared model parameters.
+- **2026-10-02** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added a public listening page with new audition audio, waveform summaries, and updated comparison UI for model benchmarking.
+- **2026-10-01** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added an offline comparison page and docs for full-corpus PINN evaluation, GPU training, and threshold-label compatibility.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-10-26 09:46 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-10-27 09:47 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
@@ -98,7 +98,7 @@ Highlight              GitHub Developer Program Member
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-10-26 09:46 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-10-27 09:47 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
