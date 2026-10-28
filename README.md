@@ -71,26 +71,26 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-10-26** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Refreshed several answer entries with updated prompts and marked outdated ones stale to keep the dataset aligned.
-- **2026-10-26** — Updated [samoyedtopa1120-cmd/topa-secrets](https://github.com/samoyedtopa1120-cmd/topa-secrets): Added a README and a 50-question fan quiz documenting Topa’s shared lore and sourcing each answer to livestream timestamps.
-- **2026-10-25** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a new portfolio card linking a cover video and describing its vocal recording and mixing work.
-- **2026-10-06** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Updated documentation and generation logic for GPT-6.1 Sol while adding freshness checks to mark stale answers and reuse shared model parameters.
-- **2026-10-02** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added a public listening page with new audition audio, waveform summaries, and updated comparison UI for model benchmarking.
-- **2026-10-01** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added an offline comparison page and docs for full-corpus PINN evaluation, GPU training, and threshold-label compatibility.
+- **2026-10-28** — Updated [Hikari-Tsai/TrackMate](https://github.com/Hikari-Tsai/TrackMate): Expanded the stereo analysis docs to explain covariance-based mono detection and the meaning of rank-1 residuals.
+- **2026-10-27** — Updated [Hikari-Tsai/TrackMate](https://github.com/Hikari-Tsai/TrackMate): Updated packaging, release notes, and the app UI/workflow to detect, preview, and import tempo alongside stems.
+- **2026-10-27** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Updated several answer prompts for clarity and marked outdated entries stale after refreshing source references.
+- **2026-10-26** — Updated [samoyedtopa1120-cmd/topa-secrets](https://github.com/samoyedtopa1120-cmd/topa-secrets): Added a README and fan quiz sheet documenting Topa’s public stream facts, sources, and trivia questions.
+- **2026-10-25** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a new video portfolio entry for a vocal recording and mixing cover on the homepage.
+- **2026-10-06** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Added GPT-6.1 Sol support and freshness checks to keep generation and commit messaging compatible and up to date.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-10-27 09:47 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-10-28 09:31 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
 
 <!-- GITHUB_STATS_START -->
 ```text
-Public repositories    31
+Public repositories    32
 Admin private org repos 6
-Total stars             123
-Last-year activity     443 contributions
+Total stars             124
+Last-year activity     464 contributions
 Merged pull requests   61 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
@@ -98,7 +98,7 @@ Highlight              GitHub Developer Program Member
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-10-27 09:47 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-10-28 09:31 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
