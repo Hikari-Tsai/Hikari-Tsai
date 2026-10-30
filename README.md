@@ -71,16 +71,16 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-10-29** — Updated [Hikari-Tsai/karaoke-battle](https://github.com/Hikari-Tsai/karaoke-battle): Clarified the licensing and attribution for the MDX-Net vocal separation models, splitting Kim_Vocal_2 from the UVR-trained models.
-- **2026-10-28** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Refreshed several AI interview answer entries and marked outdated ones stale.
-- **2026-10-28** — Updated [Hikari-Tsai/TrackMate](https://github.com/Hikari-Tsai/TrackMate): Expanded the stereo analysis docs to explain covariance-based mono detection, principal axes, and rank-1 point-cloud behavior.
-- **2026-10-27** — Updated [Hikari-Tsai/TrackMate](https://github.com/Hikari-Tsai/TrackMate): Updated TrackMate to detect and import tempo alongside stems, add universal builds, and improve release/docs and tests.
-- **2026-10-26** — Updated [samoyedtopa1120-cmd/topa-secrets](https://github.com/samoyedtopa1120-cmd/topa-secrets): Added a README and a fan quiz deck documenting Topa’s secrets with sourced answers and timestamps.
-- **2026-10-25** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a new portfolio tile showcasing a vocal recording and mixing cover video.
+- **2026-10-30** — Updated [Hikari-Tsai/karaoke-battle](https://github.com/Hikari-Tsai/karaoke-battle): Bumped the app version to 0.4.0 for the next release.
+- **2026-10-29** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Refreshed several AI interview answer entries and source metadata, marking some regenerated answers ready and updating content checks.
+- **2026-10-29** — Updated [Hikari-Tsai/karaoke-battle](https://github.com/Hikari-Tsai/karaoke-battle): Added multilingual release/install docs and localization support, while refining model attribution and release packaging for the app.
+- **2026-10-28** — Updated [Hikari-Tsai/TrackMate](https://github.com/Hikari-Tsai/TrackMate): Expanded the stereo analysis docs to explain why TrackMate uses covariance rank to detect mono sources instead of direct L/R comparison.
+- **2026-10-27** — Updated [Hikari-Tsai/TrackMate](https://github.com/Hikari-Tsai/TrackMate): Added tempo detection and import flow, updated release/docs, and switched packaging to a universal macOS build.
+- **2026-10-26** — Updated [samoyedtopa1120-cmd/topa-secrets](https://github.com/samoyedtopa1120-cmd/topa-secrets): Added a README and a 50-question fan quiz documenting Topa’s lore, sources, and timestamps from streams.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-10-29 09:31 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-10-30 09:31 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
@@ -90,7 +90,7 @@ Web experiences    Next.js, React, TypeScript, Tailwind CSS, GitHub Pages
 Public repositories    33
 Admin private org repos 6
 Total stars             124
-Last-year activity     475 contributions
+Last-year activity     527 contributions
 Merged pull requests   61 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
@@ -98,7 +98,7 @@ Highlight              GitHub Developer Program Member
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-10-29 09:31 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-10-30 09:31 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
