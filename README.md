@@ -72,34 +72,34 @@ Web systems       Astro, React, TypeScript, FastAPI, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-11-04** — Updated [Hikari-Tsai/karaoke-battle](https://github.com/Hikari-Tsai/karaoke-battle): Bumped the app version to 0.6.3+1.
-- **2026-11-03** — Updated [Hikari-Tsai/karaoke-battle](https://github.com/Hikari-Tsai/karaoke-battle): Improved live judging and lyrics overlay timing so late audio frames still showed full animations and the docs/tests reflected it.
-- **2026-11-03** — Updated [Hikari-Tsai/code-portfolio](https://github.com/Hikari-Tsai/code-portfolio): Expanded the portfolio homepage with new project highlights, updated metadata, and refreshed content-source and project link tests.
-- **2026-11-03** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Refreshed multiple answer entries and updated question source links to the latest commit.
-- **2026-10-30** — Updated [Hikari-Tsai/TrackMate](https://github.com/Hikari-Tsai/TrackMate): Added a models window to let users choose, monitor, retry, and clear model downloads from the app UI.
-- **2026-10-28** — Updated [Hikari-Tsai/TrackMate](https://github.com/Hikari-Tsai/TrackMate): Expanded the stereo-analysis docs to explain covariance-based mono detection and rank-1 point-cloud behavior in clearer terms.
+- **2026-11-05** — Updated [Hikari-Tsai/karaoke-battle](https://github.com/Hikari-Tsai/karaoke-battle): Bumped the app version to 0.6.6 for a new release.
+- **2026-11-04** — Updated [Hikari-Tsai/music-detection](https://github.com/Hikari-Tsai/music-detection): Updated the architecture docs and UI to reflect browser ONNX, FastAPI fallback, and a live GitHub star count badge.
+- **2026-11-04** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Added GitHub star loading with cached client-side fetches and updated the page to show a dynamic, localized star count.
+- **2026-11-04** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Added a localized GitHub star count badge and accessible label for the project star link.
+- **2026-11-04** — Updated [Hikari-Tsai/karaoke-battle](https://github.com/Hikari-Tsai/karaoke-battle): Added YouTube search links to KTV charts and improved yt-dlp download/update handling with safer installs and startup repair prompts.
+- **2026-11-04** — Updated [Hikari-Tsai/ktv-charts](https://github.com/Hikari-Tsai/ktv-charts): Added BPM and enrichment automation to the charts site while expanding docs and published ranking data.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-11-04 09:31 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-11-05 09:31 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
 
 <!-- GITHUB_STATS_START -->
 ```text
-Public repositories    33
+Public repositories    34
 Admin private org repos 6
-Total stars             127
-Last-year activity     569 contributions
-Merged pull requests   62 public PRs
+Total stars             129
+Last-year activity     605 contributions
+Merged pull requests   64 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
 ```
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-11-04 09:31 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-11-05 09:31 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
