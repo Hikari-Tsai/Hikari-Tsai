@@ -72,34 +72,34 @@ Web systems       Astro, React, TypeScript, FastAPI, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-11-06** — Updated [Hikari-Tsai/karaoke-battle](https://github.com/Hikari-Tsai/karaoke-battle): Bumped the app version to 0.7.4+1.
-- **2026-11-05** — Updated [Hikari-Tsai/ktv-charts](https://github.com/Hikari-Tsai/ktv-charts): Added publishing credits support and expanded the site to show detailed song info, while tuning Spotify lookup limits and retries.
-- **2026-11-05** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Refreshed AI interview Q&A records with updated source references and regenerated several answers for consistency.
-- **2026-11-04** — Updated [Hikari-Tsai/music-detection](https://github.com/Hikari-Tsai/music-detection): Updated the architecture docs and UI to show verified delivery details, add star-count loading, and refine the browser/local workflow.
-- **2026-11-04** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Added GitHub star count loading to update the profile link with a live, accessible count and safe fallback handling.
-- **2026-11-04** — Updated [Hikari-Tsai/karaoke-battle](https://github.com/Hikari-Tsai/karaoke-battle): Added YouTube search links and a yt-dlp repair flow, while hardening downloads against concurrent install races.
+- **2026-11-07** — Updated [Hikari-Tsai/ai-werewolf](https://github.com/Hikari-Tsai/ai-werewolf): Added host controls to end or dissolve rooms with confirmation, plus abort handling and room-closed notifications.
+- **2026-11-07** — Updated [Hikari-Tsai/karaoke-battle](https://github.com/Hikari-Tsai/karaoke-battle): Added a browser-based lyrics alignment app with ONNX audio processing, multilingual UI, and local evaluation utilities.
+- **2026-11-06** — Updated [Hikari-Tsai/ai-werewolf](https://github.com/Hikari-Tsai/ai-werewolf): Showed the room code in the invite panel, added stronger voting guidance, and disabled caching for the static frontend.
+- **2026-11-06** — Updated [Hikari-Tsai/ktv-charts](https://github.com/Hikari-Tsai/ktv-charts): Added new Apple Music, BPM, and Essentia metadata plus KKBOX and chart history entries for several songs.
+- **2026-11-06** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Refreshed several answer entries and source checks, marking the updated Q&A content ready and recording newer fetch metadata.
+- **2026-11-05** — Updated [Hikari-Tsai/karaoke-battle](https://github.com/Hikari-Tsai/karaoke-battle): Added a retrying prefetch step for the Windows ANGLE archive to make Flutter builds more reliable on CI.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-11-06 09:31 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-11-07 09:31 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
 
 <!-- GITHUB_STATS_START -->
 ```text
-Public repositories    34
+Public repositories    35
 Admin private org repos 6
-Total stars             129
-Last-year activity     633 contributions
-Merged pull requests   64 public PRs
+Total stars             132
+Last-year activity     648 contributions
+Merged pull requests   65 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
 ```
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-11-06 09:31 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-11-07 09:31 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
