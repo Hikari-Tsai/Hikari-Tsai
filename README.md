@@ -72,16 +72,16 @@ Web systems       Astro, React, TypeScript, FastAPI, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-11-07** — Updated [Hikari-Tsai/ktv-charts](https://github.com/Hikari-Tsai/ktv-charts): Updated music metadata and karaoke charts with new track matches, audio features, and refreshed daily rankings.
-- **2026-11-07** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Refreshed several interview QA entries with updated sources, clearer wording, and newly ready localized answers.
-- **2026-11-07** — Updated [Hikari-Tsai/ai-werewolf](https://github.com/Hikari-Tsai/ai-werewolf): Added configurable night kills and delayed reveal, plus UI/docs updates for last words and GitHub log sharing.
-- **2026-11-07** — Updated [Hikari-Tsai/karaoke-battle](https://github.com/Hikari-Tsai/karaoke-battle): Raised scoring thresholds and documentation to use the new lenient scale, and refreshed README screenshots and lyrics UI text.
-- **2026-11-06** — Updated [Hikari-Tsai/karaoke-battle](https://github.com/Hikari-Tsai/karaoke-battle): Updated the readme to better explain singing visuals, scoring, and lyrics import/editing features.
-- **2026-11-06** — Updated [Hikari-Tsai/ai-werewolf](https://github.com/Hikari-Tsai/ai-werewolf): Added contribution docs and polished the lobby UI to show the room code, refresh static assets, and better prompt voting reasons.
+- **2026-11-09** — Updated [Hikari-Tsai/karaoke-battle](https://github.com/Hikari-Tsai/karaoke-battle): Updated library cards to refresh best scores when any take was rescored, and documented early testers in the translated README files.
+- **2026-11-09** — Updated [samoyedtopa1120-cmd/sports-days](https://github.com/samoyedtopa1120-cmd/sports-days): Updated the event rules and README with a new layout, added shared images, and documented merch options with photos.
+- **2026-11-08** — Updated [Hikari-Tsai/ktv-charts](https://github.com/Hikari-Tsai/ktv-charts): Added vocal-range analysis and UI guidance for song key fit, plus refreshed cached music data and docs.
+- **2026-11-08** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Updated multiple AI interview Q&A records, refreshed source references, and added a new optimizer comparison entry.
+- **2026-11-07** — Updated [Hikari-Tsai/ai-werewolf](https://github.com/Hikari-Tsai/ai-werewolf): Added night-kill and last-words gameplay, plus custom room codes and improved GitHub log upload flow.
+- **2026-11-07** — Updated [Hikari-Tsai/karaoke-battle](https://github.com/Hikari-Tsai/karaoke-battle): Updated scoring, docs, and UI to use a fairer score curve and recalculate older takes from saved pitch data.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-11-08 09:31 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-11-09 16:10 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
@@ -91,7 +91,7 @@ Web systems       Astro, React, TypeScript, FastAPI, GitHub Pages
 Public repositories    35
 Admin private org repos 6
 Total stars             134
-Last-year activity     648 contributions
+Last-year activity     658 contributions
 Merged pull requests   65 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
@@ -99,7 +99,7 @@ Highlight              GitHub Developer Program Member
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-11-08 09:31 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-11-09 16:10 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
