@@ -72,16 +72,16 @@ Web systems       Astro, React, TypeScript, FastAPI, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-11-11** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Updated contribution prompt text in English, Japanese, and Traditional Chinese to invite users to report missing or incorrect answers.
-- **2026-11-11** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added a research summary documenting HT-1B model evaluation results and highlighting the best-performing architecture.
-- **2026-11-11** — Updated [Hikari-Tsai/Semitone](https://github.com/Hikari-Tsai/Semitone): Added two new guides that introduced the theory and explained the author’s constructed languages behind its terminology.
+- **2026-11-11** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Updated contribution prompts in English, Japanese, and Traditional Chinese to invite users to report missing or incorrect answers.
+- **2026-11-11** — Updated [Hikari-Tsai/HT-1B](https://github.com/Hikari-Tsai/HT-1B): Added a research summary documenting the best HT-1B model results, training setup, and why the S6 architecture performed best.
+- **2026-11-11** — Updated [Hikari-Tsai/Semitone](https://github.com/Hikari-Tsai/Semitone): Added two new guides that explain the theory and the author’s constructed language in a more accessible, example-based way.
 - **2026-11-11** — Updated [Hikari-Tsai/karaoke-battle](https://github.com/Hikari-Tsai/karaoke-battle): Bumped the app version to 0.7.8+1.
-- **2026-11-10** — Updated [Hikari-Tsai/ktv-charts](https://github.com/Hikari-Tsai/ktv-charts): Added weekly karaoke chart snapshots and expanded Apple album metadata with new album entries.
-- **2026-11-10** — Updated [Hikari-Tsai/Semitone](https://github.com/Hikari-Tsai/Semitone): Added a GitHub star button and updated the chord timeline help text to explain swapping substitute chords.
+- **2026-11-10** — Updated [Hikari-Tsai/ktv-charts](https://github.com/Hikari-Tsai/ktv-charts): Added new karaoke and chart history data plus updated Apple album mappings.
+- **2026-11-10** — Updated [Hikari-Tsai/Semitone](https://github.com/Hikari-Tsai/Semitone): Added timeline guidance plus a GitHub star button with count and localized copy.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-11-11 11:00 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-11-11 11:03 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
@@ -91,7 +91,7 @@ Web systems       Astro, React, TypeScript, FastAPI, GitHub Pages
 Public repositories    36
 Admin private org repos 6
 Total stars             134
-Last-year activity     687 contributions
+Last-year activity     688 contributions
 Merged pull requests   65 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
@@ -99,7 +99,7 @@ Highlight              GitHub Developer Program Member
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-11-11 11:00 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-11-11 11:03 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
