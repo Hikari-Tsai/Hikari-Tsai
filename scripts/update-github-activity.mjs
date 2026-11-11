@@ -276,10 +276,13 @@ function updateFeaturedWorkStars(readme, featuredRepoStars) {
   const section = readme.match(pattern)?.[1];
   if (!section) throw new Error("README is missing the Featured Work section");
   const updated = section.split("\n").map((line) => line.replace(
-    /^(\| \[[^\]]+\]\(https:\/\/github\.com\/([^/)]+\/[^/)]+)\))(?: <sub>⭐ \d+<\/sub>)?((?: [^|]+)? \|.*)$/,
-    (row, link, repo, remainder) => {
+    /^(\| \[[^\]]+\]\(https:\/\/github\.com\/([^/)]+\/[^/)]+)\))(?: <sub>[⭐★] \d+<\/sub>)?((?: [^|]+)? \| )(.*)$/,
+    (row, link, repo, delimiter, body) => {
       const stars = starsByRepo.get(repo.toLowerCase());
-      return Number.isInteger(stars) && stars >= 0 ? `${link} <sub>⭐ ${stars}</sub>${remainder}` : row;
+      if (!Number.isInteger(stars) || stars < 0) return row;
+      const content = body.replace(/^<a href="https:\/\/github\.com\/[^"]+\/stargazers"><img alt="GitHub stars" src="https:\/\/img\.shields\.io\/badge\/\d+-181717\?style=flat-square&logo=github&logoColor=white"><\/a> ?/, "");
+      const badge = `<a href="https://github.com/${repo}/stargazers"><img alt="GitHub stars" src="https://img.shields.io/badge/${stars}-181717?style=flat-square&logo=github&logoColor=white"></a>`;
+      return `${link}${delimiter}${badge}${content ? ` ${content}` : ""}`;
     },
   )).join("\n");
   return readme.replace(section, updated);
