@@ -175,7 +175,7 @@ async function fetchData(now) {
   const fromDate = new Date(now);
   fromDate.setUTCFullYear(fromDate.getUTCFullYear() - 1);
   const query = `query($login:String!,$from:DateTime!,$to:DateTime!,$searchQuery:String!){user(login:$login){contributionsCollection(from:$from,to:$to){contributionCalendar{totalContributions}}}search(query:$searchQuery,type:ISSUE){issueCount}}`;
-  const starredRepositoriesQuery = `query($login:String!,$after:String){user(login:$login){repositories(first:100,after:$after,privacy:PUBLIC,ownerAffiliations:OWNER){nodes{nameWithOwner stargazerCount isFork}pageInfo{hasNextPage endCursor}}}}`;
+  const starredRepositoriesQuery = `query($login:String!,$after:String){user(login:$login){repositories(first:100,after:$after,privacy:PUBLIC,ownerAffiliations:OWNER){nodes{nameWithOwner stargazerCount isFork latestRelease{tagName url}}pageInfo{hasNextPage endCursor}}}}`;
   const privateRepositoriesQuery = `query($login:String!,$after:String){organization(login:$login){repositories(first:100,after:$after,privacy:PRIVATE){nodes{viewerPermission}pageInfo{hasNextPage endCursor}}}}`;
   const [user, graph, repositories, ...pages] = await Promise.all([
     getJson(`${GITHUB_API_URL}/users/${USERNAME}`),
@@ -196,9 +196,11 @@ async function fetchData(now) {
   })));
   let totalStars;
   let featuredRepoStars;
+  let featuredRepoReleases;
   try {
     totalStars = 0;
     featuredRepoStars = {};
+    featuredRepoReleases = {};
     let after = null;
     do {
       const starredGraph = await getJson(`${GITHUB_API_URL}/graphql`, {
@@ -211,6 +213,9 @@ async function fetchData(now) {
       for (const repository of starredRepositories.nodes ?? []) {
         if (repository?.nameWithOwner && Number.isInteger(repository.stargazerCount)) {
           featuredRepoStars[repository.nameWithOwner] = repository.stargazerCount;
+          featuredRepoReleases[repository.nameWithOwner] = repository.latestRelease
+            ? { tagName: repository.latestRelease.tagName, url: repository.latestRelease.url }
+            : null;
         }
       }
       totalStars += (starredRepositories.nodes ?? [])
@@ -222,6 +227,7 @@ async function fetchData(now) {
   } catch (error) {
     totalStars = undefined;
     featuredRepoStars = undefined;
+    featuredRepoReleases = undefined;
     console.warn(`Total star count unavailable: ${error.message}`);
   }
   let adminPrivateOrgRepos;
@@ -253,6 +259,7 @@ async function fetchData(now) {
     publicRepos: user.public_repos,
     totalStars,
     featuredRepoStars,
+    featuredRepoReleases,
     adminPrivateOrgRepos,
     totalContributions: graph.data?.user?.contributionsCollection?.contributionCalendar?.totalContributions,
     mergedPullRequests: graph.data?.search?.issueCount,
@@ -289,6 +296,33 @@ function updateFeaturedWorkStars(readme, featuredRepoStars) {
   return readme.replace(section, updated);
 }
 
+function updateFeaturedWorkReleases(readme, featuredRepoReleases) {
+  if (!featuredRepoReleases || typeof featuredRepoReleases !== "object") return readme;
+  const releasesByRepo = new Map(Object.entries(featuredRepoReleases).map(([repo, release]) => [repo.toLowerCase(), release]));
+  const pattern = /(## Featured Work\n[\s\S]*?)(?=\n## )/;
+  const section = readme.match(pattern)?.[1];
+  if (!section) throw new Error("README is missing the Featured Work section");
+  const updated = section.split("\n").map((line) => line.replace(
+    /^(\| \[[^\]]+\]\(https:\/\/github\.com\/([^/)]+\/[^/)]+)\))((?: [^|]+)? \| )(.*)$/,
+    (row, link, repo, delimiter, body) => {
+      if (!releasesByRepo.has(repo.toLowerCase())) return row;
+      const release = releasesByRepo.get(repo.toLowerCase());
+      const releasePattern = / ?<a href="https:\/\/github\.com\/[^"]+\/releases\/tag\/[^"]+"><img alt="Latest release" src="[^"]+"><\/a>/;
+      const content = body.replace(releasePattern, "").trimStart();
+      if (!release?.tagName || !release?.url) return `${link}${delimiter}${content}`;
+      const tagName = String(release.tagName);
+      const releaseUrl = String(release.url).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+      const badgeUrl = `https://img.shields.io/static/v1?label=RELEASE&message=${encodeURIComponent(tagName)}&color=181717&style=flat-square&logo=github&logoColor=white`;
+      const badge = `<a href="${releaseUrl}"><img alt="Latest release" src="${badgeUrl}"></a>`;
+      const starMatch = content.match(/^(<a href="https:\/\/github\.com\/[^"]+\/stargazers"><img alt="GitHub stars" src="[^"]+"><\/a>)(?:\s+)?/);
+      if (!starMatch) return `${link}${delimiter}${badge}${content ? ` ${content}` : ""}`;
+      const rest = content.slice(starMatch[0].length);
+      return `${link}${delimiter}${starMatch[1]} ${badge}${rest ? ` ${rest}` : ""}`;
+    },
+  )).join("\n");
+  return readme.replace(section, updated);
+}
+
 const now = new Date(process.env.GITHUB_ACTIVITY_NOW ?? Date.now());
 if (Number.isNaN(now.valueOf())) throw new Error("GITHUB_ACTIVITY_NOW is invalid");
 const data = process.env.GITHUB_ACTIVITY_DATA_JSON ? JSON.parse(process.env.GITHUB_ACTIVITY_DATA_JSON) : await fetchData(now);
@@ -306,6 +340,7 @@ const events = supplementPushEvents(data.events, data.repositories, data.reposit
 
 let readme = await readFile(README_PATH, "utf8");
 readme = updateFeaturedWorkStars(readme, data.featuredRepoStars);
+readme = updateFeaturedWorkReleases(readme, data.featuredRepoReleases);
 const statsSection = readme.match(/<!-- GITHUB_STATS_START -->([\s\S]*?)<!-- GITHUB_STATS_END -->/)?.[1] ?? "";
 const achievements = statsSection.match(/^Current achievements\s+.*$/m)?.[0];
 const highlight = statsSection.match(/^Highlight\s+.*$/m)?.[0];

@@ -200,6 +200,110 @@ Highlight              Keep This Highlight
   assert.match(output, /PIE — Physics Informs Everything \*\(private\)\* \| Keep this private entry unchanged\./);
 });
 
+test("shows each Featured Work repository latest release tag and removes stale badges when no release exists", () => {
+  const directory = mkdtempSync(join(tmpdir(), "github-activity-featured-releases-"));
+  const readme = join(directory, "README.md");
+  writeFileSync(readme, `# Profile
+
+## Featured Work
+
+| Project | What it does |
+| --- | --- |
+| [TrackMate](https://github.com/Hikari-Tsai/TrackMate) | <a href="https://github.com/Hikari-Tsai/TrackMate/releases/tag/v1.0.0"><img alt="Latest release" src="https://img.shields.io/static/v1?label=RELEASE&message=v1.0.0&color=181717&style=flat-square&logo=github&logoColor=white"></a> Keep this description unchanged. |
+| [Semitone](https://github.com/Hikari-Tsai/Semitone) | <a href="https://github.com/Hikari-Tsai/Semitone/releases/tag/v0.1.0"><img alt="Latest release" src="https://img.shields.io/static/v1?label=RELEASE&message=v0.1.0&color=181717&style=flat-square&logo=github&logoColor=white"></a> Keep this description unchanged too. |
+| PIE — Physics Informs Everything *(private)* | Keep this private entry unchanged. |
+
+## Recent Activity
+
+<!-- GITHUB_RECENT_ACTIVITY_START -->old<!-- GITHUB_RECENT_ACTIVITY_END -->
+<!-- GITHUB_RECENT_UPDATED_AT_START -->old<!-- GITHUB_RECENT_UPDATED_AT_END -->
+<!-- GITHUB_STATS_START -->
+\`\`\`text
+Current achievements   Keep This Sentinel
+Highlight              Keep This Highlight
+\`\`\`
+<!-- GITHUB_STATS_END -->
+<!-- GITHUB_UPDATED_AT_START -->old<!-- GITHUB_UPDATED_AT_END -->
+`);
+
+  const result = spawnSync(process.execPath, ["scripts/update-github-activity.mjs"], {
+    cwd: new URL("..", import.meta.url),
+    encoding: "utf8",
+    env: {
+      ...process.env,
+      GITHUB_ACTIVITY_DATA_JSON: JSON.stringify({
+        publicRepos: 26,
+        totalContributions: 300,
+        mergedPullRequests: 42,
+        featuredRepoReleases: {
+          "Hikari-Tsai/TrackMate": {
+            tagName: "v2.4.0-beta.1",
+            url: "https://github.com/Hikari-Tsai/TrackMate/releases/tag/v2.4.0-beta.1",
+          },
+          "Hikari-Tsai/Semitone": null,
+        },
+        events: [],
+      }),
+      GITHUB_ACTIVITY_README_PATH: readme,
+      GITHUB_ACTIVITY_NOW: "2026-08-31T01:30:00.000Z",
+      OPENAI_API_KEY: "",
+    },
+  });
+
+  assert.equal(result.status, 0, result.stderr);
+  const output = readFileSync(readme, "utf8");
+  assert.match(output, /href="https:\/\/github\.com\/Hikari-Tsai\/TrackMate\/releases\/tag\/v2\.4\.0-beta\.1"><img alt="Latest release" src="https:\/\/img\.shields\.io\/static\/v1\?label=RELEASE&message=v2\.4\.0-beta\.1&color=181717&style=flat-square&logo=github&logoColor=white">/);
+  assert.doesNotMatch(output, /Semitone\/releases\/tag/);
+  assert.match(output, /Keep this description unchanged\./);
+  assert.match(output, /Keep this description unchanged too\./);
+  assert.match(output, /PIE — Physics Informs Everything \*\(private\)\* \| Keep this private entry unchanged\./);
+});
+
+test("keeps existing Featured Work release badges when release data is unavailable", () => {
+  const directory = mkdtempSync(join(tmpdir(), "github-activity-featured-release-fallback-"));
+  const readme = join(directory, "README.md");
+  writeFileSync(readme, `# Profile
+
+## Featured Work
+
+| Project | What it does |
+| --- | --- |
+| [TrackMate](https://github.com/Hikari-Tsai/TrackMate) | <a href="https://github.com/Hikari-Tsai/TrackMate/releases/tag/v1.0.0"><img alt="Latest release" src="https://img.shields.io/static/v1?label=RELEASE&message=v1.0.0&color=181717&style=flat-square&logo=github&logoColor=white"></a> Keep this description unchanged. |
+
+## Recent Activity
+
+<!-- GITHUB_RECENT_ACTIVITY_START -->old<!-- GITHUB_RECENT_ACTIVITY_END -->
+<!-- GITHUB_RECENT_UPDATED_AT_START -->old<!-- GITHUB_RECENT_UPDATED_AT_END -->
+<!-- GITHUB_STATS_START -->
+\`\`\`text
+Current achievements   Keep This Sentinel
+Highlight              Keep This Highlight
+\`\`\`
+<!-- GITHUB_STATS_END -->
+<!-- GITHUB_UPDATED_AT_START -->old<!-- GITHUB_UPDATED_AT_END -->
+`);
+
+  const result = spawnSync(process.execPath, ["scripts/update-github-activity.mjs"], {
+    cwd: new URL("..", import.meta.url),
+    encoding: "utf8",
+    env: {
+      ...process.env,
+      GITHUB_ACTIVITY_DATA_JSON: JSON.stringify({
+        publicRepos: 26,
+        totalContributions: 300,
+        mergedPullRequests: 42,
+        events: [],
+      }),
+      GITHUB_ACTIVITY_README_PATH: readme,
+      GITHUB_ACTIVITY_NOW: "2026-08-31T01:30:00.000Z",
+      OPENAI_API_KEY: "",
+    },
+  });
+
+  assert.equal(result.status, 0, result.stderr);
+  assert.match(readFileSync(readme, "utf8"), /message=v1\.0\.0/);
+});
+
 test("sums stars from owned public non-fork repositories across pages", async (context) => {
   const directory = mkdtempSync(join(tmpdir(), "github-activity-stars-"));
   const readme = join(directory, "README.md");
@@ -236,8 +340,8 @@ Highlight              Keep This Highlight
       if (graphRequest.query.includes("stargazerCount")) {
         starRequests.push(graphRequest);
         response.end(JSON.stringify(graphRequest.variables.after
-          ? { data: { user: { repositories: { nodes: [{ nameWithOwner: "Hikari-Tsai/Semitone", stargazerCount: 6, isFork: false }], pageInfo: { hasNextPage: false, endCursor: null } } } } }
-          : { data: { user: { repositories: { nodes: [{ nameWithOwner: "Hikari-Tsai/TrackMate", stargazerCount: 4, isFork: false }, { nameWithOwner: "Hikari-Tsai/JS_Inflator", stargazerCount: 100, isFork: true }], pageInfo: { hasNextPage: true, endCursor: "stars-next" } } } } }));
+          ? { data: { user: { repositories: { nodes: [{ nameWithOwner: "Hikari-Tsai/Semitone", stargazerCount: 6, isFork: false, latestRelease: null }], pageInfo: { hasNextPage: false, endCursor: null } } } } }
+          : { data: { user: { repositories: { nodes: [{ nameWithOwner: "Hikari-Tsai/TrackMate", stargazerCount: 4, isFork: false, latestRelease: { tagName: "v2.4.0", url: "https://github.com/Hikari-Tsai/TrackMate/releases/tag/v2.4.0" } }, { nameWithOwner: "Hikari-Tsai/JS_Inflator", stargazerCount: 100, isFork: true, latestRelease: null }], pageInfo: { hasNextPage: true, endCursor: "stars-next" } } } } }));
       } else {
         response.end(JSON.stringify({ data: { user: { contributionsCollection: { contributionCalendar: { totalContributions: 300 } } }, search: { issueCount: 42 } } }));
       }
@@ -286,6 +390,8 @@ Highlight              Keep This Highlight
   const output = readFileSync(readme, "utf8");
   assert.match(output, /Total stars             10/);
   assert.match(output, /\[TrackMate\]\(https:\/\/github\.com\/Hikari-Tsai\/TrackMate\) \| <a href="https:\/\/github\.com\/Hikari-Tsai\/TrackMate\/stargazers"><img alt="GitHub stars" src="https:\/\/img\.shields\.io\/badge\/4-181717\?style=flat-square&logo=data:image\/svg%2Bxml;base64,[A-Za-z0-9+/]+=*"><\/a>/);
+  assert.match(output, /message=v2\.4\.0/);
+  assert.match(starRequests[0].query, /latestRelease\s*\{\s*tagName\s+url\s*\}/);
   assert.deepEqual(starRequests.map(({ variables }) => variables), [
     { login: "Hikari-Tsai", after: null },
     { login: "Hikari-Tsai", after: "stars-next" },
