@@ -134,10 +134,75 @@ old timestamp
   assert.match(readFileSync(readme, "utf8"), /Total stars             13/);
 });
 
+test("updates Featured Work stars for public repositories without changing private entries", () => {
+  const directory = mkdtempSync(join(tmpdir(), "github-activity-featured-stars-"));
+  const readme = join(directory, "README.md");
+  writeFileSync(readme, `# Profile
+
+## Featured Work
+
+| Project | What it does |
+| --- | --- |
+| [TrackMate](https://github.com/Hikari-Tsai/TrackMate) <sub>⭐ 1</sub> | Keep this description unchanged. |
+| [Semitone](https://github.com/Hikari-Tsai/Semitone) | Keep this description unchanged too. |
+| [JS_Inflator](https://github.com/Hikari-Tsai/JS_Inflator) <sub>⭐ 1</sub> *(customized fork)* | Keep this fork label unchanged. |
+| PIE — Physics Informs Everything *(private)* | Keep this private entry unchanged. |
+
+## Recent Activity
+
+<!-- GITHUB_RECENT_ACTIVITY_START -->old<!-- GITHUB_RECENT_ACTIVITY_END -->
+<!-- GITHUB_RECENT_UPDATED_AT_START -->old<!-- GITHUB_RECENT_UPDATED_AT_END -->
+<!-- GITHUB_STATS_START -->
+\`\`\`text
+Current achievements   Keep This Sentinel
+Highlight              Keep This Highlight
+\`\`\`
+<!-- GITHUB_STATS_END -->
+<!-- GITHUB_UPDATED_AT_START -->old<!-- GITHUB_UPDATED_AT_END -->
+`);
+
+  const result = spawnSync(process.execPath, ["scripts/update-github-activity.mjs"], {
+    cwd: new URL("..", import.meta.url),
+    encoding: "utf8",
+    env: {
+      ...process.env,
+      GITHUB_ACTIVITY_DATA_JSON: JSON.stringify({
+        publicRepos: 26,
+        totalContributions: 300,
+        mergedPullRequests: 42,
+        featuredRepoStars: {
+          "Hikari-Tsai/TrackMate": 12,
+          "Hikari-Tsai/Semitone": 7,
+          "Hikari-Tsai/JS_Inflator": 3,
+        },
+        events: [],
+      }),
+      GITHUB_ACTIVITY_README_PATH: readme,
+      GITHUB_ACTIVITY_NOW: "2026-08-31T01:30:00.000Z",
+      OPENAI_API_KEY: "",
+    },
+  });
+
+  assert.equal(result.status, 0, result.stderr);
+  const output = readFileSync(readme, "utf8");
+  assert.match(output, /\[TrackMate\]\(https:\/\/github\.com\/Hikari-Tsai\/TrackMate\) <sub>⭐ 12<\/sub> \| Keep this description unchanged\./);
+  assert.match(output, /\[Semitone\]\(https:\/\/github\.com\/Hikari-Tsai\/Semitone\) <sub>⭐ 7<\/sub> \| Keep this description unchanged too\./);
+  assert.match(output, /\[JS_Inflator\]\(https:\/\/github\.com\/Hikari-Tsai\/JS_Inflator\) <sub>⭐ 3<\/sub> \*\(customized fork\)\* \| Keep this fork label unchanged\./);
+  assert.match(output, /PIE — Physics Informs Everything \*\(private\)\* \| Keep this private entry unchanged\./);
+});
+
 test("sums stars from owned public non-fork repositories across pages", async (context) => {
   const directory = mkdtempSync(join(tmpdir(), "github-activity-stars-"));
   const readme = join(directory, "README.md");
   writeFileSync(readme, `# Profile
+
+## Featured Work
+
+| Project | What it does |
+| --- | --- |
+| [TrackMate](https://github.com/Hikari-Tsai/TrackMate) <sub>⭐ 1</sub> | Keep this description. |
+
+## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->old<!-- GITHUB_RECENT_ACTIVITY_END -->
 <!-- GITHUB_RECENT_UPDATED_AT_START -->old<!-- GITHUB_RECENT_UPDATED_AT_END -->
@@ -162,8 +227,8 @@ Highlight              Keep This Highlight
       if (graphRequest.query.includes("stargazerCount")) {
         starRequests.push(graphRequest);
         response.end(JSON.stringify(graphRequest.variables.after
-          ? { data: { user: { repositories: { nodes: [{ stargazerCount: 6, isFork: false }], pageInfo: { hasNextPage: false, endCursor: null } } } } }
-          : { data: { user: { repositories: { nodes: [{ stargazerCount: 4, isFork: false }, { stargazerCount: 100, isFork: true }], pageInfo: { hasNextPage: true, endCursor: "stars-next" } } } } }));
+          ? { data: { user: { repositories: { nodes: [{ nameWithOwner: "Hikari-Tsai/Semitone", stargazerCount: 6, isFork: false }], pageInfo: { hasNextPage: false, endCursor: null } } } } }
+          : { data: { user: { repositories: { nodes: [{ nameWithOwner: "Hikari-Tsai/TrackMate", stargazerCount: 4, isFork: false }, { nameWithOwner: "Hikari-Tsai/JS_Inflator", stargazerCount: 100, isFork: true }], pageInfo: { hasNextPage: true, endCursor: "stars-next" } } } } }));
       } else {
         response.end(JSON.stringify({ data: { user: { contributionsCollection: { contributionCalendar: { totalContributions: 300 } } }, search: { issueCount: 42 } } }));
       }
@@ -209,7 +274,9 @@ Highlight              Keep This Highlight
   });
 
   assert.equal(result.status, 0, result.stderr);
-  assert.match(readFileSync(readme, "utf8"), /Total stars             10/);
+  const output = readFileSync(readme, "utf8");
+  assert.match(output, /Total stars             10/);
+  assert.match(output, /\[TrackMate\]\(https:\/\/github\.com\/Hikari-Tsai\/TrackMate\) <sub>⭐ 4<\/sub>/);
   assert.deepEqual(starRequests.map(({ variables }) => variables), [
     { login: "Hikari-Tsai", after: null },
     { login: "Hikari-Tsai", after: "stars-next" },

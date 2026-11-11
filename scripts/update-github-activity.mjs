@@ -174,7 +174,7 @@ async function fetchData(now) {
   const fromDate = new Date(now);
   fromDate.setUTCFullYear(fromDate.getUTCFullYear() - 1);
   const query = `query($login:String!,$from:DateTime!,$to:DateTime!,$searchQuery:String!){user(login:$login){contributionsCollection(from:$from,to:$to){contributionCalendar{totalContributions}}}search(query:$searchQuery,type:ISSUE){issueCount}}`;
-  const starredRepositoriesQuery = `query($login:String!,$after:String){user(login:$login){repositories(first:100,after:$after,privacy:PUBLIC,ownerAffiliations:OWNER){nodes{stargazerCount isFork}pageInfo{hasNextPage endCursor}}}}`;
+  const starredRepositoriesQuery = `query($login:String!,$after:String){user(login:$login){repositories(first:100,after:$after,privacy:PUBLIC,ownerAffiliations:OWNER){nodes{nameWithOwner stargazerCount isFork}pageInfo{hasNextPage endCursor}}}}`;
   const privateRepositoriesQuery = `query($login:String!,$after:String){organization(login:$login){repositories(first:100,after:$after,privacy:PRIVATE){nodes{viewerPermission}pageInfo{hasNextPage endCursor}}}}`;
   const [user, graph, repositories, ...pages] = await Promise.all([
     getJson(`${GITHUB_API_URL}/users/${USERNAME}`),
@@ -194,8 +194,10 @@ async function fetchData(now) {
     }
   })));
   let totalStars;
+  let featuredRepoStars;
   try {
     totalStars = 0;
+    featuredRepoStars = {};
     let after = null;
     do {
       const starredGraph = await getJson(`${GITHUB_API_URL}/graphql`, {
@@ -205,6 +207,11 @@ async function fetchData(now) {
       });
       const starredRepositories = starredGraph.data?.user?.repositories;
       if (!starredRepositories) throw new Error(`Public repositories for ${USERNAME} are unavailable`);
+      for (const repository of starredRepositories.nodes ?? []) {
+        if (repository?.nameWithOwner && Number.isInteger(repository.stargazerCount)) {
+          featuredRepoStars[repository.nameWithOwner] = repository.stargazerCount;
+        }
+      }
       totalStars += (starredRepositories.nodes ?? [])
         .filter((repository) => !repository?.isFork)
         .reduce((sum, repository) => sum + (repository?.stargazerCount ?? 0), 0);
@@ -213,6 +220,7 @@ async function fetchData(now) {
     } while (after);
   } catch (error) {
     totalStars = undefined;
+    featuredRepoStars = undefined;
     console.warn(`Total star count unavailable: ${error.message}`);
   }
   let adminPrivateOrgRepos;
@@ -243,6 +251,7 @@ async function fetchData(now) {
   return {
     publicRepos: user.public_repos,
     totalStars,
+    featuredRepoStars,
     adminPrivateOrgRepos,
     totalContributions: graph.data?.user?.contributionsCollection?.contributionCalendar?.totalContributions,
     mergedPullRequests: graph.data?.search?.issueCount,
@@ -258,6 +267,22 @@ function replaceSection(readme, name, content) {
   const pattern = new RegExp(`${start}[\\s\\S]*?${end}`);
   if (!pattern.test(readme)) throw new Error(`Missing README markers: ${name}`);
   return readme.replace(pattern, `${start}\n${content}\n${end}`);
+}
+
+function updateFeaturedWorkStars(readme, featuredRepoStars) {
+  if (!featuredRepoStars || typeof featuredRepoStars !== "object") return readme;
+  const starsByRepo = new Map(Object.entries(featuredRepoStars).map(([repo, stars]) => [repo.toLowerCase(), stars]));
+  const pattern = /(## Featured Work\n[\s\S]*?)(?=\n## )/;
+  const section = readme.match(pattern)?.[1];
+  if (!section) throw new Error("README is missing the Featured Work section");
+  const updated = section.split("\n").map((line) => line.replace(
+    /^(\| \[[^\]]+\]\(https:\/\/github\.com\/([^/)]+\/[^/)]+)\))(?: <sub>⭐ \d+<\/sub>)?((?: [^|]+)? \|.*)$/,
+    (row, link, repo, remainder) => {
+      const stars = starsByRepo.get(repo.toLowerCase());
+      return Number.isInteger(stars) && stars >= 0 ? `${link} <sub>⭐ ${stars}</sub>${remainder}` : row;
+    },
+  )).join("\n");
+  return readme.replace(section, updated);
 }
 
 const now = new Date(process.env.GITHUB_ACTIVITY_NOW ?? Date.now());
@@ -276,6 +301,7 @@ if (!Array.isArray(data.events)) throw new Error("Invalid events");
 const events = supplementPushEvents(data.events, data.repositories, data.repositoryCommits);
 
 let readme = await readFile(README_PATH, "utf8");
+readme = updateFeaturedWorkStars(readme, data.featuredRepoStars);
 const statsSection = readme.match(/<!-- GITHUB_STATS_START -->([\s\S]*?)<!-- GITHUB_STATS_END -->/)?.[1] ?? "";
 const achievements = statsSection.match(/^Current achievements\s+.*$/m)?.[0];
 const highlight = statsSection.match(/^Highlight\s+.*$/m)?.[0];
