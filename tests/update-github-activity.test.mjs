@@ -185,9 +185,17 @@ Highlight              Keep This Highlight
 
   assert.equal(result.status, 0, result.stderr);
   const output = readFileSync(readme, "utf8");
-  assert.match(output, /\[TrackMate\]\(https:\/\/github\.com\/Hikari-Tsai\/TrackMate\) \| <a href="https:\/\/github\.com\/Hikari-Tsai\/TrackMate\/stargazers"><img alt="GitHub stars" src="https:\/\/img\.shields\.io\/badge\/12-181717\?style=flat-square&logo=github&logoColor=white"><\/a> Keep this description unchanged\./);
-  assert.match(output, /\[Semitone\]\(https:\/\/github\.com\/Hikari-Tsai\/Semitone\) \| <a href="https:\/\/github\.com\/Hikari-Tsai\/Semitone\/stargazers"><img alt="GitHub stars" src="https:\/\/img\.shields\.io\/badge\/7-181717\?style=flat-square&logo=github&logoColor=white"><\/a> Keep this description unchanged too\./);
-  assert.match(output, /\[JS_Inflator\]\(https:\/\/github\.com\/Hikari-Tsai\/JS_Inflator\) \*\(customized fork\)\* \| <a href="https:\/\/github\.com\/Hikari-Tsai\/JS_Inflator\/stargazers"><img alt="GitHub stars" src="https:\/\/img\.shields\.io\/badge\/3-181717\?style=flat-square&logo=github&logoColor=white"><\/a> Keep this fork label unchanged\./);
+  assert.match(output, /\[TrackMate\]\(https:\/\/github\.com\/Hikari-Tsai\/TrackMate\) \| <a href="https:\/\/github\.com\/Hikari-Tsai\/TrackMate\/stargazers"><img alt="GitHub stars" src="[^"]+"><\/a> Keep this description unchanged\./);
+  assert.match(output, /\[Semitone\]\(https:\/\/github\.com\/Hikari-Tsai\/Semitone\) \| <a href="https:\/\/github\.com\/Hikari-Tsai\/Semitone\/stargazers"><img alt="GitHub stars" src="[^"]+"><\/a> Keep this description unchanged too\./);
+  assert.match(output, /\[JS_Inflator\]\(https:\/\/github\.com\/Hikari-Tsai\/JS_Inflator\) \*\(customized fork\)\* \| <a href="https:\/\/github\.com\/Hikari-Tsai\/JS_Inflator\/stargazers"><img alt="GitHub stars" src="[^"]+"><\/a> Keep this fork label unchanged\./);
+  const starBadges = [...output.matchAll(/<img alt="GitHub stars" src="([^"]+)">/g)].map((match) => match[1]);
+  assert.equal(starBadges.length, 3);
+  for (const source of starBadges) {
+    assert.match(source, /^https:\/\/img\.shields\.io\/badge\/\d+-181717\?style=flat-square&logo=data:image\/svg%2Bxml;base64,[A-Za-z0-9+/]+=*$/);
+    const svg = Buffer.from(source.split(",")[1], "base64").toString("utf8");
+    assert.match(svg, /<path fill="#fff" d="M8 \.25/);
+  }
+  assert.doesNotMatch(output, /logo=github&logoColor=white/);
   assert.doesNotMatch(output, /<sub>[⭐★]/);
   assert.match(output, /PIE — Physics Informs Everything \*\(private\)\* \| Keep this private entry unchanged\./);
 });
@@ -277,7 +285,7 @@ Highlight              Keep This Highlight
   assert.equal(result.status, 0, result.stderr);
   const output = readFileSync(readme, "utf8");
   assert.match(output, /Total stars             10/);
-  assert.match(output, /\[TrackMate\]\(https:\/\/github\.com\/Hikari-Tsai\/TrackMate\) \| <a href="https:\/\/github\.com\/Hikari-Tsai\/TrackMate\/stargazers"><img alt="GitHub stars" src="https:\/\/img\.shields\.io\/badge\/4-181717\?style=flat-square&logo=github&logoColor=white"><\/a>/);
+  assert.match(output, /\[TrackMate\]\(https:\/\/github\.com\/Hikari-Tsai\/TrackMate\) \| <a href="https:\/\/github\.com\/Hikari-Tsai\/TrackMate\/stargazers"><img alt="GitHub stars" src="https:\/\/img\.shields\.io\/badge\/4-181717\?style=flat-square&logo=data:image\/svg%2Bxml;base64,[A-Za-z0-9+/]+=*"><\/a>/);
   assert.deepEqual(starRequests.map(({ variables }) => variables), [
     { login: "Hikari-Tsai", after: null },
     { login: "Hikari-Tsai", after: "stars-next" },

@@ -7,6 +7,7 @@ const README_PATH = process.env.GITHUB_ACTIVITY_README_PATH ?? "README.md";
 const GITHUB_API_URL = process.env.GITHUB_API_URL ?? "https://api.github.com";
 const OPENAI_BASE_URL = process.env.OPENAI_BASE_URL ?? "https://api.openai.com/v1";
 const OPENAI_MODEL = process.env.OPENAI_MODEL ?? "gpt-5.4-mini";
+const OCTICON_STAR_LOGO = "data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTggLjI1YS43NS43NSAwIDAgMSAuNjczLjQxOGwxLjg4MiAzLjgxNSA0LjIxLjYxMmEuNzUuNzUgMCAwIDEgLjQxNiAxLjI3OWwtMy4wNDYgMi45Ny43MTkgNC4xOTJhLjc1MS43NTEgMCAwIDEtMS4wODguNzkxTDggMTIuMzQ3bC0zLjc2NiAxLjk4YS43NS43NSAwIDAgMS0xLjA4OC0uNzlsLjcyLTQuMTk0TC44MTggNi4zNzRhLjc1Ljc1IDAgMCAxIC40MTYtMS4yOGw0LjIxLS42MTFMNy4zMjcuNjY4QS43NS43NSAwIDAgMSA4IC4yNVptMCAyLjQ0NUw2LjYxNSA1LjVhLjc1Ljc1IDAgMCAxLS41NjQuNDFsLTMuMDk3LjQ1IDIuMjQgMi4xODRhLjc1Ljc1IDAgMCAxIC4yMTYuNjY0bC0uNTI4IDMuMDg0IDIuNzY5LTEuNDU2YS43NS43NSAwIDAgMSAuNjk4IDBsMi43NyAxLjQ1Ni0uNTMtMy4wODRhLjc1Ljc1IDAgMCAxIC4yMTYtLjY2NGwyLjI0LTIuMTgzLTMuMDk2LS40NWEuNzUuNzUgMCAwIDEtLjU2NC0uNDFMOCAyLjY5NFoiLz48L3N2Zz4=";
 const API_HEADERS = {
   Accept: "application/vnd.github+json",
   Authorization: `Bearer ${process.env.GITHUB_TOKEN ?? process.env.GH_TOKEN ?? ""}`,
@@ -280,8 +281,8 @@ function updateFeaturedWorkStars(readme, featuredRepoStars) {
     (row, link, repo, delimiter, body) => {
       const stars = starsByRepo.get(repo.toLowerCase());
       if (!Number.isInteger(stars) || stars < 0) return row;
-      const content = body.replace(/^<a href="https:\/\/github\.com\/[^"]+\/stargazers"><img alt="GitHub stars" src="https:\/\/img\.shields\.io\/badge\/\d+-181717\?style=flat-square&logo=github&logoColor=white"><\/a> ?/, "");
-      const badge = `<a href="https://github.com/${repo}/stargazers"><img alt="GitHub stars" src="https://img.shields.io/badge/${stars}-181717?style=flat-square&logo=github&logoColor=white"></a>`;
+      const content = body.replace(/^<a href="https:\/\/github\.com\/[^"]+\/stargazers"><img alt="GitHub stars" src="[^"]+"><\/a> ?/, "");
+      const badge = `<a href="https://github.com/${repo}/stargazers"><img alt="GitHub stars" src="https://img.shields.io/badge/${stars}-181717?style=flat-square&logo=${OCTICON_STAR_LOGO}"></a>`;
       return `${link}${delimiter}${badge}${content ? ` ${content}` : ""}`;
     },
   )).join("\n");
