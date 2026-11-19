@@ -95,7 +95,10 @@ function selectFeaturedBadges(allBadges) {
 }
 
 function featuredBadgeRank(name) {
+  if (name === "1000 Days Badge") return 11000;
   if (name === "500 Days Badge") return 10000;
+  if (name === "Level 3") return 9500;
+  if (name === "Programming Skills II") return 0;
 
   const romanMatch = name.match(/\b([IVXLCDM]+)$/);
   const romanLevel = romanMatch ? romanToNumber(romanMatch[1]) : 0;
@@ -103,11 +106,9 @@ function featuredBadgeRank(name) {
 
   const levelMatch = name.match(/^Level (\d+)$/);
   const numericLevel = Number(levelMatch?.[1]);
-  if (name === "Level 3") return 0;
   if (numericLevel >= 2) return 8000 + numericLevel;
 
   if (name === "LeetCode 75") return 7000;
-  if (name === "Graph Theory I") return 6000;
   return 0;
 }
 

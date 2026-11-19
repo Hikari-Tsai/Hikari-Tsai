@@ -125,9 +125,19 @@ Highlight              GitHub Developer Program Member
       <sub><strong>Guardian</strong></sub>
     </td>
     <td align="center" valign="top" width="140">
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/marketing/lg1k.png" alt="1000 Days Badge" title="1000 Days Badge" width="90"></a><br>
+      <sub><strong>1000 Days Badge</strong></sub>
+    </td>
+    <td align="center" valign="top" width="140">
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/marketing/lg500.png" alt="500 Days Badge" title="500 Days Badge" width="90"></a><br>
       <sub><strong>500 Days Badge</strong></sub>
     </td>
+    <td align="center" valign="top" width="140">
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/%E4%BC%9A%E5%91%98.png" alt="Level 3" title="Level 3" width="90"></a><br>
+      <sub><strong>Level 3</strong></sub>
+    </td>
+  </tr>
+  <tr>
     <td align="center" valign="top" width="140">
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/DP_II.png" alt="Dynamic Programming II" title="Dynamic Programming II" width="90"></a><br>
       <sub><strong>Dynamic Programming II</strong></sub>
@@ -136,23 +146,13 @@ Highlight              GitHub Developer Program Member
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/algorithm_II.png" alt="Algorithm II" title="Algorithm II" width="90"></a><br>
       <sub><strong>Algorithm II</strong></sub>
     </td>
-  </tr>
-  <tr>
     <td align="center" valign="top" width="140">
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/DS_II.png" alt="Data Structure II" title="Data Structure II" width="90"></a><br>
       <sub><strong>Data Structure II</strong></sub>
     </td>
     <td align="center" valign="top" width="140">
-  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/%E7%BC%96%E7%A8%8B%E8%83%BD%E5%8A%9B_%E5%9F%BA%E7%A1%80.png" alt="Programming Skills II" title="Programming Skills II" width="90"></a><br>
-      <sub><strong>Programming Skills II</strong></sub>
-    </td>
-    <td align="center" valign="top" width="140">
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/LeetCode_75.png" alt="LeetCode 75" title="LeetCode 75" width="90"></a><br>
       <sub><strong>LeetCode 75</strong></sub>
-    </td>
-    <td align="center" valign="top" width="140">
-  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/%E5%9B%BE%E8%AE%BA.png" alt="Graph Theory I" title="Graph Theory I" width="90"></a><br>
-      <sub><strong>Graph Theory I</strong></sub>
     </td>
   </tr>
   <tr>
@@ -203,8 +203,9 @@ Highlight              GitHub Developer Program Member
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/2022/lg/2022-annual-100.png" alt="100 Days Badge 2022" title="100 Days Badge 2022" width="90"></a>
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2022-12.png" alt="Dec LeetCoding Challenge" title="Dec LeetCoding Challenge" width="90"></a>
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2022-11.png" alt="Nov LeetCoding Challenge" title="Nov LeetCoding Challenge" width="90"></a>
-  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/%E4%BC%9A%E5%91%98.png" alt="Level 3" title="Level 3" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/%E5%9B%BE%E8%AE%BA.png" alt="Graph Theory I" title="Graph Theory I" width="90"></a>
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://leetcode.com/static/images/badges/dcc-2022-10.png" alt="Oct LeetCoding Challenge" title="Oct LeetCoding Challenge" width="90"></a>
+  <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/%E7%BC%96%E7%A8%8B%E8%83%BD%E5%8A%9B_%E5%9F%BA%E7%A1%80.png" alt="Programming Skills II" title="Programming Skills II" width="90"></a>
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/algorithm_I.png" alt="Algorithm I" title="Algorithm I" width="90"></a>
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/%E5%85%A5%E9%97%A8.png" alt="Level 1" title="Level 1" width="90"></a>
   <a href="https://leetcode.com/u/Hikari-Tsai/"><img src="https://assets.leetcode.com/static_assets/others/%E7%BC%96%E7%A8%8B%E8%83%BD%E5%8A%9B_%E5%85%A5%E9%97%A8.png" alt="Programming Skills I" title="Programming Skills I" width="90"></a>

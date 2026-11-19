@@ -24,9 +24,10 @@ function updateReadme(badges) {
   return readFileSync(readme, "utf8");
 }
 
-test("features Guardian first, keeps Knight hidden, and preserves advanced badge rules", () => {
+test("features 1000 Days and Level 3 while moving lower-priority badges into More", () => {
   const output = updateReadme([
     { id: "17", displayName: "Guardian", icon: "/guardian.png", creationDate: "2026-03-01" },
+    { id: "18", displayName: "1000 Days Badge", icon: "/1000.png", creationDate: "2026-11-19" },
     { id: "1", displayName: "May LeetCoding Challenge", icon: "/monthly.png", creationDate: "2025-05-31" },
     { id: "2", displayName: "100 Days Badge 2025", icon: "/100-2025.png", creationDate: "2025-05-01" },
     { id: "3", displayName: "500 Days Badge", icon: "/500.png", creationDate: "2025-04-01" },
@@ -49,17 +50,18 @@ test("features Guardian first, keeps Knight hidden, and preserves advanced badge
 
   assert.match(output, /<td align="right" colspan="4">\n<details>/);
   assert.ok(detailsStart < tableEnd, "More should be inside the featured badge table");
-  assert.match(output, /<summary align="right"><strong>Show 8 more badges<\/strong><\/summary>/);
+  assert.match(output, /<summary align="right"><strong>Show 9 more badges<\/strong><\/summary>/);
   assert.equal((output.slice(0, detailsStart).match(/width="90"/g) ?? []).length, 9);
-  assert.equal((output.slice(detailsStart).match(/width="90"/g) ?? []).length, 8);
-  assert.match(output.slice(0, detailsStart), /alt="Guardian"[\s\S]*alt="500 Days Badge"/);
-  for (const name of ["Guardian", "500 Days Badge", "LeetCode 75", "Dynamic Programming II", "Algorithm II", "Data Structure II", "Programming Skills II", "Graph Theory I", "Algorithm III"]) {
+  assert.equal((output.slice(detailsStart).match(/width="90"/g) ?? []).length, 9);
+  assert.match(output.slice(0, detailsStart), /alt="Guardian"[\s\S]*alt="1000 Days Badge"[\s\S]*alt="500 Days Badge"[\s\S]*alt="Level 3"/);
+  for (const name of ["Guardian", "1000 Days Badge", "500 Days Badge", "Level 3", "LeetCode 75", "Dynamic Programming II", "Algorithm II", "Data Structure II", "Algorithm III"]) {
     assert.ok(output.indexOf(name) < detailsStart, `${name} should be featured`);
     assert.match(output.slice(0, detailsStart), new RegExp(`<sub><strong>${name}<\\/strong><\\/sub>`));
   }
   assert.ok(output.indexOf("Knight") > detailsStart);
   assert.ok(output.indexOf("May LeetCoding Challenge") > detailsStart);
-  assert.ok(output.indexOf("Level 3") > detailsStart);
+  assert.ok(output.indexOf("Programming Skills II") > detailsStart);
+  assert.ok(output.indexOf("Graph Theory I") > detailsStart);
   assert.doesNotMatch(output, /\nold\n/);
 });
 
