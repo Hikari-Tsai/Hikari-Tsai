@@ -73,26 +73,26 @@ Web systems       Astro, React, TypeScript, FastAPI, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-11-22** — Updated [samoyedtopa1120-cmd/topa-store](https://github.com/samoyedtopa1120-cmd/topa-store): Added a campaign overview homepage and refreshed the 2026 preorder pages with new visuals, sharing metadata, and corrected ECPay payment expiry settings.
-- **2026-11-21** — Updated [Hikari-Tsai/ktv-charts](https://github.com/Hikari-Tsai/ktv-charts): Added new song metadata and audio analysis entries, updated karaoke/vtuber charts, and refreshed cover listings with new uploads and titles.
-- **2026-11-21** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Refreshed and republished several answer entries, added one new Q&A, and updated question source links to a newer README commit.
-- **2026-11-21** — Updated [Hikari-Tsai/karaoke-battle](https://github.com/Hikari-Tsai/karaoke-battle): Added profile identity/device tracking and a new achievements system with points, tiers, and related metadata.
-- **2026-11-21** — Updated [Hikari-Tsai/qlib-tw](https://github.com/Hikari-Tsai/qlib-tw): Updated market history, scores, and raw daily data with 2026-11-20 pricing and index snapshots.
-- **2026-11-21** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a new vocal recording gallery entry with YouTube embed, thumbnail, and studio credits.
+- **2026-11-23** — Updated [Hikari-Tsai/ai-career](https://github.com/Hikari-Tsai/ai-career): Added a rebaseline workflow option, slowed rate-limited scraping, and improved crawl filtering, cost tracking, and run reporting.
+- **2026-11-23** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a custom clear button and keyboard handling to the works search field for more consistent, accessible filtering.
+- **2026-11-23** — Updated [samoyedtopa1120-cmd/topa-store](https://github.com/samoyedtopa1120-cmd/topa-store): Moved product sync to manual/local runs, updated the site workflow and docs, and improved store image loading and display.
+- **2026-11-23** — Updated [Hikari-Tsai/karaoke-battle](https://github.com/Hikari-Tsai/karaoke-battle): Added audio device details to bug reports and the issue form, so reports now prefill mic/output info with sample rate and latency.
+- **2026-11-22** — Updated [samoyedtopa1120-cmd/topa-store](https://github.com/samoyedtopa1120-cmd/topa-store): Added automated store syncing and refreshed the shop pages, styles, and artwork for the 2026 birthday merchandise.
+- **2026-11-22** — Updated [Hikari-Tsai/ktv-charts](https://github.com/Hikari-Tsai/ktv-charts): Added song metadata, BPM data, and karaoke ranking snapshots for recent Japanese and Taiwanese tracks.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-11-22 16:16 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-11-23 17:16 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
 
 <!-- GITHUB_STATS_START -->
 ```text
-Public repositories    39
+Public repositories    40
 Admin private org repos 6
 Total stars             154
-Last-year activity     913 contributions
+Last-year activity     929 contributions
 Merged pull requests   66 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
@@ -100,7 +100,7 @@ Highlight              GitHub Developer Program Member
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-11-22 16:16 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-11-23 17:16 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
