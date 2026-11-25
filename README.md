@@ -73,16 +73,16 @@ Web systems       Astro, React, TypeScript, FastAPI, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-11-24** — Updated [Hikari-Tsai/karaoke-battle](https://github.com/Hikari-Tsai/karaoke-battle): Added configurable automatic track loudness and new achievement tracking for lyrics, backing tracks, and note deletion.
-- **2026-11-24** — Updated [Hikari-Tsai/qlib-tw](https://github.com/Hikari-Tsai/qlib-tw): Updated the event data file to reflect the latest state.
-- **2026-11-24** — Updated [Hikari-Tsai/ai-career](https://github.com/Hikari-Tsai/ai-career): Improved external-link security and referrer handling while updating the job listings data and daily stats.
-- **2026-11-23** — Updated [Hikari-Tsai/karaoke-battle](https://github.com/Hikari-Tsai/karaoke-battle): Added a GitHub-star-triggered achievement and updated the achievement docs and changelogs.
-- **2026-11-23** — Updated [Hikari-Tsai/megaforce](https://github.com/Hikari-Tsai/megaforce): Updated blog metadata and canonical links to HTTPS and added a custom domain plus private notes to .gitignore.
-- **2026-11-23** — Updated [Hikari-Tsai/ktv-charts](https://github.com/Hikari-Tsai/ktv-charts): Updated song metadata and rankings data, adding new track mappings plus recent karaoke, BPM, and audio analysis entries.
+- **2026-11-25** — Updated [Hikari-Tsai/ai-career](https://github.com/Hikari-Tsai/ai-career): Updated the job dataset and LLM cache to refine job classifications and refresh daily metrics.
+- **2026-11-25** — Updated [Hikari-Tsai/qlib-tw](https://github.com/Hikari-Tsai/qlib-tw): Refreshed market history with 2026-11-24 prices, scores, and index data, and updated the renamed stock entry.
+- **2026-11-25** — Updated [Hikari-Tsai/karaoke-battle](https://github.com/Hikari-Tsai/karaoke-battle): Lowered item costs and increased daily free item top-ups for the profile bag and item shop.
+- **2026-11-24** — Updated [Hikari-Tsai/karaoke-battle](https://github.com/Hikari-Tsai/karaoke-battle): Added an item-based achievement store with tuning and lenience effects, plus relay-backed AI advice and supporting audio/UI updates.
+- **2026-11-24** — Updated [Hikari-Tsai/ktv-charts](https://github.com/Hikari-Tsai/ktv-charts): Added new song metadata and audio analysis entries plus weekly karaoke ranking snapshots.
+- **2026-11-24** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Refreshed article metadata and timestamps for several LLM topics, and updated two entries after 403 fetch failures.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-11-24 19:10 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-11-25 17:57 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
@@ -92,7 +92,7 @@ Web systems       Astro, React, TypeScript, FastAPI, GitHub Pages
 Public repositories    42
 Admin private org repos 6
 Total stars             157
-Last-year activity     958 contributions
+Last-year activity     964 contributions
 Merged pull requests   66 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
@@ -100,7 +100,7 @@ Highlight              GitHub Developer Program Member
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-11-24 19:10 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-11-25 17:57 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
