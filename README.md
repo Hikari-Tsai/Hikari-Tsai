@@ -73,16 +73,16 @@ Web systems       Astro, React, TypeScript, FastAPI, GitHub Pages
 ## Recent Activity
 
 <!-- GITHUB_RECENT_ACTIVITY_START -->
-- **2026-11-26** — Updated [Hikari-Tsai/ai-career](https://github.com/Hikari-Tsai/ai-career): Updated job data and AI classification caches to reflect the latest listings and summaries.
-- **2026-11-26** — Updated [Hikari-Tsai/qlib-tw](https://github.com/Hikari-Tsai/qlib-tw): Updated market data, scores, and index history with the latest trading day and refreshed raw daily files.
-- **2026-11-25** — Updated [Hikari-Tsai/ktv-charts](https://github.com/Hikari-Tsai/ktv-charts): Updated song metadata, audio features, vocal ranges, karaoke charts, and VTuber cover/song mappings with new tracks and recent daily data.
-- **2026-11-25** — Updated [Hikari-Tsai/ai-interview](https://github.com/Hikari-Tsai/ai-interview): Refreshed interview Q&A entries, updated source links, and added a new ASR keyword-biasing question about safer medical transcription.
-- **2026-11-25** — Updated [Hikari-Tsai/karaoke-battle](https://github.com/Hikari-Tsai/karaoke-battle): Added daily bonus points, permanent weakness glasses, and wand reset/rescore features while widening Resonance Field scoring feedback.
-- **2026-11-25** — Updated [Hikari-Tsai/ai-career](https://github.com/Hikari-Tsai/ai-career): Updated the job data snapshot, adding a new history entry and handling several employer scrape rate-limit failures.
+- **2026-11-27** — Updated [Hikari-Tsai/software-salary](https://github.com/Hikari-Tsai/software-salary): Expanded the global stylesheet and removed an inline company-section style block from the home page.
+- **2026-11-27** — Updated [Hikari-Tsai/megaforce](https://github.com/Hikari-Tsai/megaforce): Removed a large set of unused legacy HTML and CSS assets to slim down the site’s old styles and layout files.
+- **2026-11-27** — Updated [Hikari-Tsai/ktv-charts](https://github.com/Hikari-Tsai/ktv-charts): Updated karaoke and vocal-range data with fresh fetch timestamps and new song vocal-range entries.
+- **2026-11-27** — Updated [Hikari-Tsai/ai-career](https://github.com/Hikari-Tsai/ai-career): Updated job listings and classification data to refresh company counts, add new employers, and expand cached role summaries.
+- **2026-11-27** — Updated [Hikari-Tsai/homepage](https://github.com/Hikari-Tsai/homepage): Added a new music cover entry and documented role tags so work categories can be filtered correctly.
+- **2026-11-27** — Updated [Hikari-Tsai/qlib-tw](https://github.com/Hikari-Tsai/qlib-tw): Updated market history and score data with the latest 2026-11-26 trading records and raw daily, margin, and event snapshots.
 <!-- GITHUB_RECENT_ACTIVITY_END -->
 
 <!-- GITHUB_RECENT_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-11-26 17:42 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-11-27 17:46 (UTC+8)</sub></p>
 <!-- GITHUB_RECENT_UPDATED_AT_END -->
 
 ## GitHub Activity & Achievements
@@ -92,7 +92,7 @@ Web systems       Astro, React, TypeScript, FastAPI, GitHub Pages
 Public repositories    42
 Admin private org repos 6
 Total stars             159
-Last-year activity     965 contributions
+Last-year activity     981 contributions
 Merged pull requests   66 public PRs
 Current achievements   Galaxy Brain, Starstruck, Pair Extraordinaire, Public Sponsor, YOLO, Pull Shark x2, Quickdraw
 Highlight              GitHub Developer Program Member
@@ -100,7 +100,7 @@ Highlight              GitHub Developer Program Member
 <!-- GITHUB_STATS_END -->
 
 <!-- GITHUB_UPDATED_AT_START -->
-<p align="right"><sub>Last updated: 2026-11-26 17:42 (UTC+8)</sub></p>
+<p align="right"><sub>Last updated: 2026-11-27 17:46 (UTC+8)</sub></p>
 <!-- GITHUB_UPDATED_AT_END -->
 
 ## AWS Certifications
